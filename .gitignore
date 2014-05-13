@@ -1,0 +1,27 @@
+# Compiled source #
+###################
+bin/
+server/tmp/
+*.manifest
+
+# IDE generated files #
+######################
+.project
+.settings/
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# specified files #
+###################
+node_modules
+dist
+build.js

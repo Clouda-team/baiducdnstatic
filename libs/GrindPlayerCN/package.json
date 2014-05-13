@@ -1,0 +1,22 @@
+{
+    "name": "GrindPlayerCN",
+    "filename": "GrindPlayerCN.swf",
+    "version": "1.0.1",
+    "description": "OSMF + Flex based flash video player, which provides most needed functionality in nowadays.(此版本为中文裁剪BUG修复版)",
+    "homepage": "http://osmfhls.kutu.ru/docs/grind/",
+    "keywords": [
+       "video", "audio", "flash", "osmf", "player"
+   ],
+   "maintainers": [
+       {
+           "name": "Mihail Latyshov",
+           "web": "https://github.com/kutu" 
+       }   
+    ],
+   "repositories": [
+        {   
+            "type": "git",
+            "url": "https://github.com/KentEduSoho/GrindPlayer"
+        }
+   ]
+}
