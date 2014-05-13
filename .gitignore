@@ -24,5 +24,4 @@ Thumbs.db
 ###################
 node_modules
 dist
-ref-cdnjs
 build.js
