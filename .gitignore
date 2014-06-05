@@ -28,3 +28,4 @@ build.js
 build
 bui.js
 whitelist.js
+blacklist.js

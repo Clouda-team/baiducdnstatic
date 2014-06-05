@@ -1,22 +1,22 @@
 {
-    "name": "seajs",
-    "filename": "sea.js",
-    "version": "2.1.1",
-    "description": "A Module Loader for the Web",
-    "homepage": "http://seajs.org",
-    "keywords": [
-       "seajs", "loader", "CMD"
-   ],
-   "maintainers": [
-       {
-           "name": "lifesinger",
-           "web": "http://lifesinger.github.com/" 
-       }   
-	],
-   "repositories": [
-        {   
-            "type": "git",
-            "url": "https://github.com/seajs/seajs"
-        }
-   ]
+  "name": "seajs",
+  "filename": "sea.js",  
+  "version": "2.2.1",
+  "description": "A Module Loader for the Web",
+  "homepage": "http://seajs.org/",
+  "keywords": [
+    "loader",
+    "module",
+    "CMD",
+    "browser"
+  ],
+  "author": "Frank Wang <lifesinger@gmail.com>",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url" : "git://github.com/seajs/seajs.git"
+  },
+  "main": "./lib/sea-node.js"
 }

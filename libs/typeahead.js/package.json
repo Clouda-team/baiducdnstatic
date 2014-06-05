@@ -1,0 +1,37 @@
+{
+  "name": "typeahead.js",
+  "filename": "typeahead.bundle.min.js",
+  "version": "0.10.2",
+  "description": "a fast and fully-featured autocomplete library",
+  "homepage": "http://twitter.github.com/typeahead.js/",
+  "keywords": [
+    "twitter",
+    "typeahead",
+    "autocomplete"
+  ],
+  "maintainers": [
+    {
+      "name": "Twitter, Inc."
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/twitter/typeahead.js"
+    }
+  ],
+  "npmName": "typeahead.js",
+  "npmFileMap": [
+    {
+      "basePath": "/",
+      "files": [
+        "dist/bloodhound.js",
+        "dist/bloodhound.min.js",
+        "dist/typeahead.bundle.min.js",
+        "dist/typeahead.jquery.js",
+        "dist/typeahead.jquery.min.js",
+        "dist/typeahead.bundle.js"
+      ]
+    }
+  ]
+}
