@@ -1,0 +1,23 @@
+{
+  "name": "muplayer",
+  "filename": "player.min.js",
+  "version": "0.9.1",
+  "description": "MuPlayer is an open source web audio player from Baidu Music, support HTML5 and Flash engine on different platforms.",
+  "homepage": "http://labs.music.baidu.com/muplayer/doc/",
+  "keywords": [
+    "audio",
+    "player",
+    "baidu"
+  ],
+  "maintainers": [
+    {
+      "name": "FE Team of Baidu Music"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/Baidu-Music-FE/muplayer.git"
+    }
+  ]
+}
