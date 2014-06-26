@@ -1,1 +1,7 @@
-啊啊啊
+
+├── backbone.js               # ... library
+│   ├── 1.1.0                 # ... version
+│   |   └── backbone.js       # ... fileanme
+│   └── 1.1.1
+│       └── backbone.js
+└── package.json              # ... package.json
