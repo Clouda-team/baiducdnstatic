@@ -7,20 +7,20 @@
 需要了解Github开源库目录的结构，新的库需要在libs下新建库目录及其版本目录，并将文件放在相应目录下，最后补全package.json文件。
 
 			
-
+```
   ├── backbone.js               # ... library
   │   ├── 1.1.0                 # ... version
   │   |   └── backbone.js       # ... fileanme
   │   └── 1.1.1
   │       └── backbone.js
   └── package.json              # ... package.json
-
+```
 			
 ####Step 2
 
 编辑package.json描述文件，这个文件描述最新版本的信息。
 
-
+```
   // 项目名必须与文件夹名一致
   {
     "name": "项目名",
@@ -43,7 +43,7 @@
   	}
     ]
   }
-
+```
 			
 #### Step 3
 
