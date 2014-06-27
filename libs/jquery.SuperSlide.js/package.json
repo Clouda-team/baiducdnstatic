@@ -1,0 +1,21 @@
+  {
+    "name": "jquery.SuperSlide.js",
+    "filename": "jquery.SuperSlide.js",
+    "version": "2.1.1",
+    "description": "轻松解决网站大部分特效展示问题",
+    "homepage": "http://www.SuperSlide2.com",
+    "keywords": ["焦点图/幻灯片", "图片特效", "Tab标签切换"],
+    "maintainers": [
+    {
+      "name": "大话主席",
+      "web": "http://www.SuperSlide2.com",
+      "mail": "305491515@qq.com"
+    }
+    ],
+    "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/moxuexue/baiducdnstatic/tree/patch-2/libs/jquery.SuperSlide.js"
+    }
+    ]
+  }
