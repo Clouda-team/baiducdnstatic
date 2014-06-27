@@ -1,5 +1,5 @@
 {
-    "name": "knockout",
+    "name": "knockout.js",
     "filename": "knockout.js",
     "version": "3.1.0",
     "description": "一个轻量级的MVVM框架，通过简易的UI绑定语法，实现动态更新UI",
