@@ -1,0 +1,17 @@
+{
+    "name": "knockout",
+    "filename": "knockout.js",
+    "version": "3.1.0",
+    "description": "一个轻量级的MVVM框架，通过简易的UI绑定语法，实现动态更新UI",
+    "homepage": "http://knockoutjs.com/",
+    "keywords": ["MVVM", "声明性绑定", "UI自动更新", "依赖跟踪", "模板化"],
+    "maintainers": [{
+        "name": "SteveSanderson",
+        "web": "https://github.com/SteveSanderson",
+        "mail": "开发者邮箱未知"
+    }],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/knockout/knockout"
+    }]
+}
