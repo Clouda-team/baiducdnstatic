@@ -7,15 +7,15 @@
     "keywords": ["焦点图/幻灯片", "图片特效", "Tab标签切换"],
     "maintainers": [
     {
-      "name": "大话主席",
-      "web": "http://www.SuperSlide2.com",
-      "mail": "305491515@qq.com"
+      "name": "大话主席/北北″",
+      "web": "http://www.SuperSlide2.com/ http://www.dfbar.net",
+      "mail": "305491515@qq.com/ web@fansbar.cn"
     }
     ],
     "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/moxuexue/baiducdnstatic/tree/patch-2/libs/jquery.SuperSlide.js"
+      "url": "https://github.com/moxuexue/baiducdnstatic.git"
     }
     ]
   }
