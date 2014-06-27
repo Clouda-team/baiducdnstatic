@@ -47,7 +47,7 @@
 
 #### Step 3
 
-提Pull Request。(请务必注意`package.json`字段项目名`name`必须与`文件夹名`一致)
+提Pull Request。(请务必注意`package.json`中项目名`name`必须与`文件夹名`一致)
 
 ### Notice
 
