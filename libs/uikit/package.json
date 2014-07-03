@@ -31,7 +31,6 @@
     "url": "https://github.com/uikit/uikit/blob/master/LICENSE.md"
   },
   "devDependencies": {
-    "jquery": "~1.10.1",
-  },
+    "jquery": "~1.10.1"
   }
 }
