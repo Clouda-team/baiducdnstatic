@@ -9,6 +9,11 @@
     "framework",
     "responsive"
   ],
+  "maintainers": [
+    {
+      "name": "ericf"
+    }
+  ],
   "repositories": [
     {
       "type": "git",
