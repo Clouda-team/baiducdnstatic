@@ -1,0 +1,22 @@
+{
+    "name": "validform",
+    "filename": "validform.js",
+    "version": "5.3.2",
+    "description": "一行代码搞定整站的表单验证！",
+    "homepage": "http://validform.rjboy.cn/",
+    "keywords": [
+       "validform", "jquery"
+   ],
+   "maintainers": [
+       {
+           "name": "sean",
+           "web": "http://www.rjboy.cn/" 
+       }
+   ],
+   "repositories": [
+        {   
+            "type": "http",
+            "url": "http://validform.rjboy.cn/"
+        }
+   ]
+}
