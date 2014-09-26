@@ -2,7 +2,7 @@
     "name": "echarts",
     "filename": "echarts.js",
     "description": "Enterprise Charts，基于Canvas，纯Javascript图表库，提供直观，生动，可交互，可个性化定制的数据可视化表。",
-    "version": "2.0.3",
+    "version": "2.0.4",
 
     "repository": "git://github.com/ecomfe/echarts",
     "homepage": "http://echarts.baidu.com",
