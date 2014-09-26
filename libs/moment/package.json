@@ -1,5 +1,6 @@
 {
     "name": "moment",
+    "filename": "moment.js",
     "version": "2.8.3",
     "description": "Parse, manipulate, and display dates.",
     "homepage": "http://momentjs.com",
