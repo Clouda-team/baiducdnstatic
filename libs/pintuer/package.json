@@ -1,0 +1,13 @@
+{
+  "name": "pintuer",
+  "title": "pintuer",
+  "filename": "pintuer.css",
+  "version": "1.0",
+  "homepage": "http://pintuer.com/",
+  "keywords": ["pintuer","css","framework","responsive"],
+  "maintainers": [{
+           "name": "pintuer",
+           "web": "http://pintuer.com",
+           "mail": "106967808@qq.com"
+       }]
+}
