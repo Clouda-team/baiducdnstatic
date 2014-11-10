@@ -1,0 +1,21 @@
+{
+  "name": "jquery.infinitescroll.js",
+  "filename": "jquery.infinitescroll.js",
+  "version": "2.0.2",
+  "description": "jQuery and Wordpress plugins for infinite scroll",
+  "homepage": "https://github.com/paulirish/infinite-scroll",
+  "keywords": ["scroll", "infinite"],
+  "maintainers": [
+	{
+	  "name": "Paul Irish",
+	  "web": "http://paulirish.com",
+	  "mail": ""
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/paulirish/infinite-scroll"
+	}
+  ]
+}
