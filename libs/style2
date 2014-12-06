@@ -1,0 +1,168 @@
+body { background:#000 url(bg.jpg) repeat-x;font: 14px "Times New Roman";color: #FFFF05;text-decoration: none;}
+img{ border:none}
+ul,li{ list-style:none}
+a:link,a:visited{color:#FFFF05;text-decoration: none;}
+a:hover{ color:#ff0; text-decoration: underline}
+*{ margin:0 auto; padding:0;}
+h3{ font-size:18px}
+/*头部样式*/
+.head{ width:980px; height:100%px; overflow:hidden}
+.top{ width:980px; height:20px; line-height:22px; overflow:hidden; text-align:right;}
+.top a{ display:block; width:100%px; height:20px; float:right; text-align:center; color:#ccc}
+.top a:hover{ color:#F90; text-decoration:none}
+.head-center{ width:980px; height:74px; float:left}
+.logo{ width:200px; height:80px; float:left;}
+.logo a{ display:block; width:200px; height:80px; text-indent:-3000px; overflow:hidden; background:url(logo.gif) no-repeat}
+.dh{ width:980px; height:35px; float:left; background:url(dh-bg.jpg) repeat-x;}
+.dh a:hover{ text-decoration:none; color:#FF0}
+.dh li{ width:98px; height:35px; float:left; text-align:center; font-size:15px; font-weight:bold; line-height:42px; overflow:hidden}
+.dh li a{ color:#00FF8F;}
+.dh li a:hover{ color:#ff0;width:98px; height:35px;background:url(dh-hover.jpg) no-repeat;float:left;}
+.sy{ display:block; width:98px; height:35px; float:left;background:url(1dh-hover.jpg) no-repeat;font-size:16px; font-weight:bold; line-height:42px;overflow:hidden;text-align:center}
+.red,a.red:link,a.red:visited,a.red:hover{color: #3CF}
+.current{background:url(dh-hover.jpg) no-repeat;}
+.sousuo{ width:980px; height:40px; float:left; overflow:hidden}
+.ss-left{ width:260px; height:30px;padding-top:13px; float:left; background:url(ss.jpg) no-repeat left center}
+.txt{ width:185px; height:17px; float:left; margin-left:40px; border:1px solid #000; line-height:17px;background:#fff url(txt-bg.jpg) repeat-x 0 5px}
+.sub{ width:25px; height:20px; border:none;background:url(sub.jpg) no-repeat; margin-left:5px}
+.ss-right{ width:720px; height:40px; overflow:hidden; float:left; line-height:47px;color: #003399}
+.ss-right b{ color:#C03}.key{ width:610px;float:left; padding-left:30px; overflow:hidden; white-space:nowrap}
+.ss-right a{ color:#000; padding:0 5px}.ss-right a:hover{ color:#c03}
+.book{ width:60px; height:20px; margin-top:13px; display:block; float:right;background:url(book.gif) no-repeat; line-height:22px; overflow:hidden; text-align:center; margin-right:10px}
+/*ad*/
+.ad960-90{width:960px;height:auto;padding:8px 0;overflow:hidden}
+.ad250-90{width:250px;height:auto;padding-top:8px;overflow:hidden}
+.ad696-90{width:694px;height:auto;padding-top:8px;overflow:hidden}
+/*主体页面*/
+.zt{ width:980px;}
+
+.f1{ width:980px; overflow:hidden; float:left;}
+#flash { width:345px; height:495px; float:left; background:#333; overflow:hidden; border:1px solid #666}
+#flash .bin { width:333px; height:510px; padding:5px; }
+#show { width:333px; height:440px; overflow:hidden; }
+#shownav { width:90px; height:27px; float:left; background:#2e3944; padding:9px;}
+#shownav li { width:21px; height:27px; display:block; float:left; text-align:center; margin-right:5px; }
+#shownav a{ width:21px; height:27px; display:block; background-repeat:no-repeat; background-position: center center; }
+#shownav .n0 a,#shownav .n1 a,#shownav .n2 a{ font-size:24px; color:#666; font-weight:bold; font-style:oblique}
+#shownav .n0o a,#shownav .n1o a,#shownav .n2o a{ font-size:24px;color: #ccc}
+#showtitle{ width:225px; height:45px;background:#2e3944; float: left}
+#showtitle  a{ font-size:14px; font-weight:bold;color:#ccc; line-height:45px }
+#showtitle a:hover{ color:#fff; text-decoration:none}
+.f1-center{ width:380px; float:left; margin-left:15px;overflow:hidden}
+.f1-center-top{ width:380px; height:20px; background:url(f1-top.jpg) repeat-x}
+.f1-center-top h5{ display:block; width:92px; height:20px; float:left; background:url(hot.gif) no-repeat; text-indent:-3000px}
+.f1-center ul{ width:364px; float:left; padding:8px; border-bottom:1px solid #333}
+.f1-center ul li{ float:left; width:110px; height:135px; margin-left:3px; margin-right:6px; margin-top:10px;overflow:hidden; text-align:center}
+.f1-center-1{ width:380px; float:left; border-top:1px solid #536372; text-align:center; padding-top:10px; line-height:20px; color:#ccc}
+.f1-center-1 p{ text-align:left; text-indent:30px}
+.f1-center-1 h3 a{ color:#0F0}
+.f1-center-2{ width:380px; float:left; padding-top:10px;border-bottom:1px solid #333; padding-bottom:10px}
+.f1-center-2 dt{ width:95px;float:left; text-align:center}
+.f1-center-3{ width:380px; float:left; padding-top:10px;border-top:1px solid #536372;}
+.f1-center-3 dt{width:190px;float:left; line-height:20px; text-indent:15px; background: url(dian.gif) no-repeat left center;}
+.f1-right{ width:220px; border:1px solid #333; float:right;}
+.f1-right-1{ width:210px; padding-left:5px; padding-top:5px; padding-right:5px;float:left}
+.f1-right-1 h4{ display:block; width:210px; height:30px; overflow:hidden; text-indent:15px; line-height:30px; font-size:14px; background:url(bg3.jpg); color:#8BABB7}
+.f1-right-1 ul{ padding-top:5px; padding-left:5px;}.f1-right-1 ul li{ width:200px; height:25px; overflow:hidden}
+
+.f2-left{ width:250px; overflow:hidden; float:left; overflow:hidden}
+.f2-left-1{ width:248px; float:left; border:1px solid #333; margin-top:5px; float:left; overflow:hidden}
+.f2-left-top{ width:248px; height:30px; line-height:30px; float:left; font-size:13px; font-weight:bold; text-indent:15px; color:#8BABB7;background:url(bg3.jpg) repeat-x}
+.ul-1{ padding:5px; width:238px; overflow:hidden; float:left}
+.ul-2{width:238px;overflow:hidden;float:left;padding-top: 12px;padding-right: 5px;padding-bottom: 5px;padding-left: 5px;}
+.li-1{ width:238px;height:100px; overflow:hidden; white-space:nowrap; line-height:20px; color:#ccc; float:left}.li-1 img{ width:75px; height:90px; padding:2px; border:1px solid #999; float:left}
+.li-1 dl{ width:150px; float:right; height:100px; overflow:hidden}.f2-left-1 ul li span{ width:30px; float:right; color: #C0B487}.f2-left-1 ul li a{ color:#fff}
+.li-2{width:238px; height:23px; white-space:nowrap; line-height:23px; border-bottom:1px dashed #666; float:left}
+.li-3{ width:238px; height:103px; white-space:nowrap; line-height:20px; float:left; margin-top: 3px}.li-3 img{ width:75px; height:90px; padding:2px; border:1px solid #999; float:left}
+.li-3 dl{ width:150px; float:right; height:100px; overflow:hidden; color:#666}.li-1 dl dd a,.li-3 dl dd a{ color: #FFF}
+
+.f2-right{ width:728px; overflow:hidden; padding-left:2px; float:right}
+.f2-right-1,.channel{ width:726px; border:1px solid #333;overflow:hidden; float:left; margin-top:5px}
+.f2-right-top{ width:711px; height:30px; line-height:30px; float:left; padding-left:15px; color:#8BABB7; font-size:13px; font-weight:bold;background:url(bg3.jpg)}
+.f2-right-1 ul{ width:726px; float:left; padding-bottom:4px}
+.f2-right-1 li,.channellist li{ float:left; width:145px; height:211px; padding-top:10px; text-align:center; overflow:hidden}
+.f2-right-1 li p,.channellist li p{ padding-top:5px}
+.f2-right-2{ width:726px; border:1px solid #333; float:left;overflow:hidden; margin-top:21px; float:left}
+
+.f3-right{ width:726px; overflow:hidden; padding-left:2px; float:right}
+.f3-right-1,.channel{ width:726px; border:1px solid #333;overflow:hidden; float:left; margin-top:5px}
+.f3-right-top{ width:965px; height:30px; line-height:30px; float:left; padding-left:15px; color:#8BABB7; font-size:13px; font-weight:bold;background:url(bg3.jpg)}
+.f3-right-1 ul{ width:965px; float:left; padding-bottom:4px}
+.f3-right-1 li,.channellist li{ float:left; width:145px; height:211px; padding-top:10px; text-align:center; overflow:hidden}
+.f3-right-1 li p,.channellist li p{ padding-top:5px}
+.f3-right-2{ width:965x; border:1px solid #333; float:left;overflow:hidden; margin-top:5px; float:left}
+
+.channellist{ width:290px; float:left}
+.chaneltxt{ width:410px; float:right; padding-top:8px}
+.chaneltxt li{ width:205px; float:left; background:url(video.gif) no-repeat left center; text-indent:20px; line-height:23px}
+.f33-right{ width:960px; overflow:hidden; padding-left:2px; float:right}
+.link{ width:978px; margin-top:5px; float:left; border:1px solid #333}
+.link-top{ width:968px; padding-left:10px; height:30px;line-height:30px;background:url(bg3.jpg) repeat-x; float:left;}
+.link-top h5{ display:block; width:60px; height:30px; float:left;font-size:14px;color:#fff;}
+
+
+.bottom{ width:100%; margin-top:10px; float:left;}
+.bottom-top{ width:100%; height:20px; padding-top:5px; padding-bottom:5px; float:left; text-align:center;background:#333}
+.bottom-top div{ width:350px} 
+.txt1{ width:300px; height:16px; padding-top:4px;border:1px solid #000; float:left;background:url(txt-bg.jpg) repeat-x}
+.bq{ width:980px;border-top:1px dotted #333; text-align:center; padding-bottom:5px; line-height:25px; padding-top:5px;}
+/*分类页和内容页*/
+.channel ul{ width:716px; float:left; padding-left:10px; padding-bottom:4px; overflow:hidden; color:#666}
+.channel li{ float:left; width:355px; height:178px; padding-top:10px;overflow:hidden}
+.channel li .img3{ float:left}
+.channel li p{white-space:nowrap; padding-top:7px; overflow:hidden; display:block; width:200px; float:left; margin-left:10px}
+.zm{ width:978px; height:25px; line-height:25px; border:1px solid #333; margin-top:5px; float:left}
+.zm a{ display:block; width:30px; height:25px; float:left; text-align:center; font-size:14px;  font-weight:bold; margin-left:7px; background:#333}
+.zm a:hover{ display:block; width:30px; height:25px; float:left; text-align:center; font-size:14px;  font-weight:bold; margin-left:7px; background:#666; text-decoration:none;}
+.channel1{ width:726px; border:1px solid #333;overflow:hidden; float:left; margin-top:5px}
+.conlist{ padding:10px; width:706px; float:left}
+.conlist dd{ width:180px; float: left;}
+.conlist dt{ width:520px; float: left; overflow:hidden;}
+.conlist h1{ font-size:16px; color: #C90; padding-top:10px}
+.conlist p{ display:block; width:260px; height:25px; float:left; line-height:25px;}
+.actor_w{ width:520px; float:left; height:25px; line-height:25px; white-space:nowrap; overflow:hidden}
+.compress{ width:701px; height:160px;overflow-x:hidden;float:left; padding-left:15px; padding-right:10px; padding-bottom:10px}
+.compress li{ width:150px; height:20px;float:left; margin-top:10px; margin-right:20px;white-space:nowrap; overflow:hidden}
+.compress li a{ display:block; width:148px; height:18px;border:1px solid #666; background:#000; float:left; line-height:18px; text-align:center; }
+.compress li a:hover{ display:block;width:150px; height:18px;border:1px solid #666; background: #900; text-decoration:none}
+.introbox{ width:706px; height:150px;overflow : auto;line-height:20px;float:left;padding:10px; text-indent:30px; font-size:13px; color:#666}
+/*公用*/
+.name{ padding-top:8px}
+.name1{ display:block; width:80px; height:15px; position: relative; z-index:1; background: #900; line-height:15px;top:-20px; white-space:nowrap; overflow:hidden}
+.clear{ clear:both}
+.more{ float:right; font-size:12px; font-weight:normal; margin-right:10px}
+.img1{ width:90px; height:100px; border:1px solid #666; padding:5px}
+.img2{ width:80px; height:90px; border:1px solid #666; padding:3px}
+.img3{ width:120px; height:150px; border:1px solid #666; padding:3px}
+.img4{ width:156px; height:210px; border:1px solid #666; padding:3px;}
+.ssss{padding-top: 11px;padding-right: 10px;padding-bottom: 13px;padding-left: 10px; width:230px; float:left}
+.ssss li{ width:230px;padding-bottom:12px;overflow:hidden; float:left}
+.ssss li a{ display:block; width:60px; height:20px; border:1px dotted #666; line-height:20px; margin-left:5px; margin-right:5px; margin-top:10px; float:left; text-align:center}
+.ssss li a:hover{ display:block; width:60px; height:20px; border:1px solid #666; text-decoration:none; background:#900; line-height:20px; margin-left:5px; margin-right:5px; margin-top:10px; float:left; text-align:center}
+/*地图*/
+.chaneltxt2{ width:720px; float: left; padding-top:8px; padding-left:8px}
+.chaneltxt2 li{ width:180px; float:left; background:url(video.gif) no-repeat left center; text-indent:20px; line-height:23px; white-space:nowrap; overflow:hidden}
+/*自定义模板*/
+.zztt{ width:978px; border:1px solid #333; overflow:hidden; float:left;margin-top:5px;}
+.self_left{ width:500px; float:left; border:1px solid #333}
+.self_right{ width:470px; border:1px solid #333; float:right; overflow:hidden}
+.self_top{ width:100%; height:30px; line-height:30px; padding-left:10px;background:url(bg3.jpg) repeat-x; font-size:14px; font-weight:bold}
+.self_right li{ width:155px; height:210px; padding-top:10px; padding-bottom:10px; float:left; text-align:center}.self_right li p{ padding-top:5px; white-space:nowrap; overflow:hidden}
+.ztclist li{ float:left; width:310px; margin-left:10px; padding-top:10px; padding-bottom:10px; text-align:center}
+.ztclist li img{ float:left}.ztclist li p{ display:block; margin-left:10px;width:160px; float:left; overflow:hidden; text-align:center;}
+.ztclist li p a{ color:#C36}
+/*分页样式*/
+.page{height:42px;line-height:23px;text-align:center;width:100%;overflow:hidden; float:left; padding-bottom:5px; background:#333; padding-top:5px; padding-left:10px;}
+.page span {float:left;height:17px;line-height:17px;margin-right:2px;padding:2px 4px 0px;font-size:12px;}
+.page em.nolink { font-style:normal;background-color:white;border:1px solid #ccc;color:#999;font-weight:400;height:17px;line-height:17px;}
+.page input{width:30px;margin:-2px 2px 0 0; border:1px solid #ccc}.page .btn{width:40px;}
+.page em {background:url(txt-bg.jpg) repeat-x 0 -3px;border:1px solid #f5f5f5;color:#C00;float:left;font-weight:bold;height:16px;line-height:16px;margin:2px;padding:0px 5px;text-align:center;font-style:normal;margin-top:2px;}
+.page a:link,.page a:visited {background:#fff;border:1px solid #ccc;color:#333;display:inline;float:left;height:16px;line-height:16px;margin-right:1px;padding:0px 5px;margin-left:3px;text-decoration:none;margin-top:2px;}
+.page a:hover{background:url(txt-bg.jpg) repeat-x 0 -3px;border:1px solid #f5f5f5;padding:0px 5px;color:#c00;text-decoration:none;}
+
+/*广告设置*/
+#ad1{ width:468px; height:60px;overflow:hidden; float:left; margin-top:7px; margin-left:20px}
+#ad2{ width:285px; height:60px; overflow:hidden;float:right; margin-top:7px;}
+#ad3{ width:978px; overflow:hidden; float:left; margin-top:5px; border:1px solid #333}
+#ad4{ width:200px; height:200px; padding-left:10px;padding-bottom:3px; overflow:hidden;float:left}
+#ad5{ width:468px; height:60ox; float:left; margin-top:15px; overflow:hidden}
