@@ -1,5 +1,6 @@
 {
   "name": "jquery-qrcode",
+  "filename": "jquery.qrcode.js",
   "version": "1.0.0",
   "homepage": "http://www.d-project.com/",
   "authors": [
