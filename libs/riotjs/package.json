@@ -1,0 +1,21 @@
+{
+  "name": "riotjs",
+  "filename": "riot.min.js",
+  "version": "2.0.6",
+  "description": "A REACT- LIKE, 2.5KB USER INTERFACE LIBRARY",
+  "homepage": "https://muut.com/riotjs/",
+  "keywords": ["Custom tags", "Virtual DOM", "Full stack"],
+  "maintainers": [
+    {
+      "name": "tipiirai",
+      "web": "https://muut.com",
+      "mail": "tero@muut.com"
+ }
+  ],
+  "repositories": [
+    {
+      "type": "https",
+      "url": "https://github.com/muut/riotjs.git"
+ }
+  ]
+}

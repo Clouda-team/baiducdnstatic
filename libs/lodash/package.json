@@ -1,0 +1,21 @@
+{
+  "name": "lodash",
+  "filename": "lodash.min.js",
+  "version": "3.0.0",
+  "description": "A JavaScript utility library delivering consistency, modularity, performance, & extras.",
+  "homepage": "https://lodash.com/",
+  "keywords": ["javascript utility library"],
+  "maintainers": [
+    {
+      "name": "jdalton",
+      "web": "http://www.allyoucanleet.com",
+      "mail": "john.david.dalton@gmail.com"
+ }
+  ],
+  "repositories": [
+    {
+      "type": "https",
+      "url": "https://github.com/lodash/lodash.git"
+ }
+  ]
+}
