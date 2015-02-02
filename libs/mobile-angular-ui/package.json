@@ -1,6 +1,6 @@
 {
     "name": "mobile-angular-ui",
-    "filename": "dist/mobile-angular-ui.js",
+    "filename": "js/mobile-angular-ui.js",
     "version": "1.2.0",
     "description": "mobile angular ui.",
     "homepage": "http://mobileangularui.com",
