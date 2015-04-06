@@ -1,0 +1,24 @@
+{
+    "name": "imageter",
+    "filename": "imageter.front.js",
+    "version": "1.0.1",
+    "description": "imageter front js",
+    "homepage": "http://www.imageter.com/",
+    "keywords": [
+        "dsp",
+        "imageter"
+   ],
+   "maintainers": [
+       {
+           "name": "xuguanming",
+           "email": "xuguangming@imageter.com",
+           "web": "http://www.imageter.com/"
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/imageter/frontjs"
+       } 
+   ]
+}

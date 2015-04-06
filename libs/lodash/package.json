@@ -1,0 +1,21 @@
+{
+  "name": "lodash",
+  "filename": "lodash.js",
+  "version": "3.5.0",
+  "description": "一个高效、模块化、可扩展的与underscore接口一致的实用工具库",
+  "homepage": "https://lodash.com/",
+  "keywords": ["utility", "performance"],
+  "maintainers": [
+	{
+	  "name": "John-David Dalton",
+	  "web": "http://allyoucanleet.com/",
+	  "mail": "john.david.dalton@gmail.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/lodash/lodash/"
+	}
+  ]
+}

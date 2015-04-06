@@ -1,0 +1,21 @@
+{
+  "name": "amd.loader",
+  "filename": "amd.loader.js",
+  "version": "0.9.0",
+  "description": "A Simple AMD loader Implementation, subset of Asynchronous Module Definition (AMD) API.",
+  "homepage": "https://github.com/enimo/amd-loader",
+  "keywords": ["amd", "cmd", "loader"],
+  "maintainers": [
+	{
+	  "name": "enimo",
+	  "web": "https://github.com/enimo",
+	  "mail": "enimong@gmail.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/enimo/amd-loader"
+	}
+  ]
+}

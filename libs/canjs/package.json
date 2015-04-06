@@ -1,0 +1,40 @@
+{
+  "name": "canjs",
+  "filename": "can.jquery.min.js",
+  "description": "MIT-licensed, client-side, JavaScript framework that makes building rich web applications easy.",
+  "version": "2.1.4",
+  "homepage": "http://canjs.com/",
+  "keywords": [
+    "framework",
+    "mvc",
+    "CanJS"
+  ],
+  "contributors": [{
+      "name": "Bitovi",
+      "web": "http://bitovi.com/",
+      "mail": "contact@bitovi.com"
+
+  }],
+  "repositories": [{
+    "type": "git",
+    "url": "git@github.com:bitovi/canjs.git"
+  }],
+  "npmName": "CanJS",
+  "npmFileMap": [
+    {
+      "basePath": "/",
+      "files": [
+        "can.dojo.js",
+        "can.dojo.min.js",
+        "can.jquery.js",
+        "can.jquery.min.js",
+        "can.mootools.js",
+        "can.mootools.min.js",
+        "can.yui.js",
+        "can.yui.min.js",
+        "can.zepto.js",
+        "can.zepto.min.js"
+      ]
+    }
+  ]
+}

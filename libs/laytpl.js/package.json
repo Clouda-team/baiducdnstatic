@@ -1,0 +1,21 @@
+{
+    "name": "laytpl.js",
+    "filename": "laytpl.js",
+    "version": "1.1",
+    "description": "laytpl是一款颠覆性的JavaScript模板引擎，它用巧妙的实现方式，将自身的体积变得小巧玲珑，不仅性能接近极致，并且还具备传统js引擎的几乎所有功能。",
+    "homepage": "http://sentsin.com/layui/laytpl/",
+    "keywords": ["laytpl", "JavaScript模板引擎", "sentsin"],
+    "maintainers": [
+    {
+      "name": "sentsin",
+      "web": "http://sentsin.com/",
+      "mail": "xu@sentsin.com"
+    }
+    ],
+    "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/sentsin/laytpl.git"
+    }
+    ]
+  }

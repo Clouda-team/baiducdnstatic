@@ -1,0 +1,23 @@
+{
+    "name": "mobile-angular-ui",
+    "filename": "js/mobile-angular-ui.js",
+    "version": "1.2.0",
+    "description": "mobile angular ui.",
+    "homepage": "http://mobileangularui.com",
+    "keywords": [
+        "mobile",
+        "angular",      
+        "ui"       
+    ],
+    "maintainers": [
+        {
+            "name": "mcasimir"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/jquery/jquery-ui"
+        }
+    ]
+}
