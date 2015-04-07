@@ -2,7 +2,7 @@
   "name": "canjs",
   "filename": "can.jquery.min.js",
   "description": "MIT-licensed, client-side, JavaScript framework that makes building rich web applications easy.",
-  "version": "2.2.0",
+  "version": "2.2.4",
   "homepage": "http://canjs.com/",
   "keywords": [
     "framework",
