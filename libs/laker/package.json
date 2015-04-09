@@ -1,0 +1,22 @@
+{
+  "name": “laker”,
+  "version": “1.4.1”,
+  "description": "Laker is a compendium of files, frameworks, styles and tips for designing digital publications in HTML5.",
+  "main": “styles/styles.css”,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ffranke/Laker-Compendium.git"
+  },
+  "keywords": [
+    "framework",
+    "browser",
+    “html5”,
+    "client-side"
+  ],
+  "author": "florian@lakercompendium.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ffranke/Laker-Compendium/issues"
+  },
+  "homepage": "http://www.lakercompendium.com"
+}
