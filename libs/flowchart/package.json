@@ -1,5 +1,5 @@
 {
-  "name": "flowchart-clientscript",
+  "name": "flowchart",
   "filename": "flowchart-1.4.0.js",
   "version": "1.4.0",
   "description": "Draws simple SVG flow chart diagrams from textual representation of the diagram",
