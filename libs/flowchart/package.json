@@ -1,0 +1,19 @@
+{
+  "name": "flowchart",
+  "filename": "flowchart-1.4.0.js",
+  "version": "1.4.0",
+  "description": "Draws simple SVG flow chart diagrams from textual representation of the diagram",
+  "homepage": "http://flowchart.js.org/",
+  "keywords": ["flow", "chart", "javascript"],
+  "maintainers": [
+	{
+	  "name": "adrai",
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/adrai/flowchart.js"
+	}
+  ]
+}
