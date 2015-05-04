@@ -3,7 +3,7 @@
   "version": "1.0.0-rc.1",
   "codename": "osmium-ostrich",
   "homepage": "https://github.com/driftyco/ionic",
-  "filename": “js/ionic.bundle.js”,
+  "filename": "js/ionic.bundle.js",
   "authors": [
     "Max Lynch <max@drifty.com>",
     "Adam Bradley <adam@drifty.com>",
