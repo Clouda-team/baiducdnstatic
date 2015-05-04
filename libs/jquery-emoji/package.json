@@ -1,0 +1,23 @@
+{
+    "name": "jquery-emoji",
+    "filename": "jquery.emoji.js",
+    "version": "1.1.0",
+    "description": "a easy way to send smily",
+    "homepage": "https://github.com/cokapp/jquery-emoji",
+    "keywords": [
+        "jQuery", "emoji", "smily", "angular"
+    ],
+    "maintainers": [
+        {
+            "name": "CokAPP",
+            "web": "https://github.com/cokapp",
+            "mail": "dev@cokapp.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/cokapp/jquery-emoji"
+        }
+    ]
+}
