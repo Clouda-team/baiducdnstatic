@@ -1,0 +1,18 @@
+{
+	"name": "jquery-transit",
+	"filename": "jquery.transit.js",
+	"version": "0.9.12",
+	"description": "Super-smooth CSS3 transformations and transitions for jQuery. jQuery Transit is a plugin for to help you do CSS transformations and transitions in jQuery.",
+	"homepage": "http://ricostacruz.com/jquery.transit/",
+	"keywords": [
+		"jquery", "transit"
+	],
+	"maintainers": [{
+		"name": "jquery-transit",
+		"web": "http://ricostacruz.com/jquery.transit/"
+	}],
+	"repositories": [{
+		"type": "git",
+		"url": "https://github.com/rstacruz/jquery.transit"
+	}]
+}

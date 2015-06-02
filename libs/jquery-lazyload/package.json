@@ -8,7 +8,7 @@
 		"jquery", "lazyload"
 	],
 	"maintainers": [{
-		"name": "Lazy Load Plugin for jQuery",
+		"name": "jquery-lazyload",
 		"web": "http://www.appelsiini.net/projects/lazyload"
 	}],
 	"repositories": [{
