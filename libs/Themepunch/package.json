@@ -1,0 +1,21 @@
+{
+  "name": "Themepunch",
+  "filename": "plugins.min.js",
+  "version": "1.0",
+  "description": "项目简介",
+  "homepage": "http://www.greensock.com",
+  "keywords": ["jquery", "Themepunch", "plungins"],
+  "maintainers": [
+	{
+	  "name": "Jack Doyle",
+	  "web": "ttp://www.greensock.com/terms_of_use.html",
+	  "mail": "jack@greensock.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "http://eightmedia.github.com/"
+	}
+  ]
+}
