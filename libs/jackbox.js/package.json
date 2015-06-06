@@ -1,0 +1,21 @@
+{
+  "name": "jackbox.js",
+  "filename": "jackbox.js",
+  "version": "1.0",
+  "description": "html5",
+  "homepage": "",
+  "keywords": ["jackbox", "html5", "jqery"],
+  "maintainers": [
+	{
+	  "name": "作者/维护者",
+	  "web": "https://github.com/TonyTonyParker",
+	  "mail": "hdyzlh@gmail.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/TonyTonyParker"
+	}
+  ]
+}
