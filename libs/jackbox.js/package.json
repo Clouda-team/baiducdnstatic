@@ -3,11 +3,11 @@
   "filename": "jackbox.js",
   "version": "1.0",
   "description": "html5",
-  "homepage": "",
+  "homepage": "https://github.com/TonyTonyParker",
   "keywords": ["jackbox", "html5", "jqery"],
   "maintainers": [
 	{
-	  "name": "作者/维护者",
+	  "name": "TonyParker",
 	  "web": "https://github.com/TonyTonyParker",
 	  "mail": "hdyzlh@gmail.com"
 	}
