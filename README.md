@@ -1,4 +1,5 @@
 ## Baidu Open CDN Service
+[百度静态资源公共库](http://cdn.code.baidu.com/)
 
 ### 提交一个库
 
