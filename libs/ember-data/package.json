@@ -1,0 +1,25 @@
+{
+    "name": "ember-data",
+    "filename": "ember-data.min.js",
+    "version": "1.0.0-beta.18",
+    "description": "A data persistence library for Ember.js",
+    "homepage": "http://emberjs.com/",
+    "keywords": [
+       "ember",
+       "ember.js",
+       "ember-data"
+   ],
+   "maintainers": [
+       {
+           "name": "Ember.js",
+           "web": "http://emberjs.com"
+       }
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/emberjs/data"
+       }
+   ]
+
+}

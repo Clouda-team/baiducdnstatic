@@ -1,0 +1,24 @@
+{
+    "name": "require-css",
+    "filename": "css.min.js",
+    "version": "0.1.8",
+    "description": "A RequireJS CSS loader plugin to allow CSS requires and optimization",
+    "homepage": "https://github.com/guybedford/require-css",
+    "keywords": [
+       "requirejs",
+       "require-css"
+   ],
+   "maintainers": [
+       {
+           "name": "guybedford",
+           "web": "https://github.com/guybedford"
+       }
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/guybedford/require-css"
+       }
+   ]
+
+}

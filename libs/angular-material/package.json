@@ -1,0 +1,20 @@
+{
+    "name": "angular-material",
+    "filename": "angular-material.min.js",
+    "version": "0.9.6",
+    "description": "Material Design for AngularJS Apps",
+    "homepage": "https://material.angularjs.org/",
+    "keywords": ["Material", "angularjs", "framework"],
+    "maintainers": [
+        {
+            "name": "Angular",
+            "web": "http://angularjs.org"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/angular/bower-material"
+        }
+    ]
+}

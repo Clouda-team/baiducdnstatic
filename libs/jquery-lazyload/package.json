@@ -1,0 +1,18 @@
+{
+	"name": "jquery-lazyload",
+	"filename": "jquery.lazyload.js",
+	"version": "1.9.5",
+	"description": "Lazy Load is delays loading of images in long web pages. Images outside of viewport are not loaded until user scrolls to them. This is opposite of image preloading. ",
+	"homepage": "http://www.appelsiini.net/projects/lazyload",
+	"keywords": [
+		"jquery", "lazyload"
+	],
+	"maintainers": [{
+		"name": "jquery-lazyload",
+		"web": "http://www.appelsiini.net/projects/lazyload"
+	}],
+	"repositories": [{
+		"type": "git",
+		"url": "https://github.com/tuupola/jquery_lazyload"
+	}]
+}
