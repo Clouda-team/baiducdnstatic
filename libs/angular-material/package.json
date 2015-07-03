@@ -1,7 +1,7 @@
 {
     "name": "angular-material",
     "filename": "angular-material.min.js",
-    "version": "0.9.6",
+    "version": "0.10.0-rc4",
     "description": "Material Design for AngularJS Apps",
     "homepage": "https://material.angularjs.org/",
     "keywords": ["Material", "angularjs", "framework"],
