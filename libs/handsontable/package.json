@@ -1,0 +1,14 @@
+{
+  "name": "handsontable",
+  "filename": "handsontable.full.min.js",
+  "version": "0.16.0",
+  "description": "Handsontable is an Excel-like data grid / spreadsheet for HTML & JavaScript",
+  "homepage": "http://handsontable.com",
+  "keywords": ["Excel-like", "grid", "spreadsheet"],
+  "repositories": [
+  {
+    "type": "git",
+    "url": "https://github.com/handsontable/handsontable.git"
+  }
+  ]
+}
