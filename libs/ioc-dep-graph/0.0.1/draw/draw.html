@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>var define = function (fn) {fn();};</script>
+    <script src="d3.v3.min.js"></script>
+    <script src="zoom.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nodetext {
+        font-size: 12px;
+        font-family: SimSun sans-serif;
+        fill-opacity: 0.7;
+    }
+
+    .linetext {
+        font-size: 14px;
+        font-family: SimSun sans-serif;
+        font-weight: bold;
+        fill-opacity: 0;
+        color: #ccc;
+    }
+
+    svg {
+        width: 100%;
+        min-height: 800px;
+        cursor: move;
+    }
+
+    circle {
+        fill: #03a9f4;
+        cursor: pointer;
+    }
+
+    .edge-line {
+        stroke: #888;
+        stroke-width: 1.5;
+        marker-end: url(#arrow);
+    }
+
+</style>
+<body>
+<script>
+    var data;
+    window.addEventListener('message', function (event) {
+        data = event.data;
+        draw();
+    }, false);
+
+    if (window.opener) {
+        window.opener.postMessage({from: 'iocDepGraph', type: 'windowReady'}, '*');
+    }
+
+    function draw() {
+        var root = data;
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var radius = 16;
+
+        d3.select('svg').remove();
+        var svg = d3.select('body').append('svg');
+        svg.append('marker').attr({
+            id: 'arrow',
+            viewBox: '0 0 10 10',
+            refX: 0,
+            refY: 5,
+            markerUnits: 'strokeWidth',
+            markerWidth: 4,
+            markerHeight: 4,
+            orient: 'auto'
+        }).append('path').attr('d', 'M 0 0 L 10 5 L 0 10 z');
+
+        var g = svg.append("g");
+
+        var force = d3.layout.force().nodes(root.nodes).links(root.links).size([width, height]).
+            linkDistance(100).charge(-1000).start();
+
+        var edgesLine = g.selectAll('.edge-line').data(root.links).enter().append('line').classed('edge-line', true);
+
+        var edgesText = g.selectAll('.linetext').data(root.links).enter()
+            .append('text').attr('class', 'linetext').text(function (d) {
+                return d.relation;
+            }).attr('text-anchor', 'middle');
+
+        var nodesCircle = g.selectAll('circle').data(root.nodes).enter().append('circle').attr('r', radius).call(force.drag);
+
+        var textX = -20;
+        var textY = 10;
+
+        var nodesText = g.selectAll('.nodetext').data(root.nodes).enter().append('text').attr('class', 'nodetext')
+            .attr('dx', textX).attr('dy', textY).text(function (d) {
+                return d.id;
+            }).attr('text-anchor', 'middle');
+
+        zoom.run(force, svg, g, nodesCircle, nodesText, edgesText, edgesLine, root.links);
+
+        force.on('tick', function () {
+            updateLineOffset();
+            updateLineText();
+
+            //更新结点和文字
+            nodesCircle.attr('cx', function (d) { return d.x; });
+            nodesCircle.attr('cy', function (d) { return d.y; });
+            nodesText.attr('x', function (d) { return d.x + radius});
+            nodesText.attr('y', function (d) { return d.y + radius + 2; });
+        });
+
+        //更新连接线的位置
+        function updateLineOffset() {
+            edgesLine.attr('x1', function (d) {return d.source.x;});
+            edgesLine.attr('y1', function (d) {return d.source.y;});
+
+            edgesLine.attr('x2', function (d) {
+                    var arrow = d.source.x > d.target.x ? 5 : -5;
+                    var delta = getRate(d) * (d.source.x - d.target.x) + arrow;
+                    return d.target.x + delta;
+                }
+            );
+            edgesLine.attr('y2', function (d) {
+                    var arrow = d.source.y > d.target.y ? 5 : -5;
+                    var delta = getRate(d) * (d.source.y - d.target.y) + arrow;
+                    return d.target.y + delta;
+                }
+            );
+        }
+
+        //更新连接线上文字的位置
+        function updateLineText() {
+            edgesText.attr('x', function (d) {
+                    var delta = d.relation === 'arg' ? 15 : -15;
+                    return (d.source.x + d.target.x) / 2 + delta;
+                }
+            );
+            edgesText.attr('y', function (d) {
+                    var delta = d.relation === 'arg' ? 15 : -15;
+                    return (d.source.y + d.target.y) / 2 + delta;
+                }
+            );
+            edgesText.attr('transform', rotateText);
+        }
+
+        function getRate(d) {
+            var offset = {x: d.source.x - d.target.x, y: d.source.y - d.target.y};
+            return radius / Math.sqrt(Math.pow(offset.x, 2) + Math.pow(offset.y, 2));
+        }
+
+        function rotateText(d) {
+            var offset = {x: d.source.x - d.target.x, y: d.source.y - d.target.y};
+            var x = (d.source.x + d.target.x) / 2;
+            var y = (d.source.y + d.target.y) / 2;
+            var angle = Math.atan(offset.y / offset.x) / Math.PI * 180;
+            return 'rotate(' + angle + ' ' + x + ' ' + y + ')';
+        }
+    }
+</script>
+
+</body>
+</html>

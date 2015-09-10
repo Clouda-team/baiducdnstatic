@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh_cn">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/2-0-0/esl.js"></script>
+    <script>
+        require.config({
+            baseUrl: 'assets',
+            packages: [
+                {
+                    name: 'uioc',
+                    location: './uioc-0.3.1/src'
+                }
+            ]
+        });
+
+        require(['common/ioc'], function (ioc) {
+            ioc.getComponent('a', function (a) {
+                console.log(a)
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
