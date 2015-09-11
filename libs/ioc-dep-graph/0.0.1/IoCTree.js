@@ -33,7 +33,7 @@ define(
             this.nodes.forEach(function (node, index) {
                 var config = this.ioc.getComponentConfig(node.id);
                 process.call(this, 'arg', index, config.argDeps || []);
-                process.call(this, 'setter', index, config.setterDeps || []);
+                process.call(this, 'setter(auto)', index, config.setterDeps || []);
                 process.call(this, 'property', index, config.propDeps || []);
                 // TODO: import 配置需要再考虑下怎么展示
                 //process.call(this, 'import', index, config.anonyDeps || []);
