@@ -1,0 +1,26 @@
+{
+  "name": "bootstrap-material",
+  "filename": "js/material.min.js",
+  "description": "Material design theme for Bootstrap 3",
+  "version": "0.3.0",
+  "keywords": [
+    "css",
+    "less",
+    "front-end",
+    "framework",
+    "material",
+    "theme",
+    "web"
+  ],
+  "homepage": "http://fezvrasta.github.io/bootstrap-material-design/",
+  "author": "FezVrasta",
+  "maintainers": [{
+    "name": "FezVrasta",
+    "web": "https://github.com/FezVrasta",
+    "mail": "info@mywebexpression.com"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FezVrasta/bootstrap-material-design.git"
+  }
+}
