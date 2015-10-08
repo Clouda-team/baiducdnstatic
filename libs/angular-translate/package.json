@@ -1,0 +1,27 @@
+{
+  "name": "angular-translate",
+  "version": "2.7.2",
+  "description": "AngularJS translate module",
+  "filename":"angular-translate.js",
+  "main": "angular-translate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-translate/angular-translate"
+  },
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "translate",
+    "client-side"
+  ],
+  "author": "ljiang@incardata.com.cn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "homepage": "https://angular-translate.github.io/"
+}
