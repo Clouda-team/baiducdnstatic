@@ -1,0 +1,26 @@
+{
+  "name": "angular-ui-router",
+  "version": "0.2.15",
+  "description": "AngularJS ui router",
+  "filename":"angular-ui-router.js",
+  "main": "angular-ui-router.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular-ui/ui-router.git"
+  },
+  "keywords": [
+    "angular",
+    "angular ui-router",
+    "browser",
+    "router"
+  ],
+  "author": "Angular UI Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-router/issues"
+  },
+  "homepage": "http://angular-ui.github.io/ui-router"
+}
