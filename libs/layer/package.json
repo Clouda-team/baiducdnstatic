@@ -1,0 +1,21 @@
+{
+    "name": "layer",
+    "filename": "layer.js",
+    "version": "2.0",
+    "description": "弹出组件",
+    "homepage": "http://layer.layui.com/",
+    "keywords": ["layer"],
+    "maintainers": [
+    {
+      "name": "贤心",
+      "web": "http://layer.layui.com/",
+      "mail": "xu@sentsin.com"
+    }
+    ],
+    "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/sentsin/layer"
+    }
+    ]
+  }
