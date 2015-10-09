@@ -1,6 +1,6 @@
 {
   "name": "admin-lte",
-  "filename": "app.min.js",
+  "filename": "js/app.min.js",
   "version": "2.3.0",
   "description": "AdminLTE -- is a fully responsive admin template.",
   "homepage": "https://almsaeedstudio.com/",
