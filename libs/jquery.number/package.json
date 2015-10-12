@@ -1,0 +1,26 @@
+{
+  "name": "jquery.number",
+  "filename": "jquery.number.min.js",
+  "version": "2.1.6",
+  "description": "This is a jQuery plugin which allows developers to easily format numbers for display use. Allows users to replace numbers inline in a document, or return a formatted number for other uses.",
+  "homepage": "https://www.customd.com/articles/14/jquery-number-format-redux",
+  "keywords": [
+    "jquery",
+    "plugin",
+    "number"
+  ],
+  "maintainers": [
+    {
+      "name": "samatcd"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">1.7.0"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/customd/jquery-number.git"
+    }
+  ]
+}
