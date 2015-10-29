@@ -11,8 +11,8 @@
       ]
     }
   ],
-  "filename": "jquery.mobile.min.js",
-  "version": "1.4.3",
+  "filename": "jquery.mobile-1.4.5.min.js",
+  "version": "1.4.5",
   "description": "A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation.",
   "homepage": "http://jquerymobile.com/",
   "keywords": [

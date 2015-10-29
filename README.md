@@ -9,12 +9,16 @@
 
 			
 ```
-  ├── backbone.js               # ... library
-  │   ├── 1.1.0                 # ... version
-  │   |   └── backbone.js       # ... fileanme
-  │   └── 1.1.1
-  │       └── backbone.js
-  └── package.json              # ... package.json
+├── libs
+  	  ├── backbone.js               	# ... library
+	  |      ├── package.json			# ... package.json
+	  |		 |
+      |      ├── 1.1.0                  # ... version
+      |      |   └── backbone.js        # ... fileanme
+      |      └── 1.1.1
+      |          └── backbone.js
+      ├── jquery
+
 ```
 			
 ####Step 2
