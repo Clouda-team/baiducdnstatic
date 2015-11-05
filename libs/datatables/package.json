@@ -1,0 +1,13 @@
+{
+    "name": "datatables",
+    "filename": "jquery.dataTables.min.js",
+    "version": "1.10.9",
+    "description": "很好用的JQuery表格插件",
+    "homepage": "http://www.datatables.net/",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/DataTables/DataTables"
+        }
+    ]
+}
