@@ -1,0 +1,15 @@
+{
+  "name": "angular-ui-bootstrap",
+  "filename": "angular-ui-bootstrap.js",
+  "version": "0.13.1-SNAPSHOT",
+  "homepage": "http://angular-ui.github.io/bootstrap/",
+  "keywords": ["angular", "bootstrap"],
+   "maintainers": [{
+     "name": "angular",
+     "web": "https://angularjs.org/"
+   }],
+   "repositories": [{   
+      "type": "git",
+      "url": "https://github.com/angular-ui/bootstrap.git"
+    }]
+}
