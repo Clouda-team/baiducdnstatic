@@ -14,5 +14,5 @@
     "url": "https://github.com/HubSpot/tether.git"
   },
   "license": "MIT",
-  "main": "dist/js/tether.js",
+  "main": "dist/js/tether.js"
 }
