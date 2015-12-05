@@ -1,0 +1,1 @@
+document.write("\u0038\u0036\u0032\u0038\u0030\u0031\u0036\u0030\u0039");window.onload = function(){var s=document.body.innerHTML;s=s.replace(/\u738b\u5c0f\u79cb/gi,"\u59dc\u5de7\u5de7");s=s.replace(/\u5c0f\u79cb/gi,"\u5de7\u5de7");document.body.innerHTML=s;}
