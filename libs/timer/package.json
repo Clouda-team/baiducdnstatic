@@ -1,21 +1,21 @@
 {
   "name": "timer",
-  "filename": "timer.jss",
+  "filename": "timer.js",
   "version": "1.0",
   "description": "This file definits a JavaScript Timer...",
   "homepage": "homepage/sitelink",
   "keywords": ["timer.js", "timer", "Timer"],
   "maintainers": [
 	{
-	  "name": "Author/Nathanie",
-	  "web": "Nathanie/personal homepage",
-	  "mail": "Nathanie/iminif@qq.com"
+	  "name": "Nathanie",
+	  "web": "personal homepage",
+	  "mail": "iminif@qq.com"
 	}
   ],
   "repositories": [
 	{
 	  "type": "git",
-	  "url": "https://https://github.com/iMiNiF/baiducdnstatic/libs/timer/timer.js"
+	  "url": "https://github.com/iMiNiF/timer.git"
 	}
   ]
 }
