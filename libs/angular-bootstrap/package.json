@@ -3,7 +3,7 @@
     "filename": "ui-bootstrap-tpls.js",
     "version": "0.13.0",
     "description": "Native AngularJS (Angular) directives for Bootstrap.",
-    "homepage": "https://angular-ui.github.io/bootstrap/"
+    "homepage": "https://angular-ui.github.io/bootstrap/",
     "author": {
         "name": "https://github.com/angular-ui/bootstrap/graphs/contributors"
     },
