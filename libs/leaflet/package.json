@@ -1,0 +1,26 @@
+{
+    "name": "leaflet",
+    "filename": "leaflet.js",
+    "version": "0.7.7",
+    "homepage": "http://leafletjs.com",
+    "description": "JavaScript library for mobile-friendly interactive maps",
+    "keywords": [
+      "gis",
+      "map"
+    ],    
+    "maintainers": [
+      {
+        "name": "Vladimir Agafonkin",
+        "web": "http://agafonkin.com/en",
+        "mail": "agafonkin@gmail.com"          
+      },
+      {
+        "name": "Dave Leaver",
+        "mail": "danzel@localhost.geek.nz"        
+      }
+    ],     
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Leaflet/Leaflet.git"
+    }
+}
