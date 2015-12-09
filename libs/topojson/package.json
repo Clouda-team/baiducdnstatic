@@ -1,0 +1,27 @@
+{
+    "name": "topojson",
+    "filename": "topojson.js",
+    "version": "1.6.19",
+    "description": "TopoJSON is an extension of GeoJSON that encodes topology.",
+    "homepage": "https://github.com/mbostock/topojson",
+    "keywords": [
+        "geojson",
+        "topojson"
+    ],    
+    "maintainers": [
+      {
+        "name": "Mike Bostock",
+        "web": "http://bost.ocks.org/mike",
+        "mail": "mbostock@gmail.com"
+      },
+      {
+        "name": "Jason Davies",
+        "web": "http://www.jasondavies.com/",
+        "mail": "jason@jasondavies.com"
+      }
+    ],     
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/mbostock/topojson.git"
+    }
+}
