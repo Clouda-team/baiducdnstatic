@@ -1,0 +1,22 @@
+  {
+    "name": "vue",
+    "filename": "vue.js",
+    "version": "0.12.16",
+    "description": "Simple yet powerful library for building modern web interfaces",
+    "homepage": "http://vuejs.org",
+    "keywords": ["vue", "MVVM"],
+    "maintainers": [
+    {
+      "name": "Evan You",
+      "web": "http://evanyou.me",
+      "mail": "<yyx990803@gmail.com>"
+    }
+    ],
+    "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/vuejs/vue.git"
+    }
+    ]
+  }
+
