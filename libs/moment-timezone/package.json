@@ -1,7 +1,7 @@
   {
     "name": "moment-timezone",
     "filename": "moment-timezone.min.js",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "Parse and display moments in any timezone.",
     "homepage": "http://momentjs.com/timezone/",
    "keywords": [
