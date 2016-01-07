@@ -1,7 +1,7 @@
-{
+﻿{
     "name": "layer",
     "filename": "layer.js",
-    "version": "2.0",
+    "version": "2.1",
     "description": "弹出组件",
     "homepage": "http://layer.layui.com/",
     "keywords": ["layer"],
