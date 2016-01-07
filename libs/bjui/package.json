@@ -1,0 +1,22 @@
+{
+    "name": "bjui",
+    "filename": "bjui/bjui-min.js",
+    "version": "1.2",
+    "description": "BJUI",
+    "homepage": "http://b-jui.com",
+    "keywords": [
+       "bjui",
+       "b-jui"
+   ],
+   "maintainers": [
+       {
+           "name": "bjui"
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "http://git.oschina.net/xknaan/B-JUI"
+       }
+   ]
+}
