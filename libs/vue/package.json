@@ -1,5 +1,6 @@
 {
   "name": "vue",
+  "filename": "vue.js",
   "version": "1.0.6",
   "author": "Evan You <yyx990803@gmail.com>",
   "license": "MIT",

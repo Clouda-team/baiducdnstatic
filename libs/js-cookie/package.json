@@ -18,13 +18,13 @@
   "maintainers": [
   {
     "name": "Klaus Hartl",
-    "web": "https://twitter.com/carhartl",
+    "web": "https://twitter.com/carhartl"
   }
   ],
   "repository": [
   {
     "type": "git",
     "url": "git://github.com/js-cookie/js-cookie.git"
-  },
+  }
   ]
 }
