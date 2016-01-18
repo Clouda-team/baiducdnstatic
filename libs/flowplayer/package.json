@@ -3,7 +3,7 @@
   "version"         : "6.0.4",
   "filename"		: "flowplayer.js",
   "description"		: "Flowplayer is a video platform powering 450 000+ sites all over the web. Instead of stealing your audience it welcomes users with clarity.",
-  "keywords": [video, player],
+  "keywords": ["video", "player"],
   "homepage"        : "http://flowplayer.org/",
   "author"          : {
     "name"  : "Ready",
