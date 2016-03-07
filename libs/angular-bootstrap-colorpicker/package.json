@@ -1,0 +1,22 @@
+{
+  "name": "angular-bootstrap-colorpicker",
+  "version": "3.0.22",
+  "homepage": "https://github.com/buberdds/angular-bootstrap-colorpicker",
+  "description": "Native AngularJS colorpicker directive",
+  "filename": "js/bootstrap-colorpicker-module.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buberdds/angular-bootstrap-colorpicker"
+  },
+  "keywords": [
+    "angular",
+    "color picker",
+    "bootstrap"
+  ],
+  "author": "Michal Zielenkiewicz",
+  "maintainers": [
+    {
+      "name": "Michal Zielenkiewicz"
+    }
+  ]  
+}

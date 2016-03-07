@@ -1,0 +1,26 @@
+{
+    "name": "textAngular",
+    "filename": "textAngular.js",
+    "version": "1.4.1",
+    "homepage": "https://github.com/fraywing/textAngular",
+    "description": "A radically powerful Text-Editor/Wysiwyg editor for Angular.js",
+    "keywords": [
+      "editor",
+      "angular",
+      "wysiwyg"
+    ],    
+    "maintainers": [
+      {
+        "name": "Austin Anderson"
+      },
+      {
+        "name": "Joel Parke",
+        "web": "https://dynazu.com",
+        "mail": "joelparke@gmail.com"        
+      }
+    ],     
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/fraywing/textAngular.git"
+    }
+}
