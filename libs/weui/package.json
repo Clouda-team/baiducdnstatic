@@ -1,0 +1,21 @@
+{
+    "name": "weui",
+    "filename": "weui.css",
+    "version": "0.4.0",
+    "description": "微信端ui",
+    "homepage": "http://weui.github.io/weui/",
+    "keywords": ["weui", "微信UI", "微信端UI"],
+    "maintainers": [
+    {
+      "name": "weui",
+      "web": "https://github.com/weui/weui",
+      "mail": "706403534@qq.com"
+    }
+    ],
+    "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/weui/weui"
+    }
+    ]
+  }
