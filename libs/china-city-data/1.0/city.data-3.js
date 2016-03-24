@@ -1,8 +1,8 @@
 var cityData3 = [{
 	value: '110000',
-	text: '北京市',
+	text: '北京',
 	children: [{
-		value: "110101",
+		value: "110100",
 		text: "北京市",
 		children: [{
 			value: "110101",
@@ -65,7 +65,7 @@ var cityData3 = [{
 	}]
 }, {
 	value: '120000',
-	text: '天津市',
+	text: '天津',
 	children: [{
 		value: "120100",
 		text: "天津市",
@@ -2744,9 +2744,9 @@ var cityData3 = [{
 	}]
 }, {
 	value: '310000',
-	text: '上海市',
+	text: '上海',
 	children: [{
-		value: '310000',
+		value: '310100',
 		text: '上海市',
 		children: [{
 			value: "310101",
@@ -7823,8 +7823,8 @@ var cityData3 = [{
 	value: '500000',
 	text: '重庆',
 	children: [{
-		value: '500000',
-		text: '重庆',
+		value: '500100',
+		text: '重庆市',
 		children: [{
 			value: "500101",
 			text: "万州区"
