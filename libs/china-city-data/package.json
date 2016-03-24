@@ -1,0 +1,20 @@
+{
+  "name": "china-city-data",
+  "filename": "city.data.js",
+  "version": "1.0",
+  "description": "中国省市区的名称和代码",
+  "homepage": "",
+  "keywords": ["city", "china"],
+  "maintainers": [
+	{
+	  "name": "wyman liu",
+	  "mail": "hahawyman@163.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+
+	}
+  ]
+}
