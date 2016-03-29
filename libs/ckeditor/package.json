@@ -1,0 +1,13 @@
+{
+    "name": "ckeditor",
+    "filename": "ckeditor.js",
+    "version": "4.5.5",
+    "description": "CKEditor 4 - The best browser-based WYSIWYG editor",
+    "homepage": "http://ckeditor.com/",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/ckeditor/ckeditor-dev.git"
+        }
+    ]
+}
