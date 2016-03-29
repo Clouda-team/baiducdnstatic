@@ -1,0 +1,24 @@
+/* reset */
+body, html{
+	padding: 0px;
+	margin: 0px;
+}
+p{
+	text-indent: 2em;
+}
+
+/*general*/
+.mainContainer{
+	width: 960px;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+/* division */
+#header h1{
+	margin: 0px;
+}
+
+/* aid */
+.mw800 { max-width: 800px }
+.tl {text-align: left !important;}

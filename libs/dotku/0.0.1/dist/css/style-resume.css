@@ -1,0 +1,40 @@
+/* Reset HTML */
+html, body {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #F2F2F2;
+}
+a {
+	color: black;
+}
+a:hover {
+	text-decoration: none;
+}
+dd, dt, dl {
+	padding-right: 5px;
+}
+p {
+	text-indent: 2em;
+}
+/* Reset Bootstrap */
+.container {
+	max-width: 720px;
+}
+.footer {
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	background-color: #e6e6e6;
+	margin-top: 20px;
+}
+
+
+/* Customized */
+.clear {
+	clear: both;
+}
+.title {
+	font-weight: bold;
+}

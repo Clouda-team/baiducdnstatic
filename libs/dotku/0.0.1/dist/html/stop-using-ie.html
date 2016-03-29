@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stop Using Old IE</title>
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/lib/dotku/dist/css/general-cn.css" rel="stylesheet"/>
+    <script src="/lib/jquery-1.9.0/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+  
+    <!--[if lt IE 9 ]><html class="ie ie6" lang="en">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>警告!</strong> 您正在使用旧版的浏览器，请<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie">升级到最新版本</a>！
+</div><![endif]-->
+    <div class="container">
+      <h1>Stop Using Old IE</h1>
+      <div>必备条件:</div>
+      <ol>
+        <li>确保你的页面已经加入 bootstrap （包括 jQuery 1.x）</li>
+      </ol>
+      <p>在页面中加入以下代码就好。</p>
+      <pre>&lt;!--[if lt IE 7 ]&gt;
+  &lt;div class=&quot;alert alert-warning alert-dismissible&quot; role=&quot;alert&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+  &lt;strong&gt;警告!&lt;/strong&gt; 您正在使用旧版的浏览器，请&lt;a href=&quot;http://windows.microsoft.com/zh-cn/internet-explorer/download-ie&quot;&gt;升级到最新版本&lt;/a&gt;！
+  &lt;/div&gt;
+&lt;![endif]--&gt;</pre>
+    </div>
+  </body>
+</html>

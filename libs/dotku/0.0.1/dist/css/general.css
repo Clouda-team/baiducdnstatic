@@ -1,0 +1,77 @@
+/* Reset */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset{margin:0;padding:0;}
+body, html {
+    font-family: 'Microsoft YaHei UI','Microsoft YaHei','Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Hiragino Sans GB W3','WenQuanYi Micro Hei',sans-serif;
+}
+
+ul, ol {
+  margin-left: 40px;
+}
+
+p {
+    text-indent: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+    color: #0773CA;
+}
+a:visited {
+    color: #A7A3AA;
+}
+a:hover {
+    text-decoration: underline;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  margin: 5px;
+}
+img {
+  border: 0px;
+}
+::selection {
+    background-color: #FFFAA5;
+    color: #123;
+}
+
+/* Layout */
+#header h1 {
+    margin: 0px;
+}
+#mainbody h2:first-child {
+    margin-top: 0px;
+}
+
+/* Class */
+.mainContainer {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    padding: 20px;
+}
+.mainTable {
+    border-collapse: collapse;
+}
+.mainTable td, .mainTable th {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.mainTable th {
+    background-color: #eee;
+}
+.textTop, .textTop td {
+    vertical-align: top;
+}
+.textTop td p:first-child {
+    margin-top: 0px;
+}
+.textTop td p:last-child {
+    margin-bottom: 0px;
+}
+
+/* ShortCuts */
+.mw800 { max-width: 800px}

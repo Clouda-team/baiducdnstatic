@@ -1,0 +1,11 @@
+{
+    "name": "dotku",
+    "filename": "dist/css/general-cn.css",
+    "version": "0.0.1",
+    "description": "dotku is used to support international style, also collect some famous libraries css, 
+    such as bootstrap sticky-footer.",
+    "homepage": "http://weijinglin.name/",
+    "keywords": [
+       "css", "international"
+    ]
+}
