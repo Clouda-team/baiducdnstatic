@@ -3,14 +3,14 @@
     "filename": "typo.css",
     "version": "2.0",
     "description": "一致化浏览器排版效果，构建最适合中文阅读的网页排版",
-    "homepage": "http://typo.sofish.de",
+    "homepage": "http://typo.sofi.sh/",
     "keywords": [
        "typo", "css"
    ],
    "maintainers": [
        {
            "name": "Sofish Lin",
-           "web": "http://sofish.de/" 
+           "web": "http://sofi.sh/" 
        }
    ],
    "repositories": [
