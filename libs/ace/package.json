@@ -1,0 +1,21 @@
+{
+  "name": "ace",
+  "filename": "ace.js",
+  "version": "1.2.3",
+  "description": "Ace is an embeddable code editor written in JavaScript. It matches the features and performance of native editors such as Sublime, Vim and TextMate. It can be easily embedded in any web page and JavaScript application.",
+  "homepage": "http://ace.c9.io",
+  "keywords": ["ace", "code", "editor"],
+  "maintainers": [
+    {
+      "name": "nightwing",
+      "web": "https://github.com/nightwing",
+      "mail": "amirjanyan@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/ajaxorg/ace"
+    }
+  ]
+}
