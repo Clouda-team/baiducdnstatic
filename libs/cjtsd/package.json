@@ -1,0 +1,40 @@
+{
+  "name": "cjtsd",
+  "filename": "cjtsd.min.js",
+  "version": "1.0.8",
+  "description": "Compact JSON Time Series Data library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/james-hu/cjtsd-js.git"
+  },
+  "keywords": [
+    "CJTSD",
+    "json",
+    "time series",
+    "data",
+    "table",
+    "chart"
+  ],
+  "author": "James Hu",
+  "maintainers": [
+  	{
+  	  "name": "James Hu",
+  	  "web": "https://github.com/james-hu",
+  	  "mail": "james.hu.ustc@hotmail.com"
+  	}
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/james-hu/cjtsd-js/issues"
+  },
+  "homepage": "https://github.com/james-hu/cjtsd-js#readme",
+  "npmName": "cjtsd",
+  "npmFileMap": [
+    {
+      "basePath": "dist",
+      "files": [
+        "**/*"
+      ]
+    }
+  ]
+}
