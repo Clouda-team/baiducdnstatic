@@ -1,0 +1,30 @@
+{
+  "name": "js-cookie",
+  "filename":"js.cookie.js",
+  "version": "2.0.4",
+  "description": "A simple, lightweight JavaScript API for handling cookies",
+  "homepage": "https://github.com/js-cookie/js-cookie",
+  "keywords": [
+    "jquery-plugin",
+    "cookie",
+    "cookies",
+    "browser",
+    "amd",
+    "commonjs",
+    "client",
+    "js-cookie",
+    "browserify"
+  ],
+  "maintainers": [
+  {
+    "name": "Klaus Hartl",
+    "web": "https://twitter.com/carhartl"
+  }
+  ],
+  "repository": [
+  {
+    "type": "git",
+    "url": "git://github.com/js-cookie/js-cookie.git"
+  }
+  ]
+}
