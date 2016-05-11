@@ -1,0 +1,38 @@
+{
+  "name": "blazy",
+  "version": "1.6.2",
+  "description": "A fast lightweight pure JavaScript script for lazy loading and multi-serving images, iframes, videos and more.",
+  "main": "blazy.js",
+  "keywords": [
+    "blazy",
+    "blazyjs",
+    "blazy.js",
+    "lazy",
+    "lazyload",
+    "lazyloading",
+    "image",
+    "images",
+    "iframe",
+    "video",
+    "unity",
+    "retina",
+    "responsive",
+    "performance"
+  ],
+  "author": "Bjørn Klinggaard (http://dinbror.dk/blazy)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dinbror/blazy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dinbror/blazy/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/dinbror/blazy",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "example": "example"
+  }
+}
