@@ -1,0 +1,21 @@
+{
+  "name": "metro",
+  "filename": "metro.js",
+  "version": "3.0.14",
+  "description": "Metro UI CSS 是一套用来创建类似于Windows 8 Metro UI风格网站的样式. 这组风格被开发成一个独立的解决方案。",
+  "homepage": "http://metroui.org.ua/",
+  "keywords": ["metro", "metro ui", "地铁"],
+  "maintainers": [
+  {
+    "name": "DIMON.VIC",
+    "web": "http://www.cxocx.com/",
+    "mail": "dimonwei@qq.com"
+  }
+  ],
+  "repositories": [
+  {
+    "type": "git",
+    "url": "https://github.com/olton/Metro-UI-CSS"
+  }
+  ]
+}
