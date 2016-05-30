@@ -1,0 +1,21 @@
+  {
+    "name": "materialize",
+    "filename": "materialize.js",
+    "version": "0.97.5",
+    "description": "Builds Materialize distribution packages",
+    "homepage": "http://materializecss.com/",
+    "keywords": ["materialize", "materializecss", "fontend"],
+    "maintainers": [
+  	{
+  	  "name": "Alvin Wang, Alan Chang",
+  	  "web": "http://materializecss.com/",
+  	  "mail": ""
+  	}
+    ],
+    "repositories": [
+  	{
+  	  "type": "git",
+  	  "url": "git://github.com/Dogfalo/materialize.git"
+  	}
+    ]
+  }
