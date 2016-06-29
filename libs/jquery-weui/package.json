@@ -1,0 +1,21 @@
+{
+    "name": "jquery-weui",
+    "filename": "jquery-weui/jquery-weui.min.js",
+    "version": "0.7.1",
+    "description": "Jquery WeChat UI",
+    "homepage": "http://www.oschina.net/news/73868/jquery-weui-v0-7-1",
+    "keywords": [
+       "weui"
+   ],
+   "maintainers": [
+       {
+           "name": "I don't know"
+       } 
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/lihongxun945/jquery-weui"
+       }
+   ]
+}
