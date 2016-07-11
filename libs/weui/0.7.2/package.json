@@ -1,0 +1,23 @@
+{
+  "name": "jquery-weui",
+  "filename": "jquery-weui.js",
+  "version": "0.7.2",
+  "description": "Simple HTML5 Charts using the canvas element.",
+  "homepage": "https://lihongxun945.github.io/jquery-weui/",
+  "keywords": [
+    "jquery-weui.js","jquery-weui","weui.js","weui"
+  ],
+  "maintainers": [
+    {
+      "name": "@言川",
+      "web": "https://github.com/lihongxun945/",
+      "mail": ""
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/lihongxun945/jquery-weui"
+    }
+  ]
+}
