@@ -1,0 +1,21 @@
+{
+  "name": "项目名",
+  "filename": "主文件名，比如 abc.js",
+  "version": "1.0",
+  "description": "项目简介",
+  "homepage": "项目主页/网站地址",
+  "keywords": ["关键字1", "关键字2", "关键字3"],
+  "maintainers": [
+	{
+	  "name": "作者/维护者",
+	  "web": "作者/维护者个人主页",
+	  "mail": "作者/维护者邮件"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "开源库地址"
+	}
+  ]
+}
