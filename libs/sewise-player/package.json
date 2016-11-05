@@ -1,0 +1,22 @@
+{
+    "name": "sewise-player",
+    "filename": "sewise.player.min.js",
+    "version": "1.0",
+    "description": "OSMF + Flex based flash video player, which provides most needed functionality in nowadays.",
+    "homepage": "https://github.com/jackzhang1204/sewise-player",
+    "keywords": [
+       "video", "audio", "flash", "osmf", "player"
+   ],
+   "maintainers": [
+       {
+           "name": "jackzhang1204",
+           "web": "https://github.com/jackzhang1204/sewise-player" 
+       }   
+	],
+   "repositories": [
+        {   
+            "type": "git",
+            "url": "https://github.com/jackzhang1204/sewise-player.git"
+        }
+   ]
+}
