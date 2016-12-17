@@ -1,0 +1,18 @@
+{
+  "name": "dstore",
+  "filename": "Store.js",
+  "version": "1.1.1",
+  "description": "The dstore package is a data infrastructure framework, providing the tools for modelling and interacting with data collections and objects. dstore is designed to work with a variety of data storage mediums, and provide a consistent interface for accessing data across different user interface components.",
+  "homepage": "http://dstorejs.io/",
+  "keywords": [
+    "javascript", "dojo "
+  ],
+  "maintainers": [{
+    "name": "SitePen",
+    "web": "https://www.sitepen.com/"
+  }],
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/SitePen/dstore"
+  }]
+}
