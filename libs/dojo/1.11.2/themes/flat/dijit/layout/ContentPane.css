@@ -1,0 +1,15 @@
+
+.flat .dijitContentPane {
+  background-color: #fff;
+  padding: 8px;
+}
+.flat .dijitTabContainerTop-dijitContentPane,
+.flat .dijitTabContainerLeft-dijitContentPane,
+.flat .dijitTabContainerBottom-dijitContentPane,
+.flat .dijitTabContainerRight-dijitContentPane,
+.flat .dijitAccordionContainer-dijitContentPane {
+  background-color: #fff;
+  padding: 8px;
+  left: 0 !important;
+  top: 0 !important;
+}
