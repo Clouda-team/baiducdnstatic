@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Gridx Export</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+
+		.testDataWarningStatus,
+		.testDataCriticalStatus,
+		.testDataNormalStatus {
+			background-image: url("support/data/status.png");
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.testDataWarningStatus {
+			background-position: 0 -2px;
+		}
+
+		.testDataNormalStatus {
+			background-position: -18px -2px;
+		}
+
+		.testDataCriticalStatus {
+			background-position: -36px -2px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_exporter.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Gridx Export
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td class='pane'>
+			<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout,
+				autoWidth: true,
+				selectRowTriggerOnCell: true,
+				modules: modules
+			'></div>
+		</td>
+		<td id='ctrlPane' class='pane'></td>
+	</tr></table>
+
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Tree Grid
+	</h1>
+	<h2>All expandoes in one column, sync store</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: treeStore,
+		structure: layout1,
+		paginationBarSizes: [1, 2, 0],
+		selectRowTriggerOnCell: true,
+		modules: treeModules,
+		treeAutoExpandOnFilter: true
+	'></div>
+	<div id="resultDialog" data-dojo-type="dijit.Dialog" data-dojo-props='title:"Export Results"'>
+		<textarea id="resultArea" style="width: 540px; height: 300px;" data-dojo-type="dijit.form.SimpleTextarea"
+			data-dojo-props="readOnly: true"></textarea>
+	</div>
+</body>
+</html>

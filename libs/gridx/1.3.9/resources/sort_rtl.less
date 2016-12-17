@@ -1,0 +1,49 @@
+//@import "sort_less.less";
+
+.gridxRtl {
+	/*Single Sorting*/
+	.gridxArrowButtonNode {
+		float: left;
+		margin-right: 0;
+		margin-left: 7px;
+	}
+
+	/* NestedSorting */
+	.gridxSortNode {
+		text-align: right;
+	}
+
+	.gridxSortBtn {
+		float: left;
+	}
+
+	.gridxSortBtnNested {
+		.sortIcon(arrowUpHollowBlack);
+		text-align: right;
+	}
+
+	.gridxCell:hover, .gridxCellSortFocus {
+		.gridxSortBtn {
+			border-left: none;
+		}
+	}
+
+	.gridxCellSortedAsc .gridxSortBtnNested {
+		.sortIcon(arrowUpSolidBlack);
+	}
+	.gridxCellSortedDesc .gridxSortBtnNested {
+		.sortIcon(arrowDownSolidBlack);
+	}
+	.gridxCell:hover.gridxCellSortedAsc .gridxSortBtnNested,
+	.gridxCellSortFocus.gridxCellSortedAsc .gridxSortBtnNested {
+		.sortIcon(arrowDownHollowBlack);
+	}
+	.gridxCell:hover.gridxCellSortedDesc .gridxSortBtnNested,
+	.gridxCellSortFocus.gridxCellSortedDesc .gridxSortBtnNested {
+		.sortIcon(crossBlack);
+	}
+	.gridxNestedSorted .gridxCell:hover .gridxSortBtnSingle,
+	.gridxNestedSorted .gridxCellSortFocus .gridxSortBtnSingle {
+		.sortIcon(arrowUpHollowBlack);
+	}
+}

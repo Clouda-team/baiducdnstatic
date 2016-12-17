@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Virtual Scrolling</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 700px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_virtualScroller.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Virtual Scrolling
+	</h1>
+	<h2>Big Client Store (2000 rows)</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: clientStore,
+		structure: layout,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<h2>Huge Server Store (100000 rows, lazy scroll)</h2>
+	<p>Please note - All data are loaded from a <a href="support/stores/QueryReadStore.php?start=0&count=100">third party server</a>, so loading speed will be highly dependent on the network and stability of the service.</p>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: serverStore,
+		structure: serverLayout,
+		pageSize: 30,
+		vScrollerLazy: true,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/TouchScroll",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+</body>
+</html>

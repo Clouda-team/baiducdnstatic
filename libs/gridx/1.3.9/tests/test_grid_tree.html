@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Tree Grid</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 400px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_tree.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Tree Grid
+	</h1>
+	<h2>All expandoes in one column, sync store</h2>
+	<br/>
+	<button onclick='addRow();'>add row</button> into <input type='text' id='parentIdInput'/>|
+	<button onclick='deleteRow();'>delete row</button> with id <input type='text' id='deleteRowId'/>
+	<br/>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout1,
+		paginationBarSizes: [1, 2, 0],
+		selectRowTriggerOnCell: true,
+		modules: mods,
+		treeAutoExpandOnFilter: true
+	'></div>
+	<h2>All expandoes in one column, async store</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: storeAsync,
+		structure: layout2,
+		paginationBarSizes: [1, 2, 0],
+		modules: mods1
+	'></div>
+	<h2>Expandoes in different columns (nested), async store</h2>
+	<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: storeNested,
+		structure: layout3,
+		treeNested: true,
+		paginationBarSizes: [1, 2, 0],
+		modules: mods1
+	'></div>
+	<h2>Customized expando positions (nested), async store</h2>
+	<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: storeNested,
+		structure: layout4,
+		treeNested: true,
+		paginationBarSizes: [1, 2, 0],
+		modules: mods1
+	'></div>
+</body>
+</html>

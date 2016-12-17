@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custome Style Cells in Grid</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 600px;
+			height: 600px;
+		}
+
+		.gridxHeader .gridxCell {
+			text-align: center;
+		}
+
+		.gridxBody .gridxCell {
+			border-color: transparent;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_customStyleCell.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Custom Style Cells in Grid
+	</h1>
+	<div data-dojo-id='store' data-dojo-type='dojo.store.Memory' data-dojo-props='
+		data: items
+	'></div>
+	<h2>Use "style" function in column definition</h2>
+	<div data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		autoWidth: true,
+		autoHeight: true,
+		bodyRowHoverEffect: false,
+		bodyStuffEmptyCell: false,
+		rowHeaderCellProvider: function(row){
+			return row.id;
+		},
+		modules: [
+			"gridx/modules/RowHeader"
+		]
+	'></div>
+</body>
+</html>

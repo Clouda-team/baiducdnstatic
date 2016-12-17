@@ -1,0 +1,153 @@
+.viewport {
+	width: 960px;
+	margin: auto;
+}
+
+.header {
+	width: 960px;
+	position: relative;
+	padding: 2px;
+	margin: 2px 0 10px 0;
+}
+
+.header h1 {
+	color: green;
+	font-size: 40px;
+	font-weight: bolder;
+}
+
+.header span {
+	color: green;
+	font-size: 16px;
+	font-weight: bolder;
+}
+
+.links {
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+	font-weight: bolder;
+}
+
+.links a {
+	margin: 0 5px;
+}
+
+.main {
+	position: relative;
+}
+
+#menulist {
+	float: right;
+	width: 240px;
+	height: 600px;
+	border: 1px solid green;
+	margin: 0;
+	overflow-y: auto;
+	padding: 0;
+}
+
+#menulist .dijitAccordionContainer {
+	height: 100%;
+}
+
+.menulink {
+	padding: 3px 10px;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.menulink:hover {
+	text-decoration: underline;
+	color: blue;
+	background-color: #E2F9FF;
+}
+
+.menuindex {
+	margin-right: 5px;
+}
+
+.menulink, .menulink:hover, 
+.feature, .feature:hover, 
+.featureHighlighted {
+	transition-property: background-color padding-left;
+	-webkit-transition-property: background-color padding-left;
+	-moz-transition-property: background-color padding-left;
+	-o-transition-property: background-color padding-left;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+#gallery {
+	width: 700px;
+	height: 600px;
+	overflow: auto;
+	border-style: solid;
+	border-color: green;
+	border-width: 1px 1px 1px 0;
+}
+
+.dj_ie {
+	overflow: scroll;
+}
+
+#menulist, #gallery {
+	box-shadow: 5px 5px 10px #555;
+	-moz-box-shadow: 5px 5px 10px #555;
+	-webkit-box-shadow: 5px 5px 10px #555;
+}
+
+.feature {
+	border-style: solid;
+	border-color: green;
+	border-width: 1px 1px 0 1px;
+	padding: 5px 20px 5px 5px;
+	height: 130px;
+	cursor: pointer;
+}
+
+.feature:first-child {
+	border-width: 0 1px;
+}
+
+.feature:hover,
+.featureHighlighted {
+	background-color: #E2F9FF;
+	padding-left: 15px;
+}
+
+.feature a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+.feature img {
+	float: left;
+	/*width: 200px;*/
+	/*height: 130px;*/
+	margin-right: 10px;
+}
+.dj_webkit .feature img {
+	width: 200px;
+	height: 130px;
+}
+
+
+.feature div {
+	float: left;
+	width: 430px;
+}
+
+.feature h3 {
+	margin: 5px;
+	color: darkblue;
+}
+
+.feature p {
+	margin: 3px;
+}

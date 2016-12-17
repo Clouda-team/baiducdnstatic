@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Selection Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 300px;
+		}
+		.testboard {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.dj_rtl .testboard {
+			right: auto;
+			left: 0;
+		}
+		#ctrlPane {
+			height: 300px;
+		}
+		
+		#ctrlPane2{
+			height: 300px;
+			padding: 0 20px;
+			vertical-align: top;
+			width: 200px;
+		}
+		
+		#ctrlPane2 .dijitAccordionContainer {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_unselectableRow.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid UnSelectable Row Selection Test</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td>
+			<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout,
+				modules: [
+					"gridx/modules/RowHeader",
+					"gridx/modules/select/Row",
+					"gridx/modules/SingleSort",
+					"gridx/modules/IndirectSelect",
+					"gridx/modules/VirtualVScroller"
+				],
+				selectRowTriggerOnCell: true,
+				indirectSelectAll: true,
+				selectRowUnselectable:{
+					0: true,
+					11: true
+				}
+			'></div>
+		</td>
+		<td id='ctrlPane'>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<br />
+	<h1 class='title'>Grid UnSelectable Row extended Selection Test</h1>	
+	<table border=0 cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+			<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+					cacheClass: "gridx/core/model/cache/Async",
+					store: store,
+					structure: layout,
+					modules: [
+						"gridx/modules/RowHeader",
+						"gridx/modules/IndirectSelect",
+						"gridx/modules/extendedSelect/Row",
+						"gridx/modules/VirtualVScroller",
+					],
+					selectRowTriggerOnCell: true,
+					selectRowUnselectable: {
+						0: true,
+						1: true,
+						2: true,
+						5: true,
+						10: true,
+						15: true,
+					}
+				'></div>
+			</td>
+			<td id='ctrlPane2'>
+			</td>
+		</tr>
+		
+	</table>
+	
+	<h1 class='title'>Grid UnSelectable IndirectSelectColumn Test</h1>	
+	<table border=0 cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+			<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+					cacheClass: "gridx/core/model/cache/Async",
+					store: store,
+					structure: layout,
+					modules: [
+						//"gridx/modules/RowHeader",
+						"gridx/modules/IndirectSelectColumn",
+						"gridx/modules/extendedSelect/Row",
+						"gridx/modules/VirtualVScroller",
+					],
+					selectRowTriggerOnCell: true,
+					selectRowUnselectable: {
+						0: true,
+						1: true,
+						2: true,
+						5: true,
+						10: true
+					}
+				'></div>
+			</td>
+			<td id='ctrlPane3'>
+			</td>
+		</tr>
+		
+	</table>	
+	
+	<h1 class='title'>Grid Tree UnSelectable Row Test</h1>	
+	<p>use dijit button to set selectable of each line</p>
+	<table border=0 cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+			<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+					cacheClass: "gridx/core/model/cache/Sync",
+					store: treeStore,
+					structure: treeLayout,
+					modules: [
+						"gridx/modules/Tree",
+						"gridx/modules/RowHeader",
+						"gridx/modules/select/Row",
+						//"gridx/modules/extendedSelect/Row",
+						"gridx/modules/RowHeader",
+						"gridx/modules/CellWidget",
+						"gridx/modules/IndirectSelect",
+						"gridx/modules/VirtualVScroller",
+					],
+					selectRowTriggerOnCell: false,
+					//selectRowUnselectable: {
+						//		"item-1": true
+					//}					
+				'></div>
+			</td>
+			<td id='ctrlPane4'>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

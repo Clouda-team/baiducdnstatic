@@ -1,0 +1,162 @@
+define({     
+//Body
+	loadingInfo: "Kargatzen...",
+	emptyInfo: "Ez dago bistaratzeko elementurik",
+	loadFailInfo: "Ezin izan dira datuak kargatu!",
+	loadMore: "Kargatu gehiago",
+	loadMoreLoading: "Kargatzen...",
+	loadPrevious: "Kargatu aurrekoa",
+	loadPreviousLoading: "Kargatzen...",
+
+//FilterBar
+	"clearFilterDialogTitle": "Garbitu iragazkia",
+	"filterDefDialogTitle": "Iragazi",
+	"defaultRuleTitle": "Araua",
+	"ruleTitleTemplate": "${ruleNumber} araua",
+	"noFilterApplied": "Ez da iragazkirik aplikatu.",
+	"defineFilter": "Zehaztu iragazkia",
+	"conditionEqual": "berdina",
+	"conditionNotEqual": "ezberdina",
+	"conditionLess": "hau baino txikiagoa da:",
+	"conditionLessEqual": "hau baino txikiagoa edo berdina",
+	"conditionGreater": "hau baino handiagoa da:",
+	"conditionGreaterEqual": "hau baino handiagoa edo berdina",
+	"conditionContain": "hau dauka:",
+	"conditionIs": "da",
+	"conditionStartWith": "honekin hasten da:",
+	"conditionEndWith": "honekin amaitzen da:",
+	"conditionNotContain": "ez dauka",
+	"conditionIsNot": "ez da",
+	"conditionNotStartWith": "ez da honekin hasten",
+	"conditionNotEndWith": "ez da honekin amaitzen",
+	"conditionBefore": "honen aurretik",
+	"conditionAfter": "honen ostean",
+	"conditionRange": "tartea",
+	"conditionIsEmpty": "hutsik dago",
+	"all": "guztiak",
+	"any": "edozein",
+	"relationAll": "arau guztiak",
+	"waiRelAll": "Bat etorri ondoko arau guztiekin:",
+	"relationAny": "edozein arau",
+	"waiRelAny": "Bat etorri ondoko arauetako edozeinekin:",
+	"relationMsgFront": "Bat datozenak",
+	"relationMsgTail": "",
+	"and": "eta",
+	"or": "edo",
+	"addRuleButton": "Gehitu araua",
+	"waiAddRuleButton": "Gehitu arau berria",
+	"removeRuleButton": "Kendu araua",
+	"waiRemoveRuleButtonTemplate": "Kendu ${0} araua",
+	"addRuleButton": "Gehitu iragazki-araua",
+	"cancelButton": "Utzi",
+	"waiCancelButton": "Bertan behera utzi elkarrizketa hau",
+	"clearButton": "Garbitu",
+	"waiClearButton": "Garbitu iragazkia",
+	"filterButton": "Iragazi",
+	"waiFilterButton": "Bidali iragazkia",
+	"columnSelectLabel": "Zutabea:",
+	"waiColumnSelectTemplate": "${0} arauaren zutabea",
+	"conditionSelectLabel": "Baldintza:",
+	"waiConditionSelectTemplate": "${0} arauaren baldintza",
+	"valueBoxLabel": "Balioa:",
+	"waiValueBoxTemplate": "Idatzi balioa ${0} arauaren iragazkian",
+	"rangeTo": "honaino",
+	"rangeTemplate": "${0}(e)tik ${1}(e)ra",
+	"statusTipHeaderColumn": "Zutabea",
+	"statusTipHeaderCondition": "Arauak",
+	"statusTipTitle": "Iragazki-barra",
+	"statusTipMsg": "Egin klik iragazki-barran ${0}(e)ko balioak iragazteko.",
+	"anycolumn": "edozein zutabe",
+	"statusTipTitleNoFilter": "Iragazki-barra",
+	"statusTipTitleHasFilter": "Iragazi",
+	"statusTipRelPre": "Bat datozenak",
+	"statusTipRelPost": "arauak.",
+	"statusTipHeaderAll": "Bat egin arau guztiekin",
+	"statusTipHeaderAny": "Bat egin edozein araurekin.",
+	"defaultItemsName": "elementuak",
+	"filterBarMsgHasFilterTemplate": "${0}/${1} ${2} erakusten.",
+	"filterBarMsgNoFilterTemplate": "Ez da iragazkirik aplikatu.",
+	"filterBarDefButton": "Zehaztu iragazkia",
+	"waiFilterBarDefButton": "Iragazi taula",
+	"a11yFilterBarDefButton": "Iragazi...",
+	"filterBarClearButton": "Garbitu iragazkia",
+	"waiFilterBarClearButton": "Garbitu iragazkia",
+	"closeFilterBarBtn": "Itxi iragazki-barra",
+	"clearFilterMsg": "Honek iragazkia kendu eta erregistro erabilgarri guztiak bistaratuko ditu. ",
+	"anyColumnOption": "Edozein zutabe",
+	"trueLabel": "Egia",
+	"falseLabel": "Gezurra",
+	"radioTrueLabel": "'Egia' balioa",
+	"radioFalseLabel": "'Gezurra' balioa",
+	"beginTimeRangeLabel": "Denbora-tartearen balioaren hasiera",
+	"endTimeRangeLabel": "Denbora-tartearen balioaren amaiera",
+	"beginDateRangeLabel": "Denbora-tartearen balioaren hasiera",
+	"endDateRangeLabel": "Denbora-tartearen balioaren amaiera",
+	"startsWithExpr": "${0}*",
+
+//NestedSort
+	singleSort: "Ordenazio bakuna",
+	nestedSort: "Ordenazio habiaratua",
+	ascending: "Egin klik goranzko ordenan sailkatzeko",
+	descending: "Egin klik beheranzko ordenan sailkatzeko",
+	sortingState: "${0} - ${1}",
+	unsorted: "Ez ordenatu zutabe hau",
+	waiSingleSortLabel: "${0} - honen arabera dago ordenatuta: ${1}. Hautatu honen arabera ordenatzea: ${2}",
+	waiNestedSortLabel:"${0} - honen arabera dago habia-ordenatuta: ${1}. Hautatu honen arabera habia-ordenatzea: ${2}",
+
+//PaginationBar
+	pagerWai: 'Bilagailua',
+
+	pageIndex: '${0}',
+	pageIndexTitle: '${0} orria',
+
+	firstPageTitle: 'Lehen orria',
+	prevPageTitle: 'Aurreko orria',
+	nextPageTitle: 'Hurrengo orria',
+	lastPageTitle: 'Azken orria',
+
+	pageSize: '${0}',
+	pageSizeTitle: '${0} elementu orrialdeko',
+	pageSizeAll: 'Guztiak',
+	pageSizeAllTitle: 'Elementu guztiak',
+
+	description: '${0} - ${1} / ${2} elementu.',
+	descriptionEmpty: 'Sareta hutsik dago.',
+
+	summary: 'Guztira: ${0}',
+	summaryWithSelection: 'Guztira: ${0} Hautatuta: ${1}',
+
+	gotoBtnTitle: 'Joan orri zehatz batera',
+
+	gotoDialogTitle: 'Joan orrira',
+	gotoDialogMainMsg: 'Zehaztu orriaren zenbakia:',
+	gotoDialogPageCount: '(${0} orri)',
+	gotoDialogOKBtn: 'Joan',
+	gotoDialogCancelBtn: 'Utzi',
+	// for drop down pagination bar
+	pageLabel: 'Orria',
+	pageSizeLabel: 'Errenkadak',
+
+//QuickFilter
+	filterLabel: 'Iragazi',
+	clearButtonTitle: 'Garbitu iragazkia',
+	buildFilterMenuLabel: 'Eraiki iragazkia&hellip;',
+	apply: 'Aplikatu iragazkia',
+
+//Sort
+	helpMsg: '${0} - Egin klik ordenatzeko edo egin klik kontrol sakatzen duzun bitartean ordenazio bat gehitzeko ',
+	singleHelpMsg: '${0} - Egin klik ordenatzeko',
+	priorityOrder: '${0} ordena-lehentasuna',
+
+//SummaryBar
+	summaryTotal: 'Guztira: ${0}',
+	summarySelected: 'Hautatuta: ${0}',
+	summaryRange: 'Tartea: ${0}-${1}',	//need translation
+
+//Other
+	indirectSelectAll: "Sakatu zuriune-barra guztia hautatzeko.",	//need translation
+	indirectDeselectAll: "Sakatu zuriune-barra guztia desautatzeko.",	//need translation
+	treeExpanded: "Kontrol + ezkerreranzko gezia errenkada hau tolesteko.",	//need translation
+	treeCollapsed: "Kontrol + eskumaranzko gezia errenkada hau zabaltzeko."	//need translation
+});
+

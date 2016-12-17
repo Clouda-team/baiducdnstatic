@@ -1,0 +1,13 @@
+{
+	"undef": true,
+	"unused": false,
+	"strict": false,
+	"eqeqeq": false,
+
+	"laxbreak": true,
+
+	"smarttabs": true,
+	"supernew": false,
+
+	"predef": [ "define", "window", "document", "setTimeout", "clearTimeout", "console", "dojo", "dijit"]
+}

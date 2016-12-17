@@ -1,0 +1,71 @@
+<html>
+<head>
+	<title>Show flexible selection Plain HTML</title>
+	<link rel='stylesheet' href="support/common.css" />
+	<link rel='stylesheet' href="support/GridConfig.css" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript" src="../../dojo/dojo.js" 
+				djConfig="isDebug: false, parseOnLoad: false, extraLocale: ['en-us']" >
+	</script>
+	
+	<script src="data.js" type="text/javascript">
+	</script>
+	
+
+	<script type="text/javascript">
+ 		 require([
+			'dojo',
+			'dojo/parser',
+			'gridx/Grid',
+			'gridx/allModules',
+			'gridx/core/model/cache/Sync',
+		  	'dojo/store/Memory',
+			'dojo/request',
+			'dijit/layout/BorderContainer',
+			'dijit/layout/ContentPane',
+			'dojo/domReady!'
+		], 
+		function(dojo, parser, Grid, modules, Cache, Memory,request) {	 					
+			//tableStructure = headerData;
+			for ( var iIndex =0; iIndex < valueData.length ; iIndex++){
+				
+				valueData[iIndex]["id"] = iIndex;
+			}
+			var count = valueData.length;
+			valudeData = valueData.splice(count, valueData.length-count);
+			dataStore = new Memory({ data: valueData});
+			parser.parse();
+		});
+	</script>
+</head>
+
+<body class="claro">
+	<div id='gridContainer'
+		jsid='gridContainer' 
+		data-dojo-type='gridx.Grid' data-dojo-props="
+			title: 'column lock and row lock',
+			guide: [
+				'left top cells are both column-locked and row locked.'
+			],
+			cache: 'gridx/core/model/cache/Async',
+			store: dataStore,
+			size: 100,
+			structure: tableStructure,
+			modules: [
+				'gridx/modules/RowLock',
+				'gridx/modules/ColumnLock',
+				'gridx/modules/CellWidget',
+				'gridx/modules/Edit',
+				'gridx/modules/ColumnResizer',
+				'gridx/modules/RowHeader',
+				'gridx/modules/SingleSort',
+				'gridx/modules/extendedSelect/Cell'
+			],
+			columnLockCount: 1,
+			rowLockCount: 1"> 
+	</div>
+
+</body>
+</html>

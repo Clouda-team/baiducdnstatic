@@ -1,0 +1,58 @@
+{
+	"name": "gridx",
+	"mappings": {
+		"dojo": "https://github.com/dojo/dojo/zipball/1.9.1",
+		"dijit": "https://github.com/dojo/dijit/zipball/1.9.1",
+		"dojox": "https://github.com/dojo/dojox/zipball/1.9.1"
+	},
+	"version": "1.3.8",
+	"maintainers":[
+		{
+			"name": "Xiao Wen Zhu(Oliver)",
+			"email": "zhuxw1984@gmail.com"
+		}, {
+			"name": "Pei Wang(Nate)",
+			"email": "supnate@gmail.com"
+		}, {
+			"name": "Qi Chen(Leslie)",
+			"email": "yurychika@gmail.com"
+		}
+	],
+	"contributors": [
+		{
+			"name": "Wei Huang(Evan)",
+			"email": "evanhuangwei@gmail.com"
+		}
+	],
+	"bugs": "mailto:yurychika@gmail.com",
+	"keywords": ["Gridx", "grid", "virtual scroll", "tree grid"],
+	"description": "A fast rendering, well modularized and plugin architecture based Grid. Besides supporting a rich set of popular features, GridX is optimized and extremely capable of supporting huge dataset larger than millions of rows.",
+	"licenses": [
+		{
+			"type": "AFLv2.1",
+			"url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L43"
+		},
+		{
+			"type": "BSD",
+			"url": "http://trac.dojotoolkit.org/browser/dojo/trunk/LICENSE#L13"
+		}
+	],
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/oria/gridx"
+		}
+	],
+	"dependencies": {
+		"dojo": "1.9.1",
+		"dijit": "1.9.1",
+		"dojox": "1.9.1"
+	},
+	"directories": {
+		"lib": "."
+	},
+	"homepage": "http://oria.github.com/gridx",
+	"main": "./Grid",
+	"icon": "http://oria.github.com/gridx/images/logo.png",
+	"dojoBuild": "gridx.profile.js"
+}

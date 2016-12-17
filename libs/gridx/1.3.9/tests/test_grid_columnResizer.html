@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid ColumnResizer</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_columnResizer.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid ColumnResizer
+	</h1>
+	<button data-dojo-type="dijit.form.Button" data-dojo-props="onClick: setWidth">Set a random width to column "Album"</button>
+	<span>Width of column "Album": <span id="colWidthSpan"></span></span>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/RowHeader",
+			"gridx/modules/select/Row",
+			"gridx/modules/IndirectSelect",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+</body>
+</html>

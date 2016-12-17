@@ -1,0 +1,201 @@
+
+
+.gridxSlantedHeader {
+	overflow: visible;
+}
+
+.gridxSlantedHeader .gridxHeader{
+	overflow: visible;
+	margin-left: 0px;
+	border-top: 1px solid #dbdbdb;
+	margin-top: -1px;
+
+	background: #edf2f7;
+	background: -moz-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edf2f7), color-stop(100%, #d0dfea));
+	background: -webkit-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+	background: -o-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+	background: -ms-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+	background: linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+
+	.gridxHeaderRow{
+		border-top: 1px solid #dbdbdb;
+		border-right: 1px solid #dbdbdb;
+		margin-top: -1px;
+	}
+}
+
+.gridxSlantedHeader .gridxHeaderRow .gridxHeaderRowInner {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+}
+.gridxSlantedHeader .gridxHeaderRow .gridxHeaderRowInner table{
+	height: 130px;
+
+}
+.gridxSlantedHeader .gridxHeaderRow .gridxHeaderRowInner .gridxGroupHeader {
+	height: 16px;
+}
+.gridxSlantedHeader .gridxHeaderRow .gridxCell {
+	vertical-align: bottom;
+	position: relative;
+	overflow: visible;
+	border-bottom: none;
+
+	&.gridxCellHighlight{
+		background-color: #9BCAF7;
+	}
+}
+.gridxSlantedHeader .gridxHeaderRow .gridxCell {
+	.gridxSortNode {
+		overflow: visible;
+		margin: auto auto 5px auto;
+		width: 30px;
+
+		-webkit-transform:skew(45deg,0deg) rotate(-45deg); /* Safari and Chrome */
+		-moz-transform:skew(45deg,0deg) rotate(-45deg);
+		-o-transform:skew(45deg,0deg) rotate(-45deg);
+		-ms-transform:skew(45deg,0deg) rotate(-45deg);
+		transform:skew(45deg,0deg) rotate(-45deg);
+	}
+
+	.gridxArrowButtonNode{
+		float: none;
+		display: inline-block;
+		margin-bottom: 60px;
+		margin-left: 8px;
+		-webkit-transform:skew(45deg,0deg) rotate(0deg);
+		-moz-transform:skew(45deg,0deg) rotate(0deg);
+		-ms-transform:skew(45deg,0deg) rotate(0deg);
+		-o-transform:skew(45deg,0deg) rotate(0deg);
+		transform:skew(45deg,0deg) rotate(0deg);
+
+	}
+}
+
+.gridxSlantedHeader .gridxHeaderRow .gridxCell.gridxHeaderCellFocus .gridxSortNode {
+	margin-bottom: 4px;
+}
+.gridxSlantedHeader .gridxHeaderRow .gridxGroupHeader .gridxSortNode {
+	text-align: center;
+	-webkit-transform:skew(45deg,0deg); /* Safari and Chrome */
+	-moz-transform:skew(45deg,0deg);
+	-o-transform:skew(45deg,0deg);
+	-ms-transform:skew(45deg,0deg);
+	transform:skew(45deg,0deg);
+}
+
+.gridxSlantedHeaderActionAreaHolder {
+	background-color: #d0dfea;
+	height: 10px;
+	text-align: center;
+}
+
+.gridxColumnExpandoBar {
+	overflow: hidden;
+	background-image: data-uri('images/claro-grid-header-onepixel.gif');
+	background-position: right;
+	background-repeat: repeat-y;
+	border-right: 1px solid #FFFFFF;
+
+	table {
+		table-layout: fixed;
+		width: auto;
+		margin-left: 1px;
+		.gridxColumnExpandoCell {
+			padding: 0px 3px;
+			height: 12px;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #ccc;
+			text-align: center;
+			cursor: normal;
+
+			&:first-child{
+				border-left: none;
+			}
+
+			&.gridxColumnExpandoHighlight{
+				background-color: #9BCAF7;
+			}
+
+			.gridxColumnExpando {
+				display: block;
+				.icon(arrowRightDarkGrey; 8px; 8px);
+				margin: 0 auto;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.gridxColumnExpandNode {
+	-webkit-transform:skew(45deg,0deg);
+	-moz-transform: skew(45deg,0deg);
+	-o-transform: skew(45deg,0deg);
+	-ms-transform: skew(45deg,0deg);
+	transform: skew(45deg,0deg);
+	display: block;
+	float: none;
+	position: absolute;
+	height: 11px;
+	left:3px;
+	bottom: -11px;
+	right: -6px;
+	background-color: #d0dfea;
+	border-right: 1px solid #BCBCBC;
+	border-left: 1px solid #fff;
+}
+
+.gridxColumnExpandNodeIcon {
+	
+	display: block;
+	//width: 8px;
+	//height: 8px;
+	margin: 1px auto;
+	.icon(arrowRightDarkGrey; 8px; 8px);
+	//background: transparent url(images/gridx_sprite.png) no-repeat -132px -5px;
+	//background-image: url(../images/sprite.png);
+}
+
+.gridxColumnExpandNodeIcon:hover{
+
+}
+
+
+
+.gridxColumnCollapseNode {
+
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	padding-right: 3px;
+	cursor: pointer;
+}
+
+.gridxColumnCollapseNodeIcon {
+
+	display: block;
+	margin: 1px auto;
+	.icon(arrowDownSolidShadow; 8px; 8px);
+	//background-image: url(../images/sprite.png);
+}
+
+.gridxSlantedHeader .gridxHeaderRow .gridxCell:hover .gridxColumnExpandNode{
+	background-color: #9BCAF7;
+}
+
+.gridxSlantedHeaderActionCell {
+	padding: 3px;
+	border-right: 1px solid #BCBCBC;
+	border-left: 1px solid #fff;
+	background-color: #d0dfea;
+}
+
+body .gridxSlantedHeader .gridxHeaderRow {
+	border-bottom: none;
+}
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Bidi Grid Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 740px;
+			height: 240px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true, has: {'dojo-bidi': true}"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_textDir.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Test Grid textDir
+	</h1>
+	<div jsid='store' data-dojo-type='dojo.store.Memory' data-dojo-props='
+		data: dataItems
+	'></div>
+	<button onclick='toggleTextDir()'>Toggle Grid textDir</button>
+	<button onclick='printPreview()'>Grid Print preview</button>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		textDir: "rtl",
+		modules: [
+			"gridx/modules/CellWidget",
+			"gridx/modules/Edit",
+			"gridx/modules/Filter",
+			"gridx/modules/filter/FilterBar"
+		]
+	'></div>
+	Errors:&nbsp;<span id="errors">?</span>&nbsp;&nbsp;
+	Failures:&nbsp;<span id="failures">?</span>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Grid HiddenColumns Test</title>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 400px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_hiddenColumns.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid HiddenColumns Test
+	</h1>
+	<table>
+		<tr>
+			<td>
+				<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+					cacheClass: "gridx/core/model/cache/Sync",
+					store: store,
+					structure: layout,
+					modules: [
+						"gridx/modules/HiddenColumns",
+						"gridx/modules/ColumnResizer",
+						"gridx/modules/move/Column",
+						"gridx/modules/TouchScroll",
+						"gridx/modules/VirtualVScroller"
+					]
+				'></div>
+			</td>
+			<td style="vertical-align: top; padding: 0 20px;">
+				<div jsid='configStore' data-dojo-type='dojo.store.Memory' data-dojo-props='
+					data: [
+						{id: "id"},
+						{id: "Genre"},
+						{id: "Artist"},
+						{id: "Album"},
+						{id: "Name"},
+						{id: "Year"},
+						{id: "Length"},
+						{id: "Track"},
+						{id: "Composer"},
+						{id: "Download Date"},
+						{id: "Last Played"},
+						{id: "Heard"}
+					]
+				'></div>
+				<h2>Select to hide</h2>
+				<div jsid='configGrid' data-dojo-type='gridx.Grid' data-dojo-props='
+					cacheClass: "gridx/core/model/cache/Sync",
+					store: configStore,
+					structure: [
+						{id: "id", field: "id", width: "100px"}
+					],
+					autoWidth: true,
+					autoHeight: true,
+					headerHidden: true,
+					selectRowTriggerOnCell: true,
+					modules: [
+						"gridx/modules/IndirectSelectColumn",
+						"gridx/modules/select/Row"
+					]
+				'></div>
+				<button style='margin: 10px;' onclick='showAll()'>Show All</button>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

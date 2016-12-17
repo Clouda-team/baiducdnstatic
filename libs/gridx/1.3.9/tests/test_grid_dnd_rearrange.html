@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid DnD - Rearrange Rows and Columns</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_dnd_rearrange.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid DnD - Rearrange Rows and Columns</h1>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/Filter",
+			"gridx/modules/filter/FilterBar",
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/extendedSelect/Column",
+			"gridx/modules/RowHeader",
+			"gridx/modules/move/Row",
+			"gridx/modules/move/Column",
+			"gridx/modules/dnd/Row",
+			"gridx/modules/dnd/Column",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<div id="tips">
+		<h2>Notes:</h2>
+		<ul>
+			<li>Swipe or click on column header to select columns to dnd</li>
+			<li>Swipe or click on row to select a rows to dnd</li>
+		</ul>
+	</div>
+</body>
+</html>

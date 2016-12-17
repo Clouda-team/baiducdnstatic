@@ -1,0 +1,127 @@
+<div class='columnBar'
+	><div class='columnBarIndex'><div class='columnBarIndexInner' data-dojo-attach-point='indexNode'>${columnIndex}</div></div
+	><div class='columnBarBasic'
+		><div class='columnBarBasicLabel'>id:</div
+		><div data-dojo-attach-point='idNode'
+			class='columnBarBasicAttr'
+			data-dojo-type='dijit.form.TextBox'
+			data-dojo-props='value: "${columnId}"'
+		></div
+		><div class='columnBarBasicLabel'>name:</div
+		><div data-dojo-attach-point='nameNode'
+			class='columnBarBasicAttr'
+			data-dojo-type='dijit.form.TextBox'
+			data-dojo-props='value: "${columnName}"'
+		></div
+		><div class='columnBarBasicLabel'>field:</div
+		><select data-dojo-attach-point='fieldNode'
+			class='columnBarBasicAttr'
+			data-dojo-type='dijit.form.Select'
+			data-dojo-props='options: [{lable: "", value: "empty"}]'
+			data-dojo-attach-event='onChange: onFieldChange'
+		></select
+		><div class='columnBarBasicLabel'>width:</div
+		><div class='columnBarBasicAttr columnBarWidthAttr'
+			><div data-dojo-attach-point='widthValueNode'
+				class='columnBarWidthValue'
+				data-dojo-type='dijit.form.TextBox'
+			></div
+			><select data-dojo-attach-point='widthUnitNode'
+				class='columnBarWidthUnit'
+				data-dojo-type='dijit.form.Select'
+				data-dojo-attach-event='onChange: _onWidthUnitChange'
+				><option value='auto'>auto</option
+				><option value='px'>px</option
+				><option value='em'>em</option
+				><option value='percent'>%</option
+			></select
+		></div
+	></div
+	><div class='columnBarFeatures' data-dojo-attach-point='columnBarFeatures'
+		><div class='columnBarFeature columnBarFeatureSortable'>not sortable</div
+		><div class='columnBarFeature columnBarFeatureFilterable'>not filterable</div
+		><div class='columnBarFeature columnBarFeatureEditable'>editable</div
+		><div class='columnBarFeature columnBarFeatureAlwaysEditing'>always editing</div
+		><div class='columnBarFeature columnBarFeatureEditor'>custom editor</div
+		><div class='columnBarFeature columnBarFeatureMenu'>custom menu</div
+	></div
+	><div class='columnBarBtns'
+		><div class='columnBarBtn columnBarEditBtn' data-dojo-attach-event='onclick: onEdit'></div
+		><div class='columnBarBtn columnBarAddBtn' data-dojo-attach-event='onclick: onAdd'></div
+		><div class='columnBarBtn columnBarDelBtn' data-dojo-attach-event='onclick: onDelete'></div
+	></div
+	><div id='${id}-editor' data-dojo-attach-point='editPane' class='columnBarEditPane'
+		><div class='columnBarEditPaneInner'>
+			<div class='columnBarEditPaneTitle'><span>Column&nbsp;</span><span class=''>${columnId}</span></div>
+			<table class='columnBarEditTable' border='0' cellborder='0' cellpadding='0'><tbody><tr>
+					<td class='columnAttrLabel'>style</td>
+					<td><input data-dojo-attach-point='styleBox' style='width: 200px;' data-dojo-type='dijit.form.TextBox'/></td>
+				</tr><tr>
+					<td class='columnAttrLabel'>sortable</td>
+					<td columnAttr='sortable'><input 
+						class='columnBarEditInput'
+						data-dojo-attach-point='sortableBox'
+						data-dojo-type='dijit.form.CheckBox'
+						data-dojo-attach-event='onChange: onSortableChange'
+						data-dojo-props='
+							checked: true
+						'/></td>
+				</tr><tr>
+					<td class='columnAttrLabel'>filterable</td>
+					<td columnAttr='filterable'><input 
+						class='columnBarEditInput'
+						data-dojo-attach-point='filterableBox'
+						data-dojo-type='dijit.form.CheckBox'
+						data-dojo-attach-event='onChange: onFilterableChange'
+						data-dojo-props='
+							checked: true
+						'/></td>
+				</tr><tr>
+					<td class='columnAttrLabel'>editable</td>
+					<td columnAttr='editable'><input 
+						class='columnBarEditInput'
+						data-dojo-attach-point='editableBox'
+						data-dojo-type='dijit.form.CheckBox'
+						data-dojo-attach-event='onChange: onEditableChange'
+						data-dojo-props='
+							checked: false
+						'/></td>
+				</tr><tr>
+					<td class='columnAttrLabel'>alwaysEditing</td>
+					<td columnAttr='alwaysEditing'><input 
+						class='columnBarEditInput'
+						data-dojo-attach-point='alwaysEditingBox'
+						data-dojo-type='dijit.form.CheckBox'
+						data-dojo-attach-event='onChange: onAlwaysEditChange'
+						/></td>
+				</tr><tr>
+					<td class='columnAttrLabel'>editor</td>
+					<td columnAttr='editor'><select 
+							class='columnBarEditInput'
+							data-dojo-attach-point='editorBox'
+							data-dojo-type='dijit.form.Select'
+							data-dojo-attach-event='onChange: onEditorChange'
+						><option value='empty' selected='true'>TextBox</option
+						><option value='dijit/form/NumberTextBox'>NumberTextBox</option
+						><option value='dijit/form/DateTextBox'>DateTextBox</option
+						><option value='dijit/form/TimeTextBox'>TimeTextBox</option
+						><option value='dijit/Editor'>Editor</option
+						></select></td>
+			</tr><tr>
+					<td class='columnAttrLabel'>menu</td>
+					<td columnAttr='menu'><select 
+							class='columnBarEditInput'
+							data-dojo-attach-point='menuBox'
+							data-dojo-type='dijit.form.Select'
+							data-dojo-attach-event='onChange: onMenuChange'
+						><option value='empty' selected="true">none</option
+						><option value='gridx/support/menu/AZFilterMenu'>AZmenu</option
+						><option value='gridx/support/menu/NumberFilterMenu'>NumberMenu</option
+						></select></td>
+			</tr>
+			
+			</tbody></table>
+			<div class='columnBarCloseEdit' data-dojo-attach-event='onclick: hideEditPane'>OK</div
+		></div
+	></div
+></div>

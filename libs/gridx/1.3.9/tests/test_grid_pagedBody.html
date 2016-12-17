@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid PagedBody Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 300px;
+			height: 400px;
+		}
+		.gridxBodyIOS {
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_pagedBody.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid PagedBody Test
+	</h1>
+<!--    <button onclick='deleteRow()'>Delete First Row</button>-->
+	<h2>Auto Load</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout,
+		pageSize: 20,
+		bodyMaxPageCount: 3,
+		modules: [
+			"gridx/modules/TouchVScroller",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/AutoPagedBody"
+		]
+	'></div>
+	<h2>Manual Load</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout,
+		pageSize: 20,
+		bodyMaxPageCount: 3,
+		modules: [
+			"gridx/modules/TouchVScroller",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/PagedBody"
+		]
+	'></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div class="gridxLinkPager" role="toolbar" aria-label="${pagerWai}"
+	><span class='gridxPagerStepperBtn gridxPagerPrevPage'
+		role='button'
+		tabindex='${_tabIndex}'
+		title='${prevPageTitle}'
+		aria-label='${prevPageTitle}'
+		pageindex='prev',
+		data-dojo-attach-point='_prevPageBtn'
+		data-dojo-attach-event='onclick: _prevPage'
+		><span class='gridxPagerA11yInner'>&nbsp;&lt;</span
+	></span
+	><span class='gridxPagerPages'
+		data-dojo-attach-point='_pageBtnContainer'
+		data-dojo-attach-event='onclick: _gotoPage, onmouseover: _onHover, onmouseout: _onHover'
+	></span
+	><span class='gridxPagerStepperBtn gridxPagerNextPage'
+		role='button'
+		tabindex='${_tabIndex}'
+		title='${nextPageTitle}'
+		aria-label='${nextPageTitle}'
+		pageindex='next',
+		data-dojo-attach-point='_nextPageBtn'
+		data-dojo-attach-event='onclick: _nextPage'
+		><span class='gridxPagerA11yInner'>&nbsp;&gt;</span
+	></span
+></div>

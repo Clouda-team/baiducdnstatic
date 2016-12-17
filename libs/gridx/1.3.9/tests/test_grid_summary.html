@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html style="width: 100%; height: 100%; margin: 0; padding: 0" lang="en-us">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="NO-CACHE">
+    <meta http-equiv="Pragma" content="NO-CACHE">
+    <meta http-equiv="Expires" content="-1">
+  
+    <title>GridX Pagination Issue</title>
+
+    <style type="text/css">
+        body, html { width:100%; height:100%; margin:0; padding:0; overflow:hidden; }
+    </style>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true, parseOnLoad: true"></script>
+</head>
+<body class='claro'>
+    <div id="gridContainer" style="padding: 20px; width: 100%; height: 100%;">
+    </div>
+</body>
+
+
+<script type="text/javascript">
+    
+
+            var grid;
+
+            require([
+                     "dojo/ready",
+                     "dojo/parser",
+                     "gridx/Grid",
+                     "gridx/modules/Pagination",
+                     "gridx/modules/pagination/PaginationBarDD",
+                     "dojox/data/JsonRestStore",
+                     "dojo/dom-style",
+                     "gridx/core/model/cache/Async",
+                     "dojo/dom",
+                     "dojo/_base/lang",
+                     "gridx/support/Summary",
+                     "dojo/_base/declare"
+                     ], function(ready, parser, GridX, Pagination, PaginationBarDD, JSONRestStore, 
+                        domStyle, Async, dom, lang, Summary, declare) {
+
+                function patchGridXPagination() {
+                    declare.safeMixin(grid.pagination, {
+                        setPageSize: function(size){
+                            //drop down sizer passes page size as a string and the
+                            //underlying pagination code does not handle that properly, so explicitly
+                            //coerce to an int
+                            this.inherited(arguments, [parseInt(size)]);
+                        }
+                    });
+                }
+
+                function patchGridXSummary() {
+                    var summaryPostCreate = Summary.prototype.postCreate;
+                    lang.extend(Summary, {
+                        postCreate: function(){
+
+                            //call the base - this.inherited does not work when extending this way
+                            summaryPostCreate.apply(this, arguments);
+
+                            var self = this;
+                            this.grid.pagination.loaded.then(function(){
+                              self.refresh();
+                            });
+                        }
+                    });
+                }
+
+                ready(function() {
+
+                    parser.parse().then(function() {
+
+                        //UNCOMMENT TO PATCH
+                        //patchGridXSummary();
+
+                        var store = new JSONRestStore({
+                            target: "activities.json",
+                            idAttribute: "rid",
+                            labelAttribute: "name",
+							allowNoTrailingSlash: true
+                        });
+
+                        var structure = [
+                            {
+                                field: "name",
+                                name: "Name"
+                            },
+                            {
+                                field: "createdUser",
+                                name: "Run by"
+                            },
+                            {
+                                field: "noOfRows",
+                                name: "Num Rows",
+                                width: '33%'
+                            }
+                        ];
+
+                        grid = new GridX({
+                            id: "gridX",
+                            cacheClass: Async,
+                            store: store,
+                            structure: structure,
+                            paginationInitialPageSize: 50,
+                            modules: [
+                                Pagination,
+                                PaginationBarDD
+                            ]
+                        });
+
+                        domStyle.set(grid.domNode, "width", "75%");
+                        domStyle.set(grid.domNode, "height", "60%");
+
+                        dom.byId("gridContainer").appendChild(grid.domNode);
+
+                        //UNCOMMENT TO PATCH
+                        //patchGridXPagination();
+
+                        grid.startup();
+                    });
+
+                });
+            });
+   
+    </script>
+</html>

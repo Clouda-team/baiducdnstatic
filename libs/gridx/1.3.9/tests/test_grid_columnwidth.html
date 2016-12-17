@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Column Width Initialization</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		#tc {
+			height: 430px;
+			width: 900px;
+		}
+
+		.gridx {
+			width: 800px;
+			height: 250px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_columnwidth.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid Column Width Initialization</h1>
+	<h2>All columns are provided pixel width</h2>
+	<div jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout1,
+		modules: mods
+	'></div>
+	<h2>Some columns are provided pixel width, the others are auto</h2>
+	<div jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout2,
+		modules: mods
+	'></div>
+	<h2>Some columns are provided too much width, the others are auto</h2>
+	<div jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout3,
+		modules: mods
+	'></div>
+	<h2>Some columns are provided percentage width</h2>
+	<div jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout4,
+		modules: mods
+	'></div>
+	<h2>Some columns are provided percentage width with total 100%</h2>
+	<div jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout4_1,
+		modules: mods
+	'></div>
+	<h2>Some columns are provided too much percentage width</h2>
+	<div jsid='grid6' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout5,
+		modules: mods
+	'></div>
+	<h2>Mixed up: px, em, percentage, auto</h2>
+	<div jsid='grid7' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout6,
+		modules: mods
+	'></div>
+	<h2>Grid of autoWidth</h2>
+	<div jsid='grid8' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout7,
+		modules: mods,
+		autoWidth: true
+	'></div>
+	<h2>AutoResize column width</h2>
+	<div data-dojo-type='dijit.layout.BorderContainer' style='width: 1000px; height: 400px;'>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='region: "left", splitter: true' style='width: 45%;'>
+			<div data-dojo-type='gridx.Grid' style='width: 100%' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout8,
+				modules: mods,
+				columnWidthAutoResize: true
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='region: "center"'>
+			<div data-dojo-type='gridx.Grid' style='width: 100%' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout8,
+				modules: mods,
+				columnWidthAutoResize: true
+			'></div>
+		</div>
+	</div>
+	<h2>Create grid with display: none</h2>
+	<div id='tc' data-dojo-type='dijit.layout.TabContainer'>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 1"'>
+			<h2>All columns are provided pixel width</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout1,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 2"'>
+			<h2>Some columns are provided pixel width, the others are auto</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout2,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 3"'>
+			<h2>Some columns are provided too much width, the others are auto</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout3,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 4"'>
+			<h2>Some columns are provided percentage width</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout4,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 5"'>
+			<h2>Some columns are provided too much percentage width</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout5,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 6"'>
+			<h2>Mixed up: px, em, percentage, auto</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout6,
+				modules: mods
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 7"'>
+			<h2>Grid of autoWidth</h2>
+			<div data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout7,
+				modules: mods,
+				autoWidth: true
+			'></div>
+		</div>
+		<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='title: "Grid 8"'>
+			<h2>AutoResize column width</h2>
+			<div data-dojo-type='dijit.layout.BorderContainer' style='width: 750px; height: 300px;'>
+				<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='region: "left", splitter: true' style='width: 45%;'>
+					<div data-dojo-type='gridx.Grid' style='width: 100%' data-dojo-props='
+						cacheClass: "gridx/core/model/cache/Async",
+						store: store,
+						structure: layout8,
+						modules: mods,
+						columnWidthAutoResize: true
+					'></div>
+				</div>
+				<div data-dojo-type='dijit.layout.ContentPane' data-dojo-props='region: "center"'>
+					<div data-dojo-type='gridx.Grid' style='width: 100%' data-dojo-props='
+						cacheClass: "gridx/core/model/cache/Async",
+						store: store,
+						structure: layout8,
+						modules: mods,
+						columnWidthAutoResize: true
+					'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button onclick='dijit.byId("dlg").show()'>Show Grid in Dialog</button>
+	<div id='dlg' data-dojo-type='dijit.Dialog' data-dojo-props='title: "Demo"'>
+		<h1>Grid in Dialog</h1>
+		<div data-dojo-type='gridx.Grid' data-dojo-props='
+			cacheClass: "gridx/core/model/cache/Async",
+			store: store,
+			structure: layout1,
+			modules: mods
+		'></div>
+	</div>
+</body>
+</html>

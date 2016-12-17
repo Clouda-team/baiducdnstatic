@@ -1,0 +1,103 @@
+/* dnd */
+.gridxDnDReadyCursor {
+	cursor: move;
+}
+
+/*.gridxDnDCursor,*/
+.gridxCanNotDnD {
+	cursor: default;
+}
+.gridxDnDAnchor {
+	width: 2px;
+	background-color: gray;
+	font-size: 0em;
+	position: absolute;
+	z-index: 998;
+}
+.gridxDndAvatar {
+	background-color:white;
+	border: 1px solid #CCCCCC;
+	padding: 0px;
+	.boxShadow(5px; 5px; 7px; #999);
+	z-index: 999;
+	border-spacing: 3px;
+}
+
+.gridxDnDIcon {
+	.dojoDndMove & {
+		.icon(dndNoMove);
+	}
+	.dojoDndMove .dojoDndAvatarCanDrop & {
+		.icon(dndMove);
+	}
+	.dojoDndCopy & {
+		.icon(dndNoCopy);
+	}
+	.dojoDndCopy .dojoDndAvatarCanDrop & {
+		.icon(dndCopy);
+	}
+}
+
+/* dnd row */
+.gridxDnDAnchorRow {
+	left: 0;
+	height: 1px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		height: 1px;
+		width: 100%;
+		background-color: gray;
+	}
+}
+
+.gridxDnDIconRowSingle {
+	.icon(dndRowSingle);
+}
+.gridxDnDIconRowMulti {
+	.icon(dndRowMultiple);
+}
+/* dnd column */
+.gridxDnDAnchorColumn {
+	top: 0;
+	width: 2px;
+}
+.gridxDnDIconColumnSingle {
+	.icon(dndColumnSingle);
+}
+.gridxDnDIconColumnMulti {
+	.icon(dndColumnMultiple);
+}
+/* dnd cell */
+//Not implemented yet
+/*.gridxDnDAnchorCell {
+	position: relative;
+	background-color: transparent;
+}
+.gridxDnDIconCellSingle {
+	.icon(dndCellSingle);
+}
+.gridxDnDIconCellMulti {
+	.icon(dndCellMultiple);
+}
+.gridxCellBorderLeftTopDIV {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-style: solid;
+	border-width: 2px 0 0 2px;
+	border-color: gray transparent transparent gray;
+}
+.gridxCellBorderRightBottomDIV {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	border-color: transparent gray gray transparent;
+}
+.gridxDnDCellMask {
+	background-color: #ee5555;
+}*/

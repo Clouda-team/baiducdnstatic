@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Column DnD - Drag to Non-Grid Target</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 500px;
+			height: 200px;
+			margin: 10px;
+		}
+
+		#songForm {
+			width: 500px;
+			border: 3px solid #ccc;
+			radius: 8pt;
+			-moz-border-radius: 8pt 8pt;
+			padding: 5px;
+		}
+
+		h2 {
+			font-weight: bolder !important;
+			font-size: 15px !important;
+		}
+
+		#draggedColumns {
+			margin-left: 30px;
+			font-size: 15px !important;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_dndcolumn_nongrid_target.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid Column DnD - Drag to Non-Grid Target</h1>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		dndColumnCanRearrange: false,
+		modules: [
+			"gridx/modules/extendedSelect/Column",
+			"gridx/modules/move/Column",
+			"gridx/modules/dnd/Column",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<div id="songForm">
+		<h2>Select and then Drag some columns here:</h2>
+		<div id='draggedColumns'></div>
+	</div>
+</body>
+</html>

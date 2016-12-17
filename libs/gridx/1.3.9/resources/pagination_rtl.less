@@ -1,0 +1,59 @@
+/* Pagination RTL */
+
+.gridxRtl {
+	.gridxPagerDescriptionTD {
+		text-align: right;
+	}
+
+	.gridxPagerSizeSwitchTD {
+		text-align: left;
+	}
+
+	.gridxPager .gridxPagerGoto,
+	.gridxGotoPage .gridxGotoPageBtns {
+		text-align: left;
+	}
+	.gridxPagerFirstPage {
+		.icon(arrowRightMostBlue);
+	}
+	.gridxPagerFirstPageDisable {
+		.icon(arrowRightMostGrey);
+	}
+
+	.gridxPagerPrevPage {
+		.icon(arrowRightBlue);
+	}
+	.gridxPagerPrevPageDisable {
+		.icon(arrowRightGrey);
+	}
+
+	.gridxPagerNextPage {
+		.icon(arrowLeftBlue);
+	}
+	.gridxPagerNextPageDisable {
+		.icon(arrowLeftGrey);
+	}
+
+	.gridxPagerLastPage {
+		.icon(arrowLeftMostBlue);
+	}
+	.gridxPagerLastPageDisable {
+		.icon(arrowLeftMostGrey);
+	}
+
+	.gridxPagerSizeSwitchDD {
+		text-align: left;
+	}
+}
+
+.dijitRtl {
+	.gridxGotoPage {
+		.gridxPageCountMsg {
+			padding-left: 0;
+			padding-right: 5px;
+		}
+		.gridxGotoPageBtns {
+			text-align: left;
+		}
+	}
+}

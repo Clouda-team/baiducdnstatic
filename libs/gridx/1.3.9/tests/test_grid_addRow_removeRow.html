@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Add Row Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 700px;
+			height: 350px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_addRow_removeRow.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Add Row / Remove Row Test
+	</h1>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: [
+			{id: "id", field: "id", name: "Identity"},
+			{id: "number", field: "number", name: "Number"},
+			{id: "string", field: "string", name: "String"}
+		],
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/RowHeader",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/VirtualVScroller",
+			"gridx/modules/extendedSelect/Row"
+		]
+	'></div>
+	<div>
+		<button id='addRowBtn' onclick='newRow()'>Add One Row</button>
+		<button onclick='addSomeRows()'>Add 10 Rows</button>
+		<button onclick='deleteSomeRows()'>Delete 10 Rows</button>
+		<button onclick='deleteFirstRow()'>Delete First Row</button>
+		<button onclick='deleteLastRow()'>Delete Last Row</button>
+	</div>
+</body>
+</html>
