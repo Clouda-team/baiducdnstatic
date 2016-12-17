@@ -1,0 +1,40 @@
+
+.dijitTimePickerPopup {
+  -webkit-box-shadow: 0 7px 3px -4px rgba(0,0,0,0.3), 0 8px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 7px 3px -4px rgba(0,0,0,0.3), 0 8px 8px rgba(0,0,0,0.2);
+  height: 200px;
+}
+.dijitTimePicker {
+  background-color: #fff;
+  padding: 4px 0;
+  border: 1px solid #9e9e9e;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.dijitTimePickerItem {
+  margin: 0;
+}
+.dijitTimePickerTick {
+  color: #9e9e9e;
+  border: 0 none;
+}
+.dijitTimePickerMarker {
+  background-color: transparent;
+  white-space: nowrap;
+  border: 0 none;
+}
+.dijitTimePickerTickHover,
+.dijitTimePickerMarkerHover {
+  background: #f2f2f2;
+  color: #424242;
+}
+.dijitTimePickerMarkerSelected,
+.dijitTimePickerTickSelected {
+  background: #f2f2f2;
+  color: #424242;
+}
+.dijitTimePickerTick .dijitTimePickerItemInner,
+.dijitTimePickerMarker .dijitTimePickerItemInner {
+  padding: 8px;
+  margin: 0;
+}

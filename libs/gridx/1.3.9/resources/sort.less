@@ -1,0 +1,236 @@
+@sortArrowWidth: 10px;
+@sortArrowHeight: 14px;
+
+.sortIcon(@name; @offset: 0) {
+	.iconNoSize(@name; @sortArrowWidth; @sortArrowHeight; @offset);
+}
+
+/* Single Sort */
+.gridxSortNode {
+	overflow: hidden;
+}
+.gridxArrowButtonCharAsc,
+.gridxArrowButtonCharDesc {
+	display: none;
+}
+.dijit_a11y .gridxCellSortedAsc .gridxArrowButtonCharAsc,
+.dijit_a11y .gridxCellSortedDesc .gridxArrowButtonCharDesc {
+	display: block;
+}
+
+.gridxArrowButtonNode {
+	display: none;
+	float: right;
+	margin-right: 7px;
+	width: @sortArrowWidth;
+	height: 12px;
+
+	.gridxCellSorted & {
+		display: block;
+	}
+	.gridxCellSortedAsc & {
+		.sortIcon(arrowUpSolidBlack);
+	}
+	.gridxCellSortedDesc & {
+		.sortIcon(arrowDownSolidBlack);
+	}
+	.gridxCell:hover.gridxCellSortedAsc &,
+	.gridxHeaderCellFocus.gridxCellSortedAsc & {
+		.sortIcon(arrowDownHollowBlack);
+	}
+	.gridxCell:hover.gridxCellSortedDesc &,
+	.gridxHeaderCellFocus.gridxCellSortedDesc & {
+		.sortIcon(arrowUpHollowBlack);
+	}
+}
+
+/*Nested Sorting*/
+.gridxSortBtn {
+	.sortIcon(arrowUpHollowBlack);
+	float: right;
+	cursor: pointer;
+	width: @sortArrowWidth;
+	display: none;
+}
+.gridxSortNodeFocus {
+	background: #ddd;
+}
+.gridxSortBtnNested {
+	width: @sortArrowWidth * 2;
+	.sortIcon(arrowUpHollowBlack; @sortArrowWidth);
+}
+.gridxSortBtn:hover,
+.gridxSortBtnFocus {
+    background-color: #ddd;
+}
+.gridxHeader .gridxCell .gridxSortBtnNested {
+	display: none;
+}
+
+.gridxCellSorted .gridxSortBtnSingle,
+.gridxNestedSorted .gridxCellSorted .gridxSortBtnNested,
+
+.gridxCell:hover .gridxSortBtnSingle,
+.gridxSingleSorted .gridxCell:hover .gridxSortBtn,
+.gridxNestedSorted .gridxCell:hover .gridxSortBtn,
+
+.gridxHeader .gridxCellSortFocus .gridxSortBtnSingle,
+.gridxSingleSorted .gridxCellSortFocus .gridxSortBtn,
+.gridxNestedSorted .gridxCellSortFocus .gridxSortBtn,
+.gridxHeader .gridxHeaderRegionFocus .gridxSortBtnSingle,
+.gridxSingleSorted .gridxHeaderRegionFocus .gridxSortBtn,
+.gridxNestedSorted .gridxHeaderRegionFocus .gridxSortBtn,
+/*.gridxSingleSorted .gridxHeaderRow:hover .gridxCellSortedMain.gridxHeaderRegionFocus .gridxSortBtnNested,
+.gridxSingleSorted .gridxHeaderHover .gridxCellSortedMain .gridxSortBtnNested,*/
+.gridxSingleSorted .gridxHeaderRow:hover .gridxCellSortedMain .gridxSortBtnNested,
+.gridxSingleSorted .gridxHeaderFocus .gridxCellSortedMain .gridxSortBtnNested
+{
+	display: block;
+}
+
+.gridxSingleSorted .gridxHeader .gridxCellSortedMain:hover .gridxSortBtnNested,
+.gridxSingleSorted .gridxHeader .gridxCellSortedMain.gridxCellSortFocus .gridxSortBtnNested,
+.gridxSingleSorted .gridxHeader .gridxCellSortedMain.gridxHeaderRegionFocus .gridxSortBtnNested,
+/*.gridxSingleSorted .gridxHeaderHover .gridxCellSortedMain .gridxSortBtnSingle,*/
+.gridxSingleSorted .gridxHeaderRow:hover .gridxCellSortedMain .gridxSortBtnSingle,
+.gridxSingleSorted .gridxHeaderFocus .gridxCellSortedMain .gridxSortBtnSingle,
+.gridxNestedSorted .gridxSortBtnSingle {
+	display: none;
+}
+
+/*.gridxSingleSorted .gridxHeaderHover .gridxCellSortedMain:hover .gridxSortBtnSingle,*/
+.gridxSingleSorted .gridxHeaderRow:hover .gridxCellSortedMain:hover .gridxSortBtnSingle,
+.gridxSingleSorted .gridxHeaderFocus .gridxCellSortedMain.gridxCellSortFocus .gridxSortBtnSingle,
+.gridxSingleSorted .gridxHeaderFocus .gridxCellSortedMain.gridxHeaderRegionFocus .gridxSortBtnSingle {
+	display: block;
+}
+
+.gridxCellSortedAsc .gridxSortBtnSingle {
+	.sortIcon(arrowUpSolidBlack);
+}
+.gridxCellSortedAsc .gridxSortBtnNested {
+	.sortIcon(arrowUpSolidBlack; @sortArrowWidth);
+}
+.gridxCellSortedDesc .gridxSortBtnSingle {
+	.sortIcon(arrowDownSolidBlack);
+}
+.gridxCellSortedDesc .gridxSortBtnNested {
+	.sortIcon(arrowDownSolidBlack; @sortArrowWidth);
+}
+.gridxCell:hover,
+.gridxCellSortFocus,
+.gridxHeaderRegionFocus {
+	&.gridxCellSortedAsc {
+		.gridxSortBtnSingle {
+			.sortIcon(arrowDownHollowBlack);
+		}
+		.gridxSortBtnNested {
+			.sortIcon(arrowDownHollowBlack; @sortArrowWidth);
+		}
+	}
+	&.gridxCellSortedDesc {
+		.gridxSortBtnSingle {
+			.sortIcon(crossBlack);
+		}
+		.gridxSortBtnNested {
+			.sortIcon(crossBlack; @sortArrowWidth);
+		}
+	}
+	.gridxNestedSorted & {
+		.gridxSortBtnSingle {
+			.sortIcon(arrowUpHollowBlack);
+		}
+	}
+}
+
+.gridxNestedSortBtnText {
+	display: none;
+
+	.dijit_a11y & {
+		display: inline;
+	}
+}
+
+/* Sort */
+
+.activeSortIcons() {
+	@w: 10px;
+	@h: 10px;
+	.gridxArrowButtonNode {
+		display: block;
+		.iconNoSize(arrowUpHollowDownHollowShadow; @w; @h);
+	}
+	.gridxSortUp .gridxArrowButtonNode {
+		.iconNoSize(arrowUpSolidDownHollowShadow; @w; @h);
+	}
+	.gridxSortDown .gridxArrowButtonNode {
+		.iconNoSize(arrowUpHollowDownSolidShadow; @w; @h);
+	}
+	.gridxSortAscendOnly {
+		.iconNoSize(arrowUpHollowShadow; @w; @h);
+	}
+	.gridxSortDescendOnly {
+		.iconNoSize(arrowDownHollowShadow; @w; @h);
+	}
+	.gridxSortUp .gridxSortAscendOnly {
+		.iconNoSize(arrowUpSolidShadow; @w; @h);
+	}
+	.gridxSortDown .gridxSortDescendOnly {
+		.iconNoSize(arrowDownSolidShadow; @w; @h);
+	}
+}
+
+.gridxSort {
+	.gridxSortSingle {
+		display: none;
+	}
+
+	.gridxSortNested {
+		float: right;
+		display: block;
+		margin: 0 5px;
+		font-size: 10px;
+	}
+
+	.gridxArrowButtonChar {
+		display: none;
+
+		.dijit_a11y & {
+			display: block;
+		}
+	}
+
+	.gridxArrowButtonNode {
+		height: 10px;
+		width: 10px;
+		margin: 3px 7px 0 0;
+		display: none;
+	}
+	.gridxSortUp .gridxArrowButtonNode {
+		display: block;
+		.iconNoSize(arrowUpSolidShadow; 10px; 10px);
+	}
+
+	.gridxSortDown .gridxArrowButtonNode {
+		display: block;
+		.iconNoSize(arrowDownSolidShadow; 10px; 10px);
+	}
+
+	.gridxHeaderRow .gridxCell:hover,
+	.gridxHeaderCellFocus {
+		.gridxArrowButtonNode {
+			display: block;
+		}
+		.activeSortIcons();
+	}
+
+	&.gridxTouch {
+		// for mobile devices
+		.gridxHeaderRow .gridxCell {
+			.activeSortIcons();
+		}
+	}
+}
+
+
+

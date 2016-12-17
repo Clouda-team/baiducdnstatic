@@ -1,0 +1,46 @@
+@selectedColor: #BFD6EB;
+
+/* row select */
+.gridxRowSelected > .gridxRowTable {
+	background-color: @selectedColor;
+}
+
+/* column select */
+.gridxRow .gridxColumnSelected {
+	background-color: @selectedColor;
+}
+/* cell select */
+.gridxCellSelected {
+	background-color: @selectedColor;
+}
+
+/* high contrast */
+.dijit_a11y {
+	.gridxRowSelected,
+	.gridxRow .gridxColumnSelected,
+	.gridxCellSelected {
+		opacity: 0.8;
+	}
+	.gridxRowUnselectable {
+		opacity: 0.5;
+	}
+}
+
+
+/*IndirectSelection*/
+.gridxRowHeaderHeaderCell,
+.gridxRowHeaderCell {
+	text-align: center;
+}
+
+.gridx .gridxIndirectSelectionCheckBox {
+	margin: -4px 0 0 0;
+}
+.gridxIndirectSelectionCheckBoxInner {
+	display: none;
+
+	.dijit_a11y & {
+		display: inline;
+	}
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>The Simplest Grid</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		div.container{
+			width: 800px;
+			height: 300px;
+		}
+		#gridContainer {
+			width: 800px;
+			height: 300px;
+		}
+		#grid {
+			width: 100%;
+			height: 100%;
+		}
+		#ctrlPane .dijitAccordionContainer {
+			height: auto;
+		}
+
+		textarea{
+			height: 200px;
+			width: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true, parseOnLoad: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_simpleCreate.js'></script>
+	<script type='text/javascript'>
+	function updateData(){
+		try{
+			var data = JSON.parse(document.getElementById('dataTextarea').value);
+		}catch(e){
+			console.log('fail to parse data!');
+			console.log(e);
+			return false; 
+		}
+
+		require(['gridx/Grid', 'dojo/store/Memory'], function(grid, Memory){
+			console.log(data);
+			if(grid2){
+				grid2.destroy();
+				grid2 = new grid({
+					data: data
+				});
+				grid2.placeAt('gridContainer2');
+				grid2.startup();
+			}
+		});
+	}
+
+	// require(['dojo/store/JsonRest'], function(store){
+	// 	var jsonStore = new store({target: 'http://localhost/dojo-1.8/gridx/tests/support/data/musicData.json'});
+	// 	var i = 0;
+	// 	var bucket = [];
+	// 	jsonStore.query().forEach(function(item){
+	// 		console.log(item);
+	// 		item.id = i++;
+	// 		bucket.push(item);
+	// 	});
+	// 	setTimeout(function(){
+	// 		console.log(bucket);
+	// 		console.log(JSON.stringify(bucket));
+			
+	// 	}, 2000);
+	// });
+	</script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		The Grid Simple Creation test page
+	</h1>
+	<h2>Create grid without any properties</h2>
+	<div id='gridContainer1' class='container'>
+		<div jsid='grid1' data-dojo-type='gridx/Grid'></div>
+	</div>
+
+	<h2>Create grid with self defined data property</h2>
+	<textarea id='dataTextarea'>
+[
+	{"id": 1, "name": "apple", "country": "China"},
+	{"id": 2, "name": "peach", "country": "Japan"},
+	{"id": 3, "name": "orange", "country": "America"},
+	{"id": 4, "name": "pear", "country": "Thailand"}
+]
+	</textarea>
+
+	<button onclick='updateData()'>update data</button>
+
+	<div id='gridContainer2' class='container'>
+		<div jsid='grid2' data-dojo-type='gridx/Grid' data-dojo-props="
+				data: [
+					{id: 1, name: 'apple', country: 'China'},
+					{id: 2, name: 'peach', country: 'Japan'},
+					{id: 3, name: 'orange', country: 'America'},
+					{id: 4, name: 'pear', country: 'Thailand'}
+				]
+		"></div>
+	</div>
+
+	<h2>Create grid with empty data property</h2>
+	<div id='gridContainer'>
+		<div jsid='grid4' data-dojo-type='gridx/Grid' data-dojo-props="
+				data: []
+		"></div>
+	</div>
+</body>
+</html>

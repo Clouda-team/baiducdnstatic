@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Test Auto-Hide VScroller</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 450px;
+			margin-bottom: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_autoHideVScroller.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Test Auto-Hide VScroller
+	</h1>
+	<div id='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout1,
+		barTop: [
+			"gridx/support/QuickFilter",
+			{content: "Grid with fixed column width", style: "font-weight: bold; text-shadow: 1px 1px 1px #fff;"}
+		],
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Filter",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/Bar"
+		]
+	'></div>
+	<div id='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout2,
+		barTop: [
+			"gridx/support/QuickFilter",
+			{content: "Grid with auto column width", style: "font-weight: bold; text-shadow: 1px 1px 1px #fff;"}
+		],
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Filter",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/Bar"
+		]
+	'></div>
+	<div id='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout3,
+		barTop: [
+			"gridx/support/QuickFilter",
+			{content: "Grid with percentage column width", style: "font-weight: bold; text-shadow: 1px 1px 1px #fff;"}
+		],
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Filter",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/Bar"
+		]
+	'></div>
+	<div id='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout4,
+		columnWidthAutoResize: true,
+		barTop: [
+			"gridx/support/QuickFilter",
+			{content: "Grid with auto-resize columns", style: "font-weight: bold; text-shadow: 1px 1px 1px #fff;"}
+		],
+		modules: [
+			"gridx/modules/Filter",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/Bar"
+		]
+	'></div>
+	<div id='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout5,
+		barTop: [
+			"gridx/support/QuickFilter",
+			{content: "AutoWidth grid", style: "font-weight: bold; text-shadow: 1px 1px 1px #fff;"}
+		],
+		autoWidth: true,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Filter",
+			"gridx/modules/Bar"
+		]
+	'></div>
+</body>
+</html>

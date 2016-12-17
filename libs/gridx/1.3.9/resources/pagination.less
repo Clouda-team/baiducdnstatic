@@ -1,0 +1,135 @@
+.pagerBtnDisabled() {
+	cursor: default;
+	opacity: 0.8;
+}
+/* pagination bar */
+.gridxPagerInner {
+	width: 100%;
+	table-layout: auto;
+}
+
+.gridxPagerA11yInner {
+	visibility: hidden;
+
+	.dijit_a11y & {
+		visibility: visible;
+	}
+}
+
+.gridxPagerPages span:focus, span.gridxPagerSizeSwitchBtn:focus{
+	outline: dotted 1px #555;
+}
+
+.gridxPagerStepperBtn,
+.gridxPagerSizeSwitchBtn {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+}
+
+.gridxPagerStepperBtnActive,
+.gridxPagerSizeSwitchBtnActive {
+	cursor: default;
+}
+
+.gridxPagerFirstPage {
+	.icon(arrowLeftMostBlue);
+}
+.gridxPagerFirstPageDisable {
+	.icon(arrowLeftMostGrey);
+	.pagerBtnDisabled();
+}
+
+.gridxPagerPrevPage {
+	.icon(arrowLeftBlue);
+}
+.gridxPagerPrevPageDisable {
+	.icon(arrowLeftGrey);
+	.pagerBtnDisabled();
+}
+
+.gridxPagerNextPage {
+	.icon(arrowRightBlue);
+}
+.gridxPagerNextPageDisable {
+	.icon(arrowRightGrey);
+	.pagerBtnDisabled();
+}
+
+.gridxPagerLastPage {
+	.icon(arrowRightMostBlue);
+}
+.gridxPagerLastPageDisable {
+	.icon(arrowRightMostGrey);
+	.pagerBtnDisabled();
+}
+
+.gridxPagerDescriptionTD {
+	text-align: left;
+	width: 33%;
+}
+
+.gridxPagerStepperTD {
+	text-align: center;
+	width: 33%;
+}
+
+.gridxPagerSizeSwitchTD {
+	text-align: right;
+}
+
+.gridxPagerGoto {
+	width: 20px;
+	text-align: center;
+}
+
+.gridxPagerGotoBtn {
+	.icon(arrowUpBlue; 10px);
+	cursor: pointer;
+}
+
+/* Goto Page Dialog */
+.gridxGotoPage {
+	td {
+		padding-bottom: 5px;
+	}
+
+	.gridxGotoPageBtns {
+		padding-bottom: 0;
+		text-align: right;
+	}
+
+	.gridxGotoPageInputBox {
+		width: 100px;
+	}
+
+	.gridxPageCountMsg {
+		padding-left: 5px;
+	}
+}
+
+/*DD*/
+.gridxPagerStepperWidget {
+	width: 55px;
+}
+
+.gridxPagerLabel {
+	vertical-align: middle;
+}
+
+/* LinkPage in GridBar */
+.gridxLinkPager,
+.gridxLinkSizer {
+	padding: 5px 0;
+}
+
+.gridxPaginationBar {
+	padding-right: 9px;
+}
+
+.gridxDropDownPager,
+.gridxDropDownSizer {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Indirect Select Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 600px;
+			height: 300px;
+			margin: 0 10px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_indirectSelect.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid IndirectSelect / IndirectSelectColumn Test
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td>
+			<h2>IndirectSelect with extended selection</h2>
+			<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				modules: [
+					"gridx/modules/IndirectSelect",
+					"gridx/modules/extendedSelect/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/RowHeader",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+				//indirectSelectAll:false
+			'></div>
+		</td>
+		<td>
+			<h2>IndirectSelect with extended selection (trigger on cell)</h2>
+			<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				selectRowTriggerOnCell: true,
+				modules: [
+					"gridx/modules/IndirectSelect",
+					"gridx/modules/extendedSelect/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/RowHeader",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				],
+				selectRowAllowRight: false
+			'></div>
+		</td>
+	</tr><tr>
+		<td>
+			<h2>IndirectSelect with simple multi-selection (cannot swipe)</h2>
+			<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				modules: [
+					"gridx/modules/IndirectSelect",
+					"gridx/modules/select/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/RowHeader",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+			'></div>
+		</td>
+		<td>
+			<h2>IndirectSelect with single-selection</h2>
+			<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				selectRowMultiple: false,
+				modules: [
+					"gridx/modules/IndirectSelect",
+					"gridx/modules/select/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/RowHeader",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+			'></div>
+		</td>
+	</tr><tr>
+		<td>
+			<h2>IndirectSelectColumn with extended selection</h2>
+			<div id='grid5' jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				modules: [
+					"gridx/modules/IndirectSelectColumn",
+					"gridx/modules/extendedSelect/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+				//indirectSelectAll:false
+			'></div>
+		</td>
+		<td>
+			<h2>IndirectSelectColumn with extended selection (trigger on cell)</h2>
+			<div id='grid6' jsid='grid6' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				selectRowTriggerOnCell: true,
+				modules: [
+					"gridx/modules/IndirectSelectColumn",
+					"gridx/modules/extendedSelect/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+			'></div>
+		</td>
+	</tr><tr>
+		<td>
+			<h2>IndirectSelectColumn with simple multi-selection (cannot swipe)</h2>
+			<div id='grid7' jsid='grid7' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				modules: [
+					"gridx/modules/IndirectSelectColumn",
+					"gridx/modules/select/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+			'></div>
+		</td>
+		<td>
+			<h2>IndirectSelectColumn with single-selection</h2>
+			<div id='grid8' jsid='grid8' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Sync",
+				store: store,
+				structure: layout,
+				selectRowMultiple: false,
+				modules: [
+					"gridx/modules/IndirectSelectColumn",
+					"gridx/modules/select/Row",
+					"gridx/modules/ColumnResizer",
+					"gridx/modules/Pagination",
+					"gridx/modules/pagination/PaginationBar",
+					"gridx/modules/VirtualVScroller"
+				]
+			'></div>
+		</td>
+	</tr></table>
+</body>
+</html>

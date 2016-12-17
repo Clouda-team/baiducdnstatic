@@ -1,0 +1,135 @@
+<ul class="gridxFilterPaneForm">
+	<li><label id="${id}_ColumnLabel" for="${id}_ColumnSelect">${i18n.columnSelectLabel}</label></li>
+	<li name="sltColumn">
+		<div data-dojo-type="dijit.form.Select" id="${id}_ColumnSelect" aria-label="${_columnAriaLabel}" style="width:100%;"></div>
+	</li>
+	<li><label id="${id}_ConditionLabel" for="${id}_ConditionSelect">${i18n.conditionSelectLabel}</label></li>
+	<li name="sltCondition">
+		<div data-dojo-type="dijit.form.Select" id="${id}_ConditionSelect" style="width:100%;" aria-label="${_conditionAriaLabel}"></div>
+	</li>
+	<li><label id="${id}_ValueLabel">${i18n.valueBoxLabel}</label></li>
+	
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneTextWrapper">
+		<input type="text" data-dojo-type="dijit.form.TextBox" intermediateChanges="true"
+		 style="width:100%;" aria-label="${_valueAriaLabel}"/>
+	</li>
+	
+	<!-- text -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneComboWrapper">
+		<input type="text" data-dojo-type="dijit.form.ComboBox" 
+			intermediateChanges="true" autoComplete="false" queryExpr="*${i18n.startsWithExpr}" 
+			style="width:100%;" aria-label="${_valueAriaLabel}"/>
+	</li>
+	
+	<!-- number -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneNumberWrapper">
+		<input type="text" data-dojo-type="dijit.form.NumberTextBox"  aria-label="${_conditionAriaLabel}" intermediateChanges="true" style="width:100%;"/>
+	</li>
+	<!-- number range -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneNumberRangeWrapper">
+		<div data-dojo-type="dijit.form.NumberTextBox" style="width:44%; float: left;"
+				intermediateChanges="true" aria-label="${i18n.beginNumberRangeLabel}"></div>
+		<div style="width:10%; text-align: center; float: left;">${i18n.rangeTo}</div>
+		<div data-dojo-type="dijit.form.NumberTextBox" style="width:44%; float: right;"
+				intermediateChanges="true" aria-label="${i18n.endNumberRangeLabel}"></div>
+	</li>
+	<!-- date -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDateWrapper">
+		<div data-dojo-type="dijit.form.DateTextBox" aria-label="${_valueAriaLabel}" intermediateChanges="true" style="width: 100%"></div>
+	</li>
+	<!-- date past x hours/days/months/years -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDatePastWrapper">
+		<div data-dojo-type="dijit.form.NumberTextBox" aria-label="${_valueAriaLabel}" intermediateChanges="true" style="width: 44%; float: left"></div>
+		<div class='gridxSpace' style='width: 10%; float: left; height: 1px;'></div>
+		<div data-dojo-type="dijit.form.Select" aria-label="${_valueAriaLabel}" style="width: 44%; float: left">
+			<span value="hour">${i18n.hour}</span>
+			<span value="day" selected="selected">${i18n.day}</span>
+			<span value="month">${i18n.month}</span>
+			<span value="year">${i18n.year}</span>
+			<!-- <span value="FL">Florida</span> -->
+			<!-- <span value="CA">California</span> -->
+		</div>
+		
+	</li>
+	<!-- date range -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDateRangeWrapper">
+		<div data-dojo-type="dijit.form.DateTextBox" style="width:44%; float: left;"
+				intermediateChanges="true" aria-label="${i18n.beginDateRangeLabel}"></div>
+		<div style="width:10%; text-align: center; float: left;">${i18n.rangeTo}</div>
+		<div data-dojo-type="dijit.form.DateTextBox" style="width:44%; float: right;"
+				intermediateChanges="true" aria-label="${i18n.endDateRangeLabel}"></div>
+	</li>
+
+	<!-- datetime -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDatetimeWrapper">
+		<div data-dojo-type="dijit.form.DateTextBox" aria-label="${_valueAriaLabel}" style="width:44%;float:left" intermediateChanges="true"></div>
+		<div style="width:10%; text-align: center; float: left;height:1px"></div>
+		<div data-dojo-type="dijit.form.TimeTextBox" aria-label="${_valueAriaLabel}" style="width:44%;float:left" intermediateChanges="true"></div>
+	</li>
+	<!-- datetime past x hours/days/months/years -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDatetimePastWrapper">
+		<div data-dojo-type="dijit.form.NumberTextBox" aria-label="${_valueAriaLabel}" intermediateChanges="true" style="width: 44%; float: left"></div>
+		<div class='gridxSpace' style='width: 10%; float: left; height: 1px;'></div>
+		<div data-dojo-type="dijit.form.Select" aria-label="${_valueAriaLabel}" style="width: 44%; float: left">
+			<span value="hour">${i18n.hour}</span>
+			<span value="day" selected="selected">${i18n.day}</span>
+			<span value="month">${i18n.month}</span>
+			<span value="year">${i18n.year}</span>
+			<!-- <span value="FL">Florida</span> -->
+			<!-- <span value="CA">California</span> -->
+		</div>
+	</li>
+	<!-- datetime range -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneDatetimeRangeWrapper">
+		<div data-dojo-type="dijit.form.DateTextBox" aria-label="${_valueAriaLabel}" 
+				style="width:44%;float:left" intermediateChanges="true"></div>
+		<div style="width:10%; text-align: center; float: left;">&nbsp;</div>
+		<div data-dojo-type="dijit.form.TimeTextBox" aria-label="${_valueAriaLabel}" style="width:44%;float:left" intermediateChanges="true"></div>
+		
+		<div style="">${i18n.rangeTo}</div>
+
+		<div data-dojo-type="dijit.form.DateTextBox" aria-label="${_valueAriaLabel}"
+				style="width:44%;float:left" intermediateChanges="true"></div>
+		<div style="width:10%; text-align: center; float: left;">&nbsp;</div>
+		<div data-dojo-type="dijit.form.TimeTextBox" aria-label="${_valueAriaLabel}" style="width:44%;float:left" intermediateChanges="true"></div>
+	</li>
+	<!-- time -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneTimeWrapper">
+		<div data-dojo-type="dijit.form.TimeTextBox" aria-label="${_valueAriaLabel}" style="width: 100%" intermediateChanges="true"></div>
+	</li>
+	<!-- time range -->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneTimeRangeWrapper">
+		<div data-dojo-type="dijit.form.TimeTextBox" style="width:44%; float: left;" intermediateChanges="true"
+			 aria-label="${i18n.beginTimeRangeLabel}"></div>
+		<div style="text-align: center; float: left; width: 10%;">${i18n.rangeTo}</div>
+		<div data-dojo-type="dijit.form.TimeTextBox" style="width:44%; float: right;" intermediateChanges="true"
+			 aria-label="${i18n.endTimeRangeLabel}"></div>
+	</li>
+
+	<!-- time past x hours-->
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneTimePastWrapper">
+		<div data-dojo-type="dijit.form.NumberTextBox" aria-label="${_valueAriaLabel}" intermediateChanges="true" style="width: 44%; float: left"></div>
+		<div class='gridxSpace' style='width: 10%; float: left; height: 1px;'></div>
+		<div data-dojo-type="dijit.form.Select" aria-label="${_valueAriaLabel}" style="width: 44%; float: left">
+			<span value="hour" selected="selected">${i18n.hour}</span>
+<!-- 			<span value="day" selected="selected">${i18n.day}</span>
+			<span value="month">${i18n.month}</span>
+			<span value="year">${i18n.year}</span> -->
+			<!-- <span value="FL">Florida</span> -->
+			<!-- <span value="CA">California</span> -->
+		</div>
+	</li>
+	
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneRadioWrapper">
+		<span style="width:49%; float:left;">
+			<div data-dojo-type="dijit.form.RadioButton" aria-label="${i18n.radioTrueLabel}" checked="true"></div><span>${i18n.trueLabel}</span>
+		</span>
+		<span style="width:49%; float: right;">
+			<div data-dojo-type="dijit.form.RadioButton" aria-label="${i18n.radioFalseLabel}"></div><span>${i18n.falseLabel}</span>
+		</span>
+	</li>
+	
+	<li class="gridxFilterPaneFieldWrapper gridxFilterPaneSelectWrapper">
+		<div data-dojo-type="dijit.form.Select" aria-label="${_valueAriaLabel}" style="width: 100%"></div>
+	</li>
+</ul>

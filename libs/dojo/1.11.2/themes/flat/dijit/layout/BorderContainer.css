@@ -1,0 +1,63 @@
+
+.flat .dijitBorderContainer {
+  padding: 5px;
+}
+.flat .dijitSplitContainer-child,
+.flat .dijitBorderContainer-child {
+  border: 1px solid #9e9e9e;
+}
+.flat .dijitBorderContainer-dijitTabContainerTop,
+.flat .dijitBorderContainer-dijitTabContainerBottom,
+.flat .dijitBorderContainer-dijitTabContainerLeft,
+.flat .dijitBorderContainer-dijitTabContainerRight,
+.flat .dijitBorderContainer-dijitAccordionContainer {
+  border: none;
+}
+.flat .dijitBorderContainer-dijitBorderContainer {
+  border: 0;
+  padding: 0;
+}
+.flat .dijitSplitterH,
+.flat .dijitGutterH {
+  background: none;
+  border: 0;
+  height: 5px;
+}
+.flat .dijitSplitterH .dijitSplitterThumb {
+  background: #9e9e9e;
+  height: 1px;
+  top: 2px;
+  width: 19px;
+}
+.flat .dijitSplitterV,
+.flat .dijitGutterV {
+  background: none;
+  border: 0;
+  width: 5px;
+  margin: 0;
+}
+.flat .dijitSplitterV .dijitSplitterThumb {
+  background: #9e9e9e;
+  height: 19px;
+  left: 2px;
+  width: 1px;
+  margin: 0;
+}
+.flat .dijitSplitterHHover,
+.flat .dijitSplitterVHover {
+  font-size: 1px;
+  background: #f2f2f2;
+}
+.flat .dijitSplitterHHover .dijitSplitterThumb,
+.flat .dijitSplitterVHover .dijitSplitterThumb {
+  background: #767676;
+}
+.flat .dijitSplitterHActive,
+.flat .dijitSplitterVActive {
+  font-size: 1px;
+  background: #f2f2f2;
+}
+.flat .dijitSplitterHActive .dijitSplitterThumb,
+.flat .dijitSplitterVActive .dijitSplitterThumb {
+  background: #767676;
+}

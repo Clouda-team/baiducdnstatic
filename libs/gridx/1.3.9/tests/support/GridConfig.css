@@ -1,0 +1,42 @@
+.gridxConfig{
+	width: 400px;
+	height: 530px;
+	margin: 10px;
+}
+.dojoxGridConfigBtns {
+	margin: auto;
+	padding-bottom: 10px;
+}
+.gridxConfig .dijitButton {
+	z-index: 9999;
+}
+.gridxConfig .dijitSelect,
+.gridxConfig .dijitTextBox
+{
+	margin: 0;
+	width: 100%;
+	display: inline-table;
+}
+.gridxConfig .dijitSelect .dijitArrowButton{
+	width: 18px;
+}
+.gridxConfig h2 {
+	margin: 2px 0 5px 0;
+}
+.gridxConfig table{
+	border-collapse: collapse;
+	width: 100%;
+}
+.gridxConfig th{
+	padding: 2px;
+	font-weight: bolder;
+}
+.gridxConfig th, .gridxConfig td{
+	border: 1px solid grey;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.gridxConfigAllMods {
+	font-weight: bold;
+	margin-bottom: 3px;
+}

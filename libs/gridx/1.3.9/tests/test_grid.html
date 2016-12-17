@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>The Simplest Grid</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		#gridContainer {
+			width: 800px;
+			height: 500px;
+		}
+		#grid {
+			width: 100%;
+			height: 100%;
+		}
+		#ctrlPane .dijitAccordionContainer {
+			height: auto;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		The Simplest Grid
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td class='pane'>
+			<div id='gridContainer'></div>
+		</td>
+		<td id='ctrlPane' class='pane'></td>
+	</tr></table>
+</body>
+</html>

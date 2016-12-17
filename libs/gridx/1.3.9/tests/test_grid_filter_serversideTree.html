@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Grid Filter Server Side Test</title>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 300px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_filter_serversideTree.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Filter Test
+	</h1>
+	<h2>FilterBar</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: jsonStore,
+		structure: layoutServerSide,
+		selectRowTriggerOnCell: true,
+		filterBarMaxRuleCount: Infinity,
+		filterServerMode: true,
+		paginationBarShowRange: true,
+		paginationInitialPageSize: 50,
+		pageSize: 10,
+
+		filterSetupFilterQuery: function(expr){
+			var toExpr = function(expr){
+				if(!expr){ return ""; }
+				if(typeof expr.data != "object"){
+					if(expr.isCol){
+						return "column(\"" + expr.data + "\")";
+					}
+					return "\"" + expr.data + "\"";
+				}else{
+					var exprs = [];
+					for(var i in expr.data){
+						exprs.push(toExpr(expr.data[i]));
+					}
+					var op = expr.op;
+					if(expr.op == "and"){
+						op = "logicand";
+					}
+					if(expr.op == "or"){
+						op = "logicor";
+					}
+					return op + "(" + exprs.join(",") + ")";
+				}
+			};
+			console.log("expr is: ", expr);
+
+			var newExpr = toExpr(expr);
+			if(newExpr){ newExpr += ";"}
+			console.log("expr is: ", newExpr);
+			return {query: newExpr};
+		},
+		modules: [
+			"gridx/modules/Tree",
+			"gridx/modules/Filter",
+			
+			"gridx/modules/filter/QuickFilter",
+			"gridx/modules/filter/FilterBar",
+			"gridx/modules/SingleSort",
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<!-- <h2>QuickFilter</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/Filter",
+			"gridx/modules/filter/QuickFilter",
+			"gridx/modules/SingleSort",
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/IndirectSelectColumn",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<h2>FilterBar and QuickFilter</h2>
+	<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/Filter",
+			"gridx/modules/filter/FilterBar",
+			"gridx/modules/filter/QuickFilter",
+			"gridx/modules/SingleSort",
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/IndirectSelectColumn",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div> -->
+</body>
+</html>

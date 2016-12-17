@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Playground</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="demo.css" />
+	<style type="text/css">
+	</style>
+	<script type="text/javascript" src="../../../dojo/dojo.js" 
+		data-dojo-config="async: true, isDebug: true, parseOnLoad: true"></script>
+	<script type="text/javascript" src='demo.js'></script>
+</head>
+<body class='claro'>
+	<div class='header'>
+		<h1 style='color: #3F25E8;'>Grid<span style='color: red;'>X</span>
+<!--            &nbsp;<span -->
+<!--            style='font-size: 40px; color: #666;'>playground</span>-->
+		</h1>
+		<a style="position: absolute; top: 20px; right: 20px;" href="https://github.com/evanhw/gridx">Find us on GitHub</a>
+	</div>
+	<div class='sectionTitle sectionLeft'>Modules</div>
+	<div id='modulePicker' class='modulePicker sectionLeft'>
+	</div>
+	<div class='sectionTitle sectionRight' style='float: none; position: absolute; right: 0;'>Attributes</div>
+	<div id='attrPicker' class='attrPicker sectionRight'>
+	</div>
+	<div class='sectionTitle sectionLeft'>Columns</div>
+	<div id='storeLayoutPicker' class='storeLayoutPicker sectionLeft'>
+		<div id="layoutGrid" data-dojo-type="gridx/Grid" data-dojo-props="
+			store: layoutStore,
+			structure: [
+				{id: 'movebtn', width: '34px', decorator: moveBtnDec},
+				{id: 'cfield', name: 'Field', field: 'cfield', width: '85px',
+					alwaysEditing: true,
+					editor: 'dijit/form/Select',
+					editorArgs: {
+						props: 'store: fieldStore, labelAttr: &quot;id&quot;, style: &quot;width: 80px;&quot;'
+					}
+				},
+				{id: 'cname', name: 'Name', field: 'cname', width: '70px',
+					alwaysEditing: true
+				},
+				{id: 'cwidth', name: 'Width', field: 'cwidth', width: '70px',
+					alwaysEditing: true
+				},
+				{id: 'cedit', name: 'Editable', field: 'cedit', width: '45px',
+					alwaysEditing: true,
+					editor: 'dijit/form/CheckBox',
+					editorArgs: {
+						valueField: 'checked'
+					}
+				},
+				{id: 'cid', name: 'Column ID', field: 'cid', width: '70px',
+					alwaysEditing: true
+				}
+			],
+			cacheClass: 'gridx/core/model/cache/Sync',
+			bodyRowHoverEffect: false,
+			modules: [
+				'gridx/modules/extendedSelect/Row',
+				'gridx/modules/Focus',
+				'gridx/modules/RowHeader',
+				'gridx/modules/IndirectSelect',
+				'gridx/modules/move/Row',
+				'gridx/modules/CellWidget',
+				'gridx/modules/Edit',
+				'gridx/modules/ColumnLock'
+			]
+		"></div>
+	</div>
+	<div class='sectionTitle sectionRight'>Data Source</div>
+	<div class="storeConfig sectionRight">
+		<div id="storeBtn" class="storeBtn"><div>Store</div><span>Client</span><span>Server</span></div>
+		<div id="rowCountSlider" data-dojo-type="dijit/form/HorizontalSlider" data-dojo-props='
+			value: 100,
+			maximum: 1000,
+			minimum: 0,
+			showButtons: true,
+			intermediateChanges: true,
+			discreteValues: 1001,
+			onChange: onSliderChange
+		'>
+			<div data-dojo-type="dijit/form/HorizontalRule" data-dojo-props='
+				container:"bottomDecoration", 
+				count: 5,
+				style: {height: "5px"}
+			'></div>
+			<div data-dojo-type="dijit/form/HorizontalRuleLabels" data-dojo-props='
+				container:"bottomDecoration", 
+				count: 5,
+				maximum: 1000,
+				minimum: 0,
+				constraints:{pattern: "#"},
+				style: {height: "15px"}
+			'></div>
+		</div>
+		<input id="rowCountSpinner" data-dojo-type="dijit/form/NumberSpinner" data-dojo-props='
+			value: 100,
+			pattern: "[0-9,]*",
+			constraints:{
+				max: 1000,
+				min: 0
+			},
+			onInput: onSpinnerChange,
+			onChange: onSpinnerChange
+		'/><label>Rows</label>
+	</div>
+	<div class='tabButtons'
+		><span id='codeTabBtn' class='tabButton tabButtonSelected'>Code</span
+		><span id='gridTabBtn' class='tabButton'>Demo</span
+	></div>
+	<div id='main' class='main'>
+		<div id='code' class='code'>
+			<span id='jscodeTitle' class="codeContainerTitle codeContainerTitleSelected">JavaScript Creation</span>
+			<span id='htmlcodeTitle' class="codeContainerTitle">Declarative Creation</span>
+			<div id="jscodeContainer" class="codeContainer"><div class="codeContainerInner"><pre id='jscode' class='jscode'></pre></div></div>
+			<div id="htmlcodeContainer" class="codeContainer codeHidden"><div class="codeContainerInner"><pre id='htmlcode' class='htmlcode'></pre></div></div>
+		</div>
+		<div id='gridTab' class="gridTab tabHidden">
+			<div id='gridContainer' class='gridContainer'></div>
+			<div class='gridUtil' style="display: none;">
+				<div>Resize</div>
+				<div>Events</div>
+			</div>
+		</div>
+	</div>
+	<div id='moduleDialog' class="dialog moduleDialog dialogHidden">
+		<img class="moduleDlgPic"></img>
+		<div class="moduleDlgInfo">
+			<div class="moduleDlgLabel">Filter Functionality/API</div>
+			<div class="moduleDlgSource">
+				<span class="moduleDlgSourceLabel">Source File:</span><span class="moduleDlgSourcePath">gridx/modules/Filter.js</span>
+			</div>
+			<div class="moduleDlgName">
+				<span class="moduleDlgNameLabel">Module Name:</span><span class="moduleDlgNameValue">filter</span>
+			</div>
+			<div class="moduleDlgDepsTitle">Depends on:</div>
+			<div class="moduleDlgDeps"></div>
+		</div>
+		<div class="moduleDlgDescriptionTitle">Description:</div>
+		<div class="moduleDlgDescription">Description</div>
+		<div class="dlgCloseBtn"></div>
+	</div>
+	<div id='boolAttrDlg' class="dialog attrDialog dialogHidden">
+		<div id='boolAttrLabel' class="attrLabel">
+			<span id='boolAttrMod' class="attrMod"></span><span id='boolAttrName' class="attrName"></span>
+		</div>
+		<div id='boolAttrType' class="attrType">[Boolean]</div>
+		<div id='boolAttrDesc' class="attrDesc"></div>
+		<div class='attrValues'>
+			<input id='boolAttrValueTrue' type="radio" name="boolAttrValue" 
+				data-dojo-type="dijit/form/RadioButton"
+				data-dojo-props="onChange: onBoolAttrValueChange"
+			/>
+			<label for='boolAttrValueTrue'>True</label>
+			<input id='boolAttrValueFalse' type="radio" name="boolAttrValue"
+				data-dojo-type="dijit/form/RadioButton"
+				data-dojo-props="onChange: onBoolAttrValueChange"
+			/>
+			<label for='boolAttrValueFalse'>False</label>
+		</div>
+		<div class="dlgCloseBtn"></div>
+	</div>
+	<div id='numberAttrDlg' class="dialog attrDialog dialogHidden">
+		<div id='numberAttrLabel' class="attrLabel">
+			<span id='numberAttrMod' class="attrMod"></span><span id='numberAttrName' class="attrName"></span>
+		</div>
+		<div id='numberAttrType' class="attrType">[Number]</div>
+		<div id='numberAttrDesc' class="attrDesc"></div>
+		<div class='attrValues'>
+			<input id='numberAttrValue' type="text"
+				data-dojo-type="dijit/form/NumberTextBox"
+				data-dojo-props="onInput: onNumberAttrValueChange"
+			/>
+		</div>
+		<div class="dlgCloseBtn"></div>
+	</div>
+</body>
+</html>

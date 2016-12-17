@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Widget in Grid Cell Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 1000px;
+			height: 420px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_cellWidget.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Widget in Grid Cell Test 
+	</h1>
+	<h2>Read-Only Widgets</h2>
+	<div data-dojo-id='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout1,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/CellWidget",
+			"gridx/modules/select/Row",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+	<h2>Multiple Focusable Elements in Cell</h2>
+	<div data-dojo-id='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout2,
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/CellWidget",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+</body>
+</html>

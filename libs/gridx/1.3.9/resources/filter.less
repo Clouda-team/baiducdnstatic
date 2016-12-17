@@ -1,0 +1,319 @@
+.gridxFilterDialog {
+	.dijitAccordionContainer .dijitAccordionContainer-child {
+		padding: 6px 9px;
+	}
+
+	.gridxFilterAccordionWrapper {
+		height: 227px;
+		width: 300px;
+		overflow: auto;
+		position: relative;
+		margin: 5px 0 15px 0;
+	}
+
+	.gridxFilterDialogButtons {
+		text-align: right;
+
+		.gridxFilterDialogBtnAdd {
+			float:left;
+			margin-top: -10px;
+		}
+	}
+
+	.dijitAccordionTitleFocus{
+		margin-right: 16px;
+
+		.dijitAccordionText {
+			display: block;
+		}
+
+		.dijitAccordionArrow {
+			display: none;
+		}
+	}
+}
+
+.gridxFilterPaneForm {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	font-size: 10px;
+
+	.dijitSelect{
+		margin: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0px;
+		list-style: none;
+		width:98%;
+	}
+
+	.dijitSelect,
+	.dijitTextBox,
+	.dijitComboBox {
+		font-size: 12px;
+	}
+
+	.gridxFilterPaneFieldWrapper {
+		display: none;
+	}
+}
+
+.gridxFilterPaneCloseButton {
+	float: right;
+	margin-top: -15px;
+
+	img {
+		.icon(crossBorderedGrey);
+		cursor: pointer;
+
+		&:hover {
+			.icon(crossBorderedRed);
+		}
+	}
+
+	.gridxFilterSingleRule & {
+		display: none;
+	}
+}
+
+.gridxFilterBtnAddRule {
+	.icon(plusBorderedGreen);
+
+	.dijitButtonDisabled & {
+		.icon(plusBorderedGrey);
+	}
+}
+
+.gridxFilterBarBtnIcon {
+	.icon(filterLTR; 15px; 15px);
+}
+
+.gridxFilterPaneText .gridxFilterPaneTextWrapper,
+.gridxFilterPaneCombo .gridxFilterPaneComboWrapper,
+.gridxFilterPaneNumber .gridxFilterPaneNumberWrapper,
+.gridxFilterPaneNumberRange .gridxFilterPaneNumberRangeWrapper,
+
+.gridxFilterPaneDate .gridxFilterPaneDateWrapper,
+.gridxFilterPaneDateRange .gridxFilterPaneDateRangeWrapper,
+.gridxFilterPaneDatePast .gridxFilterPaneDatePastWrapper,
+
+.gridxFilterPaneDatetime .gridxFilterPaneDatetimeWrapper,
+.gridxFilterPaneDatetimeRange .gridxFilterPaneDatetimeRangeWrapper,
+.gridxFilterPaneDatetimePast .gridxFilterPaneDatetimePastWrapper,
+
+.gridxFilterPaneTime .gridxFilterPaneTimeWrapper,
+.gridxFilterPaneTimeRange .gridxFilterPaneTimeRangeWrapper,
+.gridxFilterPaneTimePast .gridxFilterPaneTimePastWrapper,
+.gridxFilterPaneSelect .gridxFilterPaneSelectWrapper,
+.gridxFilterPaneRadio .gridxFilterPaneRadioWrapper {
+	display: block;
+}
+
+.gridxFilterBar {
+	cursor: pointer;
+	width: 100%;
+	font-family: arial;
+
+	[action="clear"] {
+		color: #5B83B6;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.dijitButton {
+		margin: 0;
+		float: left;
+
+		.dijitButtonNode {
+			-moz-border-radius: 1px;
+			-webkit-border-radius: 1px;
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-right: 2px;
+		}
+	}
+}
+
+.gridxFilterBarStatus {
+	.verticalGradientBackground(#f2f9ff; #eaf5ff);
+	border-bottom: 1px solid #BFD6EB;
+	border-top: 1px solid #BFD6EB;
+	padding: 1px 0 0 45px;
+
+	.dj_ie9 & {
+		padding-left: 5px;
+	}
+}
+
+.gridxFilterBarCloseBtn {
+	.icon(crossBlue; 14px; 14px);
+	float: right;
+	margin-right: 3px;
+	cursor: pointer;
+
+	.dj_ie7 & {
+		margin-top: -14px;
+	}
+
+	.gridxFilterBarHideCloseBtn & {
+		display: none;
+	}
+
+	&:hover {
+		.icon(crossBlueHover; 14px; 14px);
+	}
+	.dj_ie &:focus {
+		outline: 1px dotted black;
+	}
+}
+
+.gridxFilterTooltip {
+	table {
+		border: 1px solid #bbb;
+		border-collapse: collapse;
+
+		th {
+			background-color: #E8EFF4;
+			border: 1px solid #bbb;
+		}
+		th, td {
+			padding: 2px 4px;
+			height: 16px;
+			vertical-align: middle;
+		}
+		.gridxFilterTooltipValueCell div{
+			max-width: 150px;
+			position: relative;
+			padding-right: 25px;
+		}
+	}
+	.gridxFilterTooltipTitle {
+		margin-bottom: 8px;
+	}
+	.gridxFilterTooltipRemoveBtn {
+		.icon(crossBorderedGrey);
+		position:absolute;
+		right: 0px;
+		top: 1px;
+		cursor: pointer;
+		border: none;
+
+		&:hover {
+			.icon(crossBorderedRed);
+		}
+	}
+	.gridxFilterTooltipOddRow {
+		background-color: #F1F8FF;
+	}
+}
+
+.gridxFilterTooltipSingleRule .gridxFilterTooltipRemoveBtn {
+	visibility: hidden;
+}
+
+.gridxFilterConfirmDialogButtons {
+	text-align: right;
+	margin-top: 10px;
+}
+
+/* QuickFilter */
+.gridxQuickFilterInputContainer {
+	margin-right: 2px;
+	position: relative;
+}
+
+.gridxQuickFilterInput {
+	width: 150px;
+
+	.dijitInputInner::-ms-clear {
+		display: none;
+	}
+}
+
+.gridxQuickFilterClear {
+	.icon(crossBlack, 18px, 18px);
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	cursor: pointer;
+	display: none;
+	text-align: center;
+
+	.dj_ie7 & {
+		top: 5px;
+	}
+
+	.gridxQuickFilterActive & {
+		display: block;
+	}
+}
+
+
+.gridxQuickFilterIcon {
+	.icon(filterLTR);
+}
+
+.gridxQuickFilterNoFilterBar .gridxQuickFilterComboButton,
+.gridxQuickFilterHasFilterBar .gridxQuickFilterButton {
+	display: none;
+}
+
+.gridxQuickFilterClearInner,
+.gridxFilterBarCloseBtnText,
+.gridxFilterTooltipRemoveBtnText {
+	display: none;
+
+	.dijit_a11y & {
+		display: inline;
+	}
+}
+
+.gridxBarQuickFilter {
+	text-align: right;
+}
+
+/*Copied from dojox/html/resources/ellipsis.css*/
+.dojoxEllipsis,
+.dojoxEllipsisShown {
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+}
+
+.dojoxEllipsis window {
+    width:100%;
+    -moz-user-focus:normal;
+    -moz-user-select:text;
+}
+.dojoxEllipsis description{
+    -moz-user-focus:normal;
+    -moz-user-select:text;
+}
+.dojoxEllipsisIFrame{
+	white-space: normal;
+	border: none;
+	width: 100%;
+	display: block;
+	height: 1px;
+	margin-top: -1px;
+	clear: both;
+}
+.dojoxEllipsisContainer{
+	width: 100%;
+}
+.dojoxEllipsisShown:after {
+	content: "\2026";
+}
+
+
+
+/*Adaptive Filter*/

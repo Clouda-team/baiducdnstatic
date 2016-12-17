@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Persist Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		#gridContainer {
+			width: 800px;
+			height: 500px;
+		}
+		#grid {
+			height: 100%;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_persist.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Persist Test
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td>
+			<div id='gridContainer'></div>
+		</td>
+		<td id='ctrlPane'></td>
+	</tr></table>
+	<div>
+		<h2>Notes:</h2>
+		<ul>
+			<li>If new columns are added, column order won't be restored.</li>
+			<li>If some columns are removed but no new columns, column order will still be restored.</li>
+		</ul>
+	</div>
+</body>
+</html>

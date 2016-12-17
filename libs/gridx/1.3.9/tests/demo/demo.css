@@ -1,0 +1,553 @@
+@import "../../../dijit/themes/claro/claro.css";
+@import "../../../dijit/themes/claro/document.css";
+@import "../../resources/claro/Gridx.css";
+@import "../../resources/claro/Gridx_rtl.css";
+
+body {
+	background-color: #eee;
+}
+
+.header {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+}
+
+.header h1 {
+	font-size: 60px;
+	font-weight: bolder;
+	padding-top: 10px;
+	margin: 0;
+	text-shadow: 5px 5px 3px #bbb;
+}
+
+.sectionTitle {
+	font-size: 18px;
+	text-align: center;
+	width: 20%;
+	padding: 5px 0;
+	color: #555;
+	text-shadow: 1px 1px 0px #fff;
+}
+
+.sectionLeft {
+	float: left;
+	clear: left;
+}
+
+.sectionRight {
+	float: right;
+	clear: right;
+}
+
+.modulePicker {
+	height: 325px;
+	width: 20%;
+	overflow: auto;
+}
+
+.attrPicker {
+	height: 430px;
+	width: 20%;
+	overflow: auto;
+}
+
+.storeLayoutPicker {
+	width: 20%;
+}
+
+.storeConfig {
+	width: 20%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#rowCountSlider {
+	margin: 10px;
+}
+
+#rowCountSlider .dijitSliderDecoration,
+.storeConfig label {
+	text-shadow: 1px 1px 0px #fff;
+}
+
+.storeConfig .dijitSpinner {
+	width: 100px;
+	margin-right: 10px;
+}
+
+.storeBtn {
+	font-size: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	position: relative;
+	width: 158px;
+	margin: 0 auto;
+	height: 30px;
+	padding: 5px 0;
+	color: #555;
+	text-shadow: 1px 1px 0px #fff;
+	cursor: pointer;
+}
+
+.storeBtn div {
+	position: absolute;
+	width: 60px;
+	top: 0px;
+	left: 76px;
+	right: 0px;
+	border: 1px solid #ddd;
+	font-weight: bold;
+	color: #888;
+	text-shadow: 1px 1px 0 #fff;
+	border-radius: 8px;
+	height: 28px;
+	padding: 5px 10px;
+	-webkit-box-shadow: -1px 0px 2px #888888;
+	box-shadow: -1px 0px 2px #888888;
+	-moz-transition: left 0.3s; /* Firefox 4 */
+	-webkit-transition: left 0.3s; /* Safari and Chrome */
+	-o-transition: left 0.3s; /* Opera */
+	transition: left 0.3s;
+}
+
+.storeBtnServer div {
+	left: 0;
+	-webkit-box-shadow: 1px 0px 2px #888888;
+	box-shadow: 1px 0px 2px #888888;
+}
+
+.storeBtn:hover div {
+	color: #fff;
+	text-shadow: 0 1px 0 #888;
+}
+
+.storeBtn span {
+	padding: 0 8px;
+}
+
+.storeLayoutPicker .gridx {
+	width: 100%;
+	height: 255px;
+}
+
+.storeLayoutPicker .gridx [colid='cedit'].gridxCell {
+	text-align: center;
+}
+.storeLayoutPicker .gridx [colid='movebtn'].gridxCell {
+	padding-top: 9px;
+	z-index: 1;
+}
+
+.moveBtns {
+	height: 16px;
+	cursor: pointer;
+}
+.upBtn {
+	width: 16px;
+	height: 16px;
+	background: url('images/upbtn.png');
+	display: inline-block;
+}
+.upBtn:hover {
+	background: url('images/upbtn-hover.png');
+}
+.downBtn {
+	width: 16px;
+	height: 16px;
+	background: url('images/downbtn.png');
+	display: inline-block;
+}
+.downBtn:hover {
+	background: url('images/downbtn-hover.png');
+}
+
+.storeLayoutPicker .gridxRow:first-child .upBtn {
+	cursor: default;
+	background: url('images/upbtn-disabled.png');
+}
+
+.storeLayoutPicker [rowindex='8'].gridxRow .downBtn {
+	cursor: default;
+	background: url('images/downbtn-disabled.png');
+}
+
+.main {
+	margin: 0 22%;
+	width: auto;
+	height: 600px;
+	position: relative;
+	overflow: auto;
+}
+
+.main .gridx {
+	height: 500px;
+	width: 750px;
+/*    width: 90%;*/
+	margin: 20px auto;
+}
+
+.loader {
+	width: 100px;
+	margin: 100px auto;
+	text-align: center;
+	font-weight: bold;
+	color: #666;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+/* -------------------------------------------------------------*/
+.moduleItem,
+.attrItem {
+	padding: 10px 20px;
+	border-bottom: 1px solid #fff;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	cursor: pointer;
+	overflow: hidden;
+	text-shadow: 1px 1px 0 #fff;
+}
+
+.moduleItem:hover,
+.attrItem:hover {
+	color: #fff;
+	text-shadow: 0 1px 0 #888;
+}
+
+.attrModName {
+	color: blue;
+}
+
+/* -------------------------------------------------------------*/
+.code {
+	position: absolute;
+	width: 100%;
+	height: 600px;
+}
+
+.codeContainerTitle {
+	width: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	text-align: center;
+	font-size: 20px;
+	padding: 10px 0;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #fff transparent transparent transparent;
+	border-radius: 0 20px 0 0;
+	color: #555;
+	text-shadow: 1px 1px 1px #fff;
+	cursor: pointer;
+}
+
+.codeContainerTitle:first-child {
+	left: 0;
+	right: auto;
+	border-radius: 20px 0 0 0;
+}
+
+.codeContainerTitle:hover,
+.code .codeContainerTitleSelected {
+	background: #fff;
+	border-color: #ddd #ddd transparent #ddd;
+	z-index: 9;
+}
+
+.codeContainer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background-color: #fff;
+}
+
+.codeContainerInner {
+	border: 2px solid #ddd;
+	border-top: none;
+	height: 552px;
+	overflow: auto;
+}
+
+.jscode,
+.htmlcode {
+	background-color: #fff !important;
+	border: none !important;
+}
+
+.codeHidden {
+	display: none;
+}
+
+.gridTab {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.tabHidden {
+	display: none;
+}
+
+.tabButtons {
+	margin: 0px auto;
+	width: 200px;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.tabButton {
+	padding: 5px 20px;
+	border: 1px solid #bbb;
+	font-size: 20px;
+	cursor: pointer;
+	color: #888;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#codeTabBtn {
+	border-right: none;
+	border-radius: 15px 0 0 15px;
+}
+#gridTabBtn {
+	border-radius: 0 15px 15px 0;
+}
+
+.tabButton:hover {
+	color: #fff;
+	text-shadow: 0 1px 0 #888;
+}
+
+/*-------------------------------------*/
+.dialog {
+	z-index: 999;
+	border: 1px solid #aaa;
+	position: absolute;
+	-webkit-box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 10px;
+}
+
+.dialogHidden {
+	display: none;
+}
+
+.attrDialog {
+	width: 300px;
+}
+
+.attrLabel {
+	padding: 10px 20px;
+	font-size: 18px;
+}
+
+.attrMod {
+	font-weight: bolder;
+	color: red;
+}
+
+.attrName {
+	color: green;
+}
+
+.attrType {
+	margin-left: 20px;
+	font-weight: bolder;
+}
+
+.attrDesc {
+	padding: 20px 20px 0 20px;
+}
+
+.attrValues {
+	padding: 20px;
+}
+
+.dlgCloseBtn {
+	position: absolute;
+	top: -14px;
+	right: -14px;
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+	background-image: url('images/popupClose.png');
+}
+
+/*--------------------------------------------------------------*/
+.moduleDialog {
+	width: 430px;
+	background-color: #fff;
+}
+
+.moduleDlgPic {
+	position: absolute;
+	border: 1px solid #ddd;
+	margin: 5px;
+	margin-bottom: 0;
+	top: 0;
+	left: 0;
+}
+
+.moduleDlgInfo {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px;
+	padding: 10px;
+}
+
+.moduleDlgLabel {
+	font-size: 18px;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #888;
+}
+
+.moduleDlgSource {
+	margin: 3px 0;
+}
+
+.moduleDlgSourceLabel {
+	font-weight: bolder;
+	margin-right: 5px;
+}
+
+.moduleDlgName {
+	margin: 3px 0;
+}
+
+.moduleDlgNameLabel {
+	font-weight: bolder;
+	margin-right: 5px;
+}
+
+.moduleDlgDepsTitle {
+	font-weight: bolder;
+	margin-right: 5px;
+}
+
+.moduleDlgDeps {
+	position: relative;
+}
+
+.moduleDlgDep {
+	border: 1px solid #fff;
+	background-color: #888;
+	margin: 2px;
+	padding: 2px;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+}
+
+.moduleDlgDescriptionTitle {
+	font-weight: bolder;
+	margin: 150px 0 0 10px;
+}
+
+.moduleDlgDescription {
+	padding: 10px;
+	clear: both;
+}
+
+/* ------------------------Gradients-------------------------------- */
+.header {
+	background: #cccccc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cccccc 0%, #eeeeee 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* IE10+ */
+	background: linear-gradient(top,  #cccccc 0%,#eeeeee 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}
+
+.storeBtn {
+	background: #05abe0; /* Old browsers */
+	background: -moz-linear-gradient(top,  #05abe0 0%, #87e0fd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#05abe0), color-stop(100%,#87e0fd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #05abe0 0%,#87e0fd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #05abe0 0%,#87e0fd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #05abe0 0%,#87e0fd 100%); /* IE10+ */
+	background: linear-gradient(top,  #05abe0 0%,#87e0fd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05abe0', endColorstr='#87e0fd',GradientType=0 ); /* IE6-9 */
+}
+
+.storeBtn div,
+.moduleItem,
+.attrItem,
+.dialog,
+.codeContainerTitle {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.storeBtn:hover div,
+.moduleItem:hover,
+.attrItem:hover,
+.tabButton:hover {
+	background: rgb(212,212,212); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(212,212,212,1) 0%, rgba(189,189,189,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(212,212,212,1)), color-stop(100%,rgba(189,189,189,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(212,212,212,1) 0%,rgba(189,189,189,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(212,212,212,1) 0%,rgba(189,189,189,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(212,212,212,1) 0%,rgba(189,189,189,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(212,212,212,1) 0%,rgba(189,189,189,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d4d4', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
+}
+
+.moduleSelected,
+.attrSelected {
+	background: #f0f9ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f0f9ff 0%, #a1dbff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f9ff), color-stop(100%,#a1dbff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f0f9ff 0%,#a1dbff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f0f9ff 0%,#a1dbff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f0f9ff 0%,#a1dbff 100%); /* IE10+ */
+	background: linear-gradient(top,  #f0f9ff 0%,#a1dbff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+}
+
+.moduleSelected:hover,
+.attrSelected:hover {
+	background: #a0d9ff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #a0d9ff 0%, #1eacff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a0d9ff), color-stop(100%,#1eacff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #a0d9ff 0%,#1eacff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #a0d9ff 0%,#1eacff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #a0d9ff 0%,#1eacff 100%); /* IE10+ */
+	background: linear-gradient(top,  #a0d9ff 0%,#1eacff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0d9ff', endColorstr='#1eacff',GradientType=0 ); /* IE6-9 */
+}
+
+.tabButton {
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+}
+
+.tabButtonSelected {
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}

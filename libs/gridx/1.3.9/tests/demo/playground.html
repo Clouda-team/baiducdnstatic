@@ -1,0 +1,197 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Playground</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="playground.css" />
+	<style type="text/css">
+
+		.gridx {
+			width: 900px;
+			height: 570px;
+			margin: auto;
+		}
+	</style>
+	<script type="text/javascript" src="ZeroClipboard.js"></script>
+	<script type="text/javascript" src="../../../dojo/dojo.js" 
+		data-dojo-config="async: true, isDebug: true, parseOnLoad: true"></script>
+	
+	<script>
+	require(['gridx/tests/demo/playground']);
+	</script>
+</head>
+<body class='claro'>
+	<div id='main'>
+		<div id='header'>
+			<div id='logo'>Grid<span style='color: #189FF9;'>X</span> Playground</div>
+			<div id='headerButtons'
+				><span id='showConfig' class='headerBtn headerBtnPressed'>Configure</span
+				><span id='showGrid' class='headerBtn'>Run</span
+				><span id='showCode' class='headerBtn'>Code</span
+			></div>
+		</div>
+		<div id='playground'>
+			<div id='gridContainer'></div>
+		</div>
+		<div id='config' class='configOpen'>
+			<div id='storeConfigPreview' class='configPreview'>
+				<div id='storeConfigPreviewTitle'>Data</div>
+				<div id='storeConfigPreviewSummary'></div>
+			</div>
+			<div id='columnsConfigPreview' class='configPreview'>
+				<div id='columnsConfigPreviewTitle'>Columns</div>
+				<div id='columnsConfigPreviewSummary'>
+					<table id='columnsConfigPreviewSummaryHeader'>
+						<tbody><tr>
+							<td class='columnsConfigPreviewSummaryIdx'></th>
+							<td class='columnsConfigPreviewSummaryId'>ID</th>
+							<td class='columnsConfigPreviewSummaryName'>Name</th>
+							<td class='columnsConfigPreviewSummaryField'>Field</th>
+							<td class='columnsConfigPreviewSummaryWidth'>Width</th>
+						</tr></tbody>
+					</table>
+					<div id='columnsConfigPreviewSummaryInner'>
+						<table>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id='modulesConfigPreview' class='configPreview'>
+				<div id='modulesConfigPreviewTitle'>Modules</div>
+				<div id='modulesConfigPreviewSummary'></div>
+			</div>
+			<div id='attributesConfigPreview' class='configPreview'>
+				<div id='attributesConfigPreviewTitle'>Attributes</div>
+				<div id='attributesConfigPreviewSummary'>
+					<table>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+			<div id='configComplete'><div id='configCompleteInner'></div></div>
+			<div id='storeConfig' class='configDetail'
+				><div id='clientOrServer' class='storeConfigChoose'
+					><div class='storeConfigPointer'>&#9654;</div
+					><div id='clientStoreBtn' class='storeConfigBtn storeConfigBtnSelected'>Client Data</div
+					><div id='serverStoreBtn' class='storeConfigBtn'>Server Data</div
+				></div
+				><div id='listOrTree' class='storeConfigChoose'
+					><div class='storeConfigPointer'>&#9654;</div
+					><div id='listDataBtn' class='storeConfigBtn storeConfigBtnSelected'>List Data</div
+					><div id='treeDataBtn' class='storeConfigBtn'>Hierarchical Data</div
+				></div>
+				<div id='treeDataConfig'>
+					<div>
+						<label>Max Level</label>
+						<select id='levelInput' data-dojo-type='dijit/form/Select'>
+							<option value='1'>1</option>
+							<option value='2' selected='true'>2</option>
+							<option value='3'>3</option>
+							<option value='4'>4</option>
+						</select>
+					</div>
+					<div style='margin-top: 10px;'>
+						<label for='childrenCountInput'>Max Children Count</label>
+						<input id='childrenCountInput' data-dojo-type='dijit/form/NumberSpinner'
+							data-dojo-props='constraints: {min: 0}, value: 10'
+						/>
+					</div>
+				</div>
+				<div id='rowCountConfig'>
+					<label for='rowCountInput'>Row Count</label>
+					<input id='rowCountInput' data-dojo-type='dijit/form/NumberSpinner'
+						data-dojo-props='constraints: {min: 0}, value: 100'
+					/>
+				</div>
+				<div class='closeConfig'>OK</div>
+			</div>
+			<div id='columnsConfig' class='configDetail'>
+				<div id='columnsContainer'
+					><div class='betweenColumnsPad'></div
+					><div id='addColumnBtn'>Add Column</div
+				></div>
+				<div class='closeConfig'>OK</div>
+			</div>
+			<div id='modulesConfig' class='configDetail'>
+				<div id='moduleDescription'
+					><div id='moduleDescIcon'></div
+					><div id='moduleDescLabel'>SingleSort</div
+					><div id='moduleDescName'>sort</div
+					><div id='moduleDescAccess'
+						><span id='moduleDescAccessLabel'>Access:</span
+						><span id='moduleDescAccessDetail'>grid.sort</span
+					></div
+					><div id='moduleDescPath'
+						><span id='moduleDescPathLabel'>File:</span
+						><span id='moduleDescPathDetail'>gridx/modules/SingleSort.js</span
+					></div
+					><div id='moduleDescDepend'
+						><span id='moduleDescDependLabel'>Depend:</span
+						><span id='moduleDescDependDetail'></span
+					></div
+					><div id='moduleDescApiDocUrl'
+						><span id='moduleDescApiDocUrlLabel'>Api:</span
+						><span id='moduleDescApiDocUrlLabelDetail'>http://oria.github.io/gridx/apidoc/index.html#1.2/gridx/modules/SingleSort</span
+					></div
+					><div id='moduleDescDetail'>Description</div
+					><div id='moduleDescCover'>
+						<div id='moduleDescCoverMsg'>Click a module to view descriptions</div>
+					</div
+				></div>
+				<div id='modulesFilter'>
+					<label>Filter Modules</label>
+					<input id='modulesFilterInput' data-dojo-type='dijit.form.TextBox'/>
+				</div>
+				<div id='modulesAvailable' class='modulesContainer'></div>
+				<div id='modulesLoaded' class='modulesContainer'>
+					<div id='modulesLoadedCover'>
+						Double click a module to add it to grid
+					</div>
+				</div>
+				<div class='closeConfig'>OK</div>
+			</div>
+			<div id='attributesConfig' class='configDetail'>
+				<div id='attributesFilter'>
+					<label>Filter Attributes</label>
+					<input id='attributesFilterInput' data-dojo-type='dijit.form.TextBox'/>
+				</div>
+				<div id='attributesConfigInner'
+					><div id='attributesBool' class='attributesPane attributesPaneSelected'
+						><div id='attributesBoolLabel' class='attributesConfigLabel'></div
+						><div id='attributesBoolInner'></div
+					></div
+					><div id='attributesNumber' class='attributesPane'
+						><div id='attributesNumberLabel' class='attributesConfigLabel'></div
+						><div id='attributesNumberInner'></div
+					></div
+					><div id='attributesOther' class='attributesPane'
+						><div id='attributesOtherLabel attributesNumberLabel' class='attributesConfigLabel'>
+							<p class='attributesLabel'>Object</p>
+						</div
+						><div id='attributesOtherInner'></div
+					></div
+					><!--div id='attributesText' class='attributesPane'></div
+					><div id='attributesOther' class='attributesPane'></div
+				--></div>
+				<div class='closeConfig'>OK</div>
+			</div>
+			<div class='configDetail'></div>
+		</div>
+		<div id='codeViewer'>
+			<div id='codeContainer'>
+				<span id='jscodeTitle' class="codeContainerTitle codeContainerTitleSelected">JavaScript Creation</span>
+				<span id='htmlcodeTitle' class="codeContainerTitle">Declarative Creation</span>
+				<div id="jscodeContainer"><div class="codeContainerInner"><pre id='jscode' class='jscode'></pre
+				></div></div>
+				<div id="htmlcodeContainer" class="codeHidden"><div class="codeContainerInner"><pre id='htmlcode' class='htmlcode'></pre
+				></div></div>
+				<div id="clipBtn" class='clipBtn'>Copy To Clipboard</div>
+			</div>
+			<div class='closeCode'>Close</div>
+		</div>
+		<script type="text/javascript">
+
+		</script>
+	</div>
+</body>

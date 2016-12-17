@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Row DnD - Drag to Non-Grid Target</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridContainer {
+			width: 500px;
+			height: 400px;
+			margin: 10px;
+		}
+
+		.gridx {
+			height: 100%;
+		}
+
+		#songForm {
+			border: 3px solid #ccc;
+			radius: 8pt;
+			-moz-border-radius: 8pt 8pt;
+			padding: 5px;
+		}
+
+		h2 {
+			font-weight: bolder !important;
+			font-size: 15px !important;
+		}
+
+		#trashcan {
+			width: 200px;
+			margin: 20px 20px 0 20px;
+			height: 120px;
+			border: 3px solid #ccc;
+			radius: 8pt;
+			-moz-border-radius: 8pt 8pt;
+			word-wrap: break-word;
+			padding: 5px;
+		}
+
+		.trashItem {
+			margin: 2px;
+		}
+	</style>
+
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_dndrow_nongrid_target.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid Row DnD - Drag to Non-Grid Target</h1>
+	<table border='0' cellspacing='0' cellpadding='0'>
+		<tr>
+			<td>
+				<div id='grid1Container' class='gridContainer'></div>
+			</td>
+			<td>
+				<div id='draggedRows'>
+					<form id="songForm">
+						<h2>Drag a row here for details</h2>
+					  <table>
+						<tr>
+						  <td><label for="inputName">Song name</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox' id="inputName" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputYear">Publish year</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox' id="inputYear" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputGenre">Genre</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputGenre" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputArtist">Artist</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputArtist" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputAlbum">Album</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputAlbum" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputComposer">Composer</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputComposer" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputLength">Length</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputLength" type="text" /></td>
+						</tr>
+						<tr>
+						  <td><label for="inputTrack">Track</label></td>
+						  <td><input data-dojo-type='dijit.form.TextBox'  id="inputTrack" type="text" /></td>
+						</tr>
+					  </table>
+					</form>
+				</div>
+				<div id='trashcan'><h2>Trash Can</h2><br/>drag here to delete rows:<br/></div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

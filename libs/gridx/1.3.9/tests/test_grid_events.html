@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Basic Events Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_events.js'></script>
+	<script type='text/javascript'>
+		require(['dojo/domReady', 'dojo/on'], function(ready, on){
+			console.log('in dojo domready');
+			ready(function(){
+				dojo.query('input[type=radio]').forEach(function(input){
+					on(input, 'click', function(){
+						console.log(this.id);
+					})
+				})
+			});
+		})
+	</script>
+	<style type='text/css'>
+		div#bindingForm{
+			margin: 20px 0;
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Basic Events Test
+	</h1>
+	<div id='bindingForm'>
+		<strong>Bind event way:</strong>
+		<input type="radio" name="bingingWay" id="dojo/on" checked='true'><label for='dojo/on'>dojo/on</label>
+		<input type="radio" name="bingingWay" id="grid.on"><label for='grid.on'>grid.on</label>
+		<input type="radio" name="bingingWay" id="dojo/connect"><label for='dojo/connect'>dojo/connnect</label>
+		<input type="radio" name="bingingWay" id="grid.connect"><label for='grid.connect'>grid.connect</label>
+	</div>
+	<div id='grid'></div>
+	<button onclick='grid.setStore(createStore())'>Clear Counter</button>
+</body>
+</html>

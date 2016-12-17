@@ -1,0 +1,18 @@
+{
+  "name": "dgrid",
+  "filename": "Grid.js",
+  "version": "1.1.0",
+  "description": "Full featured, lightweight data grids",
+  "homepage": "http://dgrid.io/",
+  "keywords": [
+    "javascript", "dgrid", "dojo"
+  ],
+  "maintainers": [{
+    "name": "SitePen",
+    "web": "https://www.sitepen.com/"
+  }],
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/SitePen/dgrid"
+  }]
+}

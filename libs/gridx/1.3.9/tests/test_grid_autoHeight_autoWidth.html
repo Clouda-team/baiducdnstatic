@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid AutoHeight / AutoWidth Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			height: 300px;
+			width: 600px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_autoHeight_autoWidth.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title'>Grid AutoHeight / AutoWidth Test</h1>
+	<h2>AutoHeight only</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoHeight: true
+	'></div>
+	<h2>AutoHeight Empty Grid</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: emptyStore,
+		autoHeight: true
+	'></div>
+	<h2>AutoWidth only</h2>
+	<div id='grid3' jsid='grid3 data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoWidth: true
+	'></div>
+	<h2>AutoHeight and AutoWidth</h2>
+	<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoHeight: true,
+		autoWidth: true
+	'></div>
+	<h2>AutoHeight with PaginationBar</h2>
+	<div id='grid5' jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoHeight: true,
+		modules: [
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+	<h2>AutoWidth with ColumnResizer</h2>
+	<div id='grid6' jsid='grid6' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoWidth: true,
+		modules: [
+			"gridx/modules/ColumnResizer"
+		]
+	'></div>
+	<h2>AutoHeight, AutoWidth, PaginationBar, ColumnResizer</h2>
+	<div id='grid7' jsid='grid7' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		structure: layout,
+		store: store,
+		autoHeight: true,
+		autoWidth: true,
+		modules: [
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar",
+			"gridx/modules/ColumnResizer"
+		]
+	'></div>
+</body>
+</html>

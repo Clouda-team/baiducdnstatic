@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test Skin</title>
+		<meta name="viewport" content="width=570">
+		<link rel="stylesheet" href="../../dojo/resources/dojo.css">
+		<link rel="stylesheet" href="../css/dgrid.css">
+		<link rel="stylesheet" href="../css/skins/claro.css">
+		<link rel="stylesheet" href="../css/skins/tundra.css">
+		<link rel="stylesheet" href="../css/skins/nihilo.css">
+		<link rel="stylesheet" href="../css/skins/soria.css">
+		<link rel="stylesheet" href="../css/skins/slate.css">
+		<link rel="stylesheet" href="../css/skins/sage.css">
+		<link rel="stylesheet" href="../css/skins/cactus.css">
+		<style>
+			h2 {
+				font-weight: bold;
+				padding-bottom: 0.25em;
+			}
+
+			/* add styles to size this grid appropriately */
+			#grid {
+				height: 20em;
+				margin: 10px;
+			}
+			#grid .field-col2 {
+				width: 8%;
+			}
+			#grid .field-col1, #grid .field-col3, #grid .field-col5 {
+				width: 15%;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 id="gridHeading">A basic grid using the <span id="skin"></span> skin</h2>
+		<div><button type="button" onclick="grid.save();">Save</button>
+			(for testing highlight color)</div>
+		<div><button id="toggleUi" type="button">Render without ui- classes</button></div>
+		<h2>Test more skins!</h2>
+		<p id="skins"></p>
+		<script src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+		<script>
+			require([
+				'dojo/_base/declare',
+				'dojo/_base/array',
+				'dojo/dom-construct',
+				'dojo/on',
+				'dgrid/Grid',
+				'dgrid/Selection',
+				'dgrid/Keyboard',
+				'dgrid/Editor',
+				'dgrid/extensions/Pagination',
+				'dgrid/test/data/testStore'
+			], function (declare, arrayUtil, domConstruct, on, Grid, Selection, Keyboard, Editor, Pagination,
+					testStore) {
+
+				if (location.search.indexOf('dir=rtl') > -1) {
+					document.body.dir = 'rtl';
+				}
+
+				var grid;
+				var columns = {
+					col1: 'Column 1',
+					col2: { label: 'Column 2', sortable: false, editor: 'checkbox' },
+					col3: 'Column 3',
+					col4: 'Column 4',
+					col5: 'Column 5'
+				};
+				var skins = arrayUtil.filter(document.getElementsByTagName('link'), function (link) {
+					return link.href.indexOf('/skins/') > -1;
+				});
+				skins = arrayUtil.map(skins, function (link) {
+					return link.href.slice(link.href.lastIndexOf('/') + 1, -4);
+				});
+
+				function byId(id) {
+					return document.getElementById(id);
+				}
+
+				function createGrid(addUiClasses) {
+					if (grid) {
+						grid.destroy();
+					}
+					grid = window.grid = new (declare([ Grid, Selection, Keyboard, Editor, Pagination ]))({
+						id: 'grid',
+						sort: 'id',
+						collection: testStore,
+						columns: columns,
+						showFooter: true,
+						addUiClasses: addUiClasses
+					});
+					domConstruct.place(grid.domNode, 'gridHeading', 'after');
+					grid.startup();
+
+					byId('toggleUi').innerHTML = 'Render with' +
+						(addUiClasses ? 'out' : '') + ' ui- classes';
+				}
+
+				on(byId('toggleUi'), 'click', function () {
+					createGrid(!grid.addUiClasses);
+				});
+
+				byId('skins').innerHTML = arrayUtil.map(skins, function (s) {
+					return '<a href="#' + s + '">' + s + '</a>';
+				}).join(' / ');
+
+				function updateSkin() {
+					var skin = location.hash.slice(1) || 'claro';
+					document.getElementById('skin').innerHTML = skin;
+					document.body.className = skin;
+					grid.resize();
+				}
+
+				createGrid(true);
+				updateSkin();
+				on(window, 'hashchange', updateSkin);
+			});
+		</script>
+	</body>
+</html>

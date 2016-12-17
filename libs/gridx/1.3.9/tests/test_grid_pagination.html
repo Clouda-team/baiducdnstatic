@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Pagination Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 600px;
+			height: 300px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_pagination.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Pagination Test
+	</h1>
+	<h2>Pagination Grid with API only</h2>
+	<table style='width: 600px;'>
+		<tr>
+			<td style='text-align: center;'><button data-dojo-type='dijit.form.Button' data-dojo-props='onClick: first'>First Page</button></td>
+			<td style='text-align: center;'><button data-dojo-type='dijit.form.Button' data-dojo-props='onClick: prev'>Prev Page</button></td>
+			<td style='text-align: center;'><button data-dojo-type='dijit.form.Button' data-dojo-props='onClick: next'>Next Page</button></td>
+			<td style='text-align: center;'><button data-dojo-type='dijit.form.Button' data-dojo-props='onClick: last'>Last Page</button></td>
+		</tr>
+	</table>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		modules: [
+			"gridx/modules/Pagination"
+		]
+	'></div>
+	<h2>Link-button style PaginationBar</h2>
+	<h3>using self defined size handler to calculate row count</h3>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		//self defined size handler
+		sizeHandler: function() {
+			console.log("in size handler");
+			return 123;
+		},
+		paginationBarMessage: "${2} to ${3} of ${0} items ${1} items selected",
+		modules: [
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+	<h2>Drop-down style PaginationBar</h2>
+	<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		modules: [
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBarDD"
+		],
+		paginationBarShowRange: true
+	'></div>
+	<h2>Drop-down style PaginationBar(not showing range)</h2>
+	<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		modules: [
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBarDD"
+		],
+		paginationBarShowRange: false
+	'></div>
+</body>
+</html>

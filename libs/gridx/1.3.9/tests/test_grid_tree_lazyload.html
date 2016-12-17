@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Tree Grid - Lazy Load Children</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 300px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_tree_lazyload.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Tree Grid - Lazy Load Children (Experimental)
+	</h1>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		pageSize: 20,
+		store: store,
+		structure: layout1,
+		paginationBarSizes: [1, 2, 0],
+		modules: mods
+	'></div>
+	<h2>Data fetch log</h2>
+	<textarea id='log' cols='80' rows='13'></textarea>
+</body>
+</html>

@@ -1,0 +1,162 @@
+define({     
+//Body
+	loadingInfo: "Učitavanje...",
+	emptyInfo: "Nema stavki za prikaz",
+	loadFailInfo: "Neuspešno učitavanje podataka!",
+	loadMore: "Učitaj više",
+	loadMoreLoading: "Učitavanje...",
+	loadPrevious: "Učitaj prethodno",
+	loadPreviousLoading: "Učitavanje...",
+
+//FilterBar
+	"clearFilterDialogTitle": "Obriši filter",
+	"filterDefDialogTitle": "Filter",
+	"defaultRuleTitle": "Pravilo",
+	"ruleTitleTemplate": "Pravilo ${ruleNumber}",
+	"noFilterApplied": "Filter nije primenjen",
+	"defineFilter": "Definiši filter",
+	"conditionEqual": "jednako",
+	"conditionNotEqual": "nije jednako",
+	"conditionLess": "je manje od",
+	"conditionLessEqual": "manje ili jednako",
+	"conditionGreater": "je veće od",
+	"conditionGreaterEqual": "veće ili jednako",
+	"conditionContain": "sadrži",
+	"conditionIs": "je",
+	"conditionStartWith": "počinje sa",
+	"conditionEndWith": "završava se sa",
+	"conditionNotContain": "ne sadrži",
+	"conditionIsNot": "nije",
+	"conditionNotStartWith": "ne počinje sa",
+	"conditionNotEndWith": "ne završava se sa",
+	"conditionBefore": "pre",
+	"conditionAfter": "posle",
+	"conditionRange": "opseg",
+	"conditionIsEmpty": "je prazno",
+	"all": "sve",
+	"any": "bilo koje",
+	"relationAll": "sva pravila",
+	"waiRelAll": "Podudaranje sa svim sledećim pravilima:",
+	"relationAny": "bilo koje pravilo",
+	"waiRelAny": "Podudaranje sa bilo kojim od sledećih pravila:",
+	"relationMsgFront": "Podudaranje",
+	"relationMsgTail": "",
+	"and": "i",
+	"or": "ili",
+	"addRuleButton": "Dodaj pravilo",
+	"waiAddRuleButton": "Dodaj novo pravilo",
+	"removeRuleButton": "Ukloni pravilo",
+	"waiRemoveRuleButtonTemplate": "Ukloni pravilo ${0}",
+	"addRuleButton": "Dodaj pravilo za filter",
+	"cancelButton": "Otkaži",
+	"waiCancelButton": "Otkaži ovaj dijalog",
+	"clearButton": "Obriši",
+	"waiClearButton": "Obriši filter",
+	"filterButton": "Filter",
+	"waiFilterButton": "Pošalji filter",
+	"columnSelectLabel": "Kolona:",
+	"waiColumnSelectTemplate": "Kolona za pravilo ${0}",
+	"conditionSelectLabel": "Uslov:",
+	"waiConditionSelectTemplate": "Uslov za pravilo ${0}",
+	"valueBoxLabel": "Vrednost:",
+	"waiValueBoxTemplate": "Unesite vrednost koju treba filtrirati za pravilo ${0}",
+	"rangeTo": "do",
+	"rangeTemplate": "Od ${0} do ${1}",
+	"statusTipHeaderColumn": "Kolona",
+	"statusTipHeaderCondition": "Pravila",
+	"statusTipTitle": "Traka sa filterima",
+	"statusTipMsg": "Kliknite na traku sa filterima ovde da biste filtrirali vrednosti u ${0}.",
+	"anycolumn": "bilo kojoj koloni",
+	"statusTipTitleNoFilter": "Traka sa filterima",
+	"statusTipTitleHasFilter": "Filter",
+	"statusTipRelPre": "Podudaranje",
+	"statusTipRelPost": "pravila.",
+	"statusTipHeaderAll": "Podudaranje sa svim pravilima.",
+	"statusTipHeaderAny": "Podudaranje sa bilo kojim pravilom.",
+	"defaultItemsName": "stavke",
+	"filterBarMsgHasFilterTemplate": "Prikazano je ${0} od ${1} ${2}.",
+	"filterBarMsgNoFilterTemplate": "Filter nije primenjen",
+	"filterBarDefButton": "Definiši filter",
+	"waiFilterBarDefButton": "Filtriraj tabelu",
+	"a11yFilterBarDefButton": "Filtriraj...",
+	"filterBarClearButton": "Obriši filter",
+	"waiFilterBarClearButton": "Obriši filter",
+	"closeFilterBarBtn": "Zatvori traku sa filterima",
+	"clearFilterMsg": "Ovo će ukloniti filter i prikazati sve dostupne zapise.",
+	"anyColumnOption": "Bilo koja kolona",
+	"trueLabel": "Tačno",
+	"falseLabel": "Netačno",
+	"radioTrueLabel": "Vrednost tačno",
+	"radioFalseLabel": "Vrednost netačno",
+	"beginTimeRangeLabel": "Početak vremenske vrednosti opsega",
+	"endTimeRangeLabel": "Kraj vremenske vrednosti opsega",
+	"beginDateRangeLabel": "Početak vremenske vrednosti datuma",
+	"endDateRangeLabel": "Kraj vremenske vrednosti datuma",
+	"startsWithExpr": "${0}*",
+
+//NestedSort
+	singleSort: "Jednokratno sortiranje",
+	nestedSort: "Ugnežđeno sortiranje",
+	ascending: "Kliknite da biste sortirali po rastućem redosledu",
+	descending: "Kliknite da biste sortirali po opadajućem redosledu",
+	sortingState: "${0} - ${1}",
+	unsorted: "Ne sortiraj ovu kolonu",
+	waiSingleSortLabel: "${0} - je sortirano po ${1}. Izaberite da biste sortirali po ${2}",
+	waiNestedSortLabel:"${0} - je ugnežđeno sortirano po ${1}. Izaberite da biste ugnežđeno sortirali po ${2}",
+
+//PaginationBar
+	pagerWai: 'Pejdžer',
+
+	pageIndex: '${0}',
+	pageIndexTitle: 'Strana ${0}',
+
+	firstPageTitle: 'Prva stranica',
+	prevPageTitle: 'Prethodna stranica',
+	nextPageTitle: 'Sledeća stranica',
+	lastPageTitle: 'Poslednja stranica',
+
+	pageSize: '${0}',
+	pageSizeTitle: '${0} stavki po strani',
+	pageSizeAll: 'Sve',
+	pageSizeAllTitle: 'Sve stavke',
+
+	description: '${0} - ${1} od ${2} stavki',
+	descriptionEmpty: 'Mreža je prazna.',
+
+	summary: 'Ukupno: ${0}',
+	summaryWithSelection: 'Ukupno: ${0} Izabrano: ${1}',
+
+	gotoBtnTitle: 'Idi na određenu stranicu',
+
+	gotoDialogTitle: 'Idi na stranicu',
+	gotoDialogMainMsg: 'Navedite broj stranice:',
+	gotoDialogPageCount: '(${0} stranica)',
+	gotoDialogOKBtn: 'Idi',
+	gotoDialogCancelBtn: 'Otkaži',
+	// for drop down pagination bar
+	pageLabel: 'Stranica',
+	pageSizeLabel: 'Redova',
+
+//QuickFilter
+	filterLabel: 'Filter',
+	clearButtonTitle: 'Obriši filter',
+	buildFilterMenuLabel: 'Kreiraj filter&hellip;',
+	apply: 'Primeni filter',
+
+//Sort
+	helpMsg: '${0} - Kliknite ovde da biste sortirali ili kliknite dok držite taster Ctrl da biste dodali na sortiranje',
+	singleHelpMsg: '${0} - Kliknite ovde da biste sortirali',
+	priorityOrder: 'prioritet sortiranja ${0}',
+
+//SummaryBar
+	summaryTotal: 'Ukupno: ${0}',
+	summarySelected: 'Izabrano: ${0}',
+	summaryRange: 'Opseg: ${0}-${1}',	//need translation
+
+//Other
+	indirectSelectAll: "Pritisnite taster za razmak da biste izabrali sve.",	//need translation
+	indirectDeselectAll: "Pritisnite taster za razmak da biste opozvali izbor svih.",	//need translation
+	treeExpanded: "Skupite ovaj red tako što ćete pritisnuti taster Ctrl i taster sa strelicom na levo.",	//need translation
+	treeCollapsed: "Proširite ovaj red tako što ćete pritisnuti taster Ctrl i taster sa strelicom na desno."	//need translation
+});
+

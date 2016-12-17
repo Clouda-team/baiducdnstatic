@@ -1,0 +1,50 @@
+.grid {
+	border: 1px solid #dbdbdb;
+	border-collapse: collapse;
+}
+
+.grid_header_cell,
+.grid_cell {
+	font-weight: normal;
+	text-align: left;
+	padding: 3px;
+	border: 1px solid #e5dac8;
+}
+
+.grid_row_odd {
+	background-color: #f1f8ff;
+}
+
+.grid_header {
+	background: #edf2f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #edf2f7 0%, #d0dfea 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf2f7), color-stop(100%,#d0dfea)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #edf2f7 0%,#d0dfea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #edf2f7 0%,#d0dfea 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #edf2f7 0%,#d0dfea 100%); /* IE10+ */
+	background: linear-gradient(top,  #edf2f7 0%,#d0dfea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf2f7', endColorstr='#d0dfea',GradientType=0 ); /* IE6-9 */
+}
+
+.testDataWarningStatus,
+.testDataCriticalStatus,
+.testDataNormalStatus {
+	background-image: url("support/data/status.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.testDataWarningStatus {
+	background-position: 0 -2px;
+}
+
+.testDataNormalStatus {
+	background-position: -18px -2px;
+}
+
+.testDataCriticalStatus {
+	background-position: -36px -2px;
+}

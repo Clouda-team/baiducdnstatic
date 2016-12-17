@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid RowHeader Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_rowHeader.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid RowHeader Test
+	</h1>
+	<h2>RowHeader with Sync grid</h2>
+	<div jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store1,
+		structure: layout1,
+		cacheClass: "gridx/core/model/cache/Sync",
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<h2>RowHeader with Async grid</h2>
+	<div jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store2,
+		structure: layout2,
+		cacheClass: "gridx/core/model/cache/Async",
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+	<h2>RowHeader with PaginationBar</h2>
+	<div jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store1,
+		structure: layout1,
+		cacheClass: "gridx/core/model/cache/Sync",
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+	<h2>RowHeader with CellWidget</h2>
+	<div jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store1,
+		structure: layout3,
+		cacheClass: "gridx/core/model/cache/Sync",
+		autoHeight: true,
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/CellWidget",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+	<h2>RowHeader with Editable Cells</h2>
+	<div jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store1,
+		structure: layout4,
+		cacheClass: "gridx/core/model/cache/Sync",
+		autoWidth: true,
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/CellWidget",
+			"gridx/modules/Edit"
+		]
+	'></div>
+	<h2>RowHeader with AlwaysEditing Cells</h2>
+	<div jsid='grid6' data-dojo-type='gridx.Grid' data-dojo-props='
+		store: store1,
+		structure: layout5,
+		cacheClass: "gridx/core/model/cache/Sync",
+		autoWidth: true,
+		modules: [
+			"gridx/modules/Focus",
+			"gridx/modules/RowHeader",
+			"gridx/modules/CellWidget",
+			"gridx/modules/Edit",
+			"gridx/modules/Pagination",
+			"gridx/modules/pagination/PaginationBar"
+		]
+	'></div>
+</body>
+</html>

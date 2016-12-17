@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Column Lock Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+			margin-top: 10px;
+		}
+		.gridxCell {
+			vertical-align: top;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_columnLock.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Column Lock Test
+	</h1>
+	<div>
+		<label for="integerspinner">Columns to lock:</label>
+		<div id="integerspinner" data-dojo-type="dijit.form.NumberSpinner" data-dojo-props="
+			constraints: {max:10,min: 1},
+			value: 1
+		"></div>
+		<div data-dojo-type="dijit.form.Button" data-dojo-props="onClick: lockColumns">Lock Columns</div>
+		<div data-dojo-type="dijit.form.Button" data-dojo-props="onClick: unlockColumns">Unlock</div>
+		<div data-dojo-type="dijit.form.Button" data-dojo-props="onClick: showWidgetInCell">Add Widget To Change Row Height</div>
+	</div>
+	<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Async",
+		store: store,
+		structure: layout,
+		columnLockCount: 2,
+		modules: [
+			"gridx/modules/ColumnLock",
+			"gridx/modules/CellWidget",
+			"gridx/modules/Edit",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/RowHeader",
+			"gridx/modules/SingleSort",
+			"gridx/modules/move/Column",
+			"gridx/modules/select/Column",
+			"gridx/modules/dnd/Column",
+			"gridx/modules/VirtualVScroller"
+		]
+	'></div>
+</body>
+</html>

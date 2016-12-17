@@ -1,0 +1,18 @@
+{
+  "name": "gridx",
+  "filename": "Grid.js",
+  "version": "1.3.9",
+  "description": "A fast rendering, well modularized and plugin architecture based Grid. The next generation of Dojo data grid ",
+  "homepage": "http://oria.github.io/gridx/",
+  "keywords": [
+    "javascript", "gridx", "dojo"
+  ],
+  "maintainers": [{
+    "name": "SitePen",
+    "web": "https://www.sitepen.com/"
+  }],
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/dojo"
+  }]
+}

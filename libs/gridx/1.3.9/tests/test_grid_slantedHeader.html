@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Grid Group Header Test</title>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 400px;
+			height: 500px;
+		}
+		.gridxHeader {
+			background: #edf2f7;
+			background: -moz-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #edf2f7), color-stop(100%, #d0dfea));
+			background: -webkit-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+			background: -o-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+			background: -ms-linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+			background: linear-gradient(top, #edf2f7 0%, #d0dfea 100%);
+		}
+
+		.gridxHeaderRow tr:first-child .gridxCell:first-child {
+			border-left: 1px solid rgba(0,0,0,0);
+		}
+		.gridxHeaderRow tr:first-child .gridxCell:first-child .gridxSortNode {
+			-webkit-transform:skew(45deg,0deg) rotate(0deg)!important;
+			-moz-transform:skew(45deg,0deg) rotate(0deg)!important;
+			-ms-transform:skew(45deg,0deg) rotate(0deg)!important;
+			-o-transform:skew(45deg,0deg) rotate(0deg)!important;
+			transform:skew(45deg,0deg) rotate(0deg)!important;
+			margin-bottom: 3px!important;
+			margin-left: 0px;
+		}
+		.gridxCell {
+			text-align: center!important;
+		}
+
+		.gridxCell:first-child {
+			text-align: left!important;
+		}
+
+		.gridxCell .mark {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+		}
+
+		.gridxCell .mark-normal {
+			background-color: #77AF77;
+			-webkit-transform:rotate(-45deg);
+			-moz-transform:rotate(-45deg);
+			-ms-transform:rotate(-45deg);
+			-o-transform:rotate(-45deg);
+			transform:rotate(-45deg);
+		}
+
+		.gridxCell .mark-warning {
+			width: 0px;
+			height: 0px;
+			border: none;
+			border-bottom: 8px solid #C7CC5A;
+			border-left: 6px solid rgba(0,0,0,0);
+			border-right: 6px solid rgba(0,0,0,0);
+		}
+
+		.gridxCell .mark-critical {
+			background-color: #B84A4A;
+		}
+
+		
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_slantedHeader.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Slanted Header
+	</h1>
+	<p>
+		Use ctrl + m to expand/collapse columns.
+	</p>
+
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		autoWidth: false,
+		autoHeight: false,
+		modules: [
+			"gridx/modules/SlantedHeader"
+			,"gridx/modules/GroupHeader"
+			,"gridx/modules/ExpandableColumn"
+			,"gridx/modules/SingleSort"
+		]
+	'></div>
+
+	<h1 style="margin-top: 40px">Slanted Header for Tree Grid (auto width and auto height)</h1>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: treeStore,
+		structure: treeLayout,
+		
+		autoWidth: true,
+		autoHeight: true,
+		modules: [
+
+			"gridx/modules/SlantedHeader"
+			,"gridx/modules/GroupHeader"
+			,"gridx/modules/ExpandableColumn"
+			,"gridx/modules/Tree"
+
+		]
+	'></div>
+	
+</body>
+</html>

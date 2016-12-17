@@ -1,0 +1,149 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Extended Select Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		#gridContainer {
+			width: 800px;
+			height: 500px;
+		}
+		#grid {
+			height: 100%;
+		}
+		textarea {
+			resize: none;
+		}
+		.testboard {
+			text-align: center;
+			width: 400px;
+		}
+		.testboard h3 {
+			font-weight: bold;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_extendedSelect.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Extended Select Test
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td>
+			<div id='gridContainer'></div>
+		</td>
+		<td id='ctrlPane'>
+		<table class='testboard'>
+			<tr>
+				<td colspan='4'>
+					<h3>Row Selection</h3>
+				</td>
+			</tr>
+			<tr>
+				<td style='text-align: right;'>
+					<label>Start</label><br />
+					<label>End</label>
+				</td>
+				<td>
+					<input id='rowStart' dojoType="dijit.form.NumberTextBox" value='0' style='width: 100px;' /><br />
+					<input id='rowEnd' dojoType="dijit.form.NumberTextBox" value='5' style='width: 100px;' />
+				</td>
+				<td>
+					<button onclick='selectRow(1)'>Select</button><br />
+					<button onclick='selectRow(0)'>Deselect</button>
+				</td>
+				<td>
+					<button onclick='selectAllRow(1)'>Select All</button><br />
+					<button onclick='selectAllRow(0)'>Deselect All</button>
+				</td>
+			</tr>			
+			<tr>
+				<td colspan='4'>
+					<h3>Column Selection</h3>
+				</td>
+			</tr>
+			<tr>
+				<td style='text-align: right;'>
+					<label>Start</label><br />
+					<label>End</label>
+				</td>
+				<td>
+					<input id='colStart' dojoType="dijit.form.NumberTextBox" value='0' style='width: 100px;' /><br />
+					<input id='colEnd' dojoType="dijit.form.NumberTextBox" value='5' style='width: 100px;' />
+				</td>
+				<td>
+					<button onclick='selectColumn(1)'>Select</button><br />
+					<button onclick='selectColumn(0)'>Deselect</button>
+				</td>
+				<td>
+					<button onclick='selectAllColumn(1)'>Select All</button><br />
+					<button onclick='selectAllColumn(0)'>Deselect All</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='4'>
+					<h3>Cell Selection</h3>
+				</td>
+			</tr>
+			<tr>
+				<td style='text-align: right;'>
+					<label>Start</label><br />
+					<label>End</label>
+				</td>
+				<td>
+					<input id='cellStartR' dojoType="dijit.form.NumberTextBox" value='0' style='width: 50px;' />
+					<input id='cellStartC' dojoType="dijit.form.NumberTextBox" value='0' style='width: 50px;' /><br />
+					<input id='cellEndR' dojoType="dijit.form.NumberTextBox" value='5' style='width: 50px;' />
+					<input id='cellEndC' dojoType="dijit.form.NumberTextBox" value='5' style='width: 50px;' />
+				</td>
+				<td>
+					<button onclick='selectCell(1)'>Select</button><br />
+					<button onclick='selectCell(0)'>Deselect</button>
+				</td>
+				<td>
+					<button onclick='selectAllCell(1)'>Select All</button><br />
+					<button onclick='selectAllCell(0)'>Deselect All</button>
+				</td>
+			</tr>
+			<tr>
+				<td colspan='4'>
+					<h3>Selection Status</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>Last Row IDs</td>
+				<td>Row IDs</td>
+				<td>Column IDs</td>
+				<td>Cell IDs</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id='rowSelectedCount' size='10' readonly value='0' /></td>
+				<td><input id='colSelectedCount' size='10' readonly value='0' /></td>
+				<td><input id='cellSelectedCount' size='10' readonly value='0' /></td>
+			</tr>
+			<tr>
+				<td>
+					<textarea id='lastRowStatus' cols='10' rows='15' readonly></textarea>
+				</td>
+				<td>
+					<textarea id='rowStatus' cols='10' rows='15' readonly></textarea>
+				</td>
+				<td>
+					<textarea id='colStatus' cols='10' rows='15' readonly></textarea>
+				</td>
+				<td>
+					<textarea id='cellStatus' cols='10' rows='15' readonly></textarea>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr></table>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<title>Gridx Demo - MobileGrid</title>
+		<style type="text/css">
+			@import "../../dojo/resources/dojo.css";
+			@import url('../resources/basic.css');
+			@import url('../resources/sort.css');
+			@import url('../resources/claro/basic.css');
+			@import url('../resources/claro/sort.css');		
+
+			html, body {
+				height: 100%;
+			}
+			#view {
+				position: relative;
+				height: 100%;
+			}
+			#grid {
+				position: absolute;
+				left: 0px; right: 0px; top: 0px; bottom: 0px;
+			}
+		</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" 
+		data-dojo-config="isDebug: true, async: true, parseOnLoad: true,  packages:[{name: 'gridx', location:'../gridx'}], mblThemeFiles:['base']"></script>	
+	<script type="text/javascript" src="demo_mobile_grid.js"></script>
+	</head>
+	<body>
+		<div dojoType="dojox.mobile.View" id="view" selected="true">
+			<div id="gridDiv"></div>
+		</div>
+	</body>
+</html>

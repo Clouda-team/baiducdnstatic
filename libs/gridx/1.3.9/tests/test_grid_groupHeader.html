@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Grid Group Header Test</title>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 300px;
+		}
+		.gridxCell {
+			padding: 3px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_groupHeader.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Group Header Test
+	</h1>
+	<b style='color: red;'>Group Header does not support IE7 and below.</b>
+	<h2>1 layer of groups, all columns in group</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		headerGroups: headerGroups1,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>1 layer of groups, some columns not in group</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		headerGroups: headerGroups2,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>multiple layers of groups</h2>
+	<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		headerGroups: headerGroups3,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>multiple layers of groups, has rowspan</h2>
+	<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		headerGroups: headerGroups4,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>GroupHeader and autoWidth</h2>
+	<div id='grid5' jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		autoWidth: true,
+		headerGroups: headerGroups4,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>GroupHeader and columnWidthAutoResize</h2>
+	<div id="hslider" data-dojo-type="dijit.form.HorizontalSlider" 
+		style='width: 800px;'
+		data-dojo-props='
+		value:800,
+		minimum:0,
+		maximum:800,
+		pageIncrement:50,
+		showButtons:true,
+		intermediateChanges:true,
+		slideDuration:500,
+		onChange: onHSliderChange
+	'>
+		<div data-dojo-type="dijit.form.HorizontalRule" data-dojo-props='
+			container:"bottomDecoration",
+			count:11,
+			style:{height:"5px"}
+		'></div>
+		<div data-dojo-type="dijit.form.HorizontalRuleLabels" data-dojo-props='
+			container:"bottomDecoration",
+			count:11,
+			maximum:800,
+			constraints:{pattern:"#px"}
+		'></div>
+	</div>
+	<div style='height: 30px;'></div>
+	<div id='grid6' jsid='grid6' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		columnWidthAutoResize: true,
+		headerGroups: headerGroups4,
+		modules: [
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+	<h2>Degenerated to normal header</h2>
+	<div id='grid7' jsid='grid7' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		headerGroups: headerGroups5,
+		modules: [
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/move/Column",
+			"gridx/modules/GroupHeader"
+		]
+	'></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<title>Gridx Demo - MobileGrid</title>
+		<style type="text/css">
+			@import "../../dojo/resources/dojo.css";
+			body{
+				padding-left:3em;
+			}
+			h1{
+				font-size:2em;
+			}
+		</style>
+		<script type="text/javascript" src="../../dojo/dojo.js"></script>
+		<script type="text/javascript">
+			dojo.ready(function(){
+				var iframe = dojo.byId("iframe");
+				var deviceSelect = dojo.byId("deviceSelect"); 
+				dojo.connect(deviceSelect, "onchange", function(){
+					var device = deviceSelect.value;
+					iframe.src = "demo_mobile_grid.html?theme=" + device;
+				}); 
+				var rotateButton = dojo.byId("rotateButton");
+				dojo.connect(rotateButton, "onclick", function(){
+					var box = dojo.marginBox(iframe);
+					dojo.marginBox(iframe, {w: box.h, h: box.w});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Gridx Demo - MobileGrid</h1>
+		<p>
+			<select id="deviceSelect">
+				<option>iPhone</option>
+				<option>Android</option>
+				<option>BlackBerry</option>
+			</select>
+			<button id="rotateButton">Rotate</button>
+		</p>
+		<iframe id="iframe" src="demo_mobile_grid.html?theme=iPhone" style="width: 320px; height: 480px;"></iframe>
+	</body>
+</html>

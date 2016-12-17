@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Grid Bar Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 700px;
+			height: 370px;
+		}
+
+		.dropDownSizer,
+		.gridxRtl .linkPager,
+		.gridxRtl .linkSizer,
+		.quickFilter {
+			text-align: right;
+		}
+
+		.dijitToolbar {
+			background: none !important;
+			border-bottom: none !important;
+		}
+
+		.gridxRtl .dropDownSizer,
+		.linkPager,
+		.linkSizer,
+		.gridxRtl .quickFilter {
+			text-align: left;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_bar.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Grid Bar Test
+	</h1>
+	<h2>Top Bar Only</h2>
+	<div id='grid1' jsid='grid1' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		barTop: grid1Top,
+		selectRowTriggerOnCell: true,
+		modules: mods
+	'></div>
+	<h2>Bottom Bar Only</h2>
+	<div id='grid2' jsid='grid2' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		barBottom: grid2Bottom,
+		selectRowTriggerOnCell: true,
+		modules: mods
+	'></div>
+	<h2>Top and Bottom Bars</h2>
+	<div id='grid3Toolbar' data-dojo-type='dijit/Toolbar'>
+		<div data-dojo-type='dijit/form/Button' data-dojo-props='
+			label: "cut",
+			showLabel: false,
+			iconClass: "dijitEditorIcon dijitEditorIconCut"
+		'></div>
+		<div data-dojo-type='dijit/form/Button' data-dojo-props='
+			label: "copy",
+			showLabel: false,
+			iconClass: "dijitEditorIcon dijitEditorIconCopy"
+		'></div>
+		<div data-dojo-type='dijit/form/Button' data-dojo-props='
+			label: "paste",
+			showLabel: false,
+			iconClass: "dijitEditorIcon dijitEditorIconPaste"
+		'></div>
+		<div data-dojo-type='dijit/form/Button' data-dojo-props='
+			label: "bold",
+			showLabel: false,
+			iconClass: "dijitEditorIcon dijitEditorIconBold"
+		'></div>
+	</div>
+	<div id='grid3' jsid='grid3' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		barTop: grid3Top,
+		barBottom: grid3Bottom,
+		selectRowTriggerOnCell: true,
+		modules: mods
+	'></div>
+	<h2>SummaryBar as a module</h2>
+	<div id='grid4' jsid='grid4' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/IndirectSelectColumn",
+			"gridx/modules/SummaryBar"
+		]
+	'></div>
+	<h2>Empty Toolbar</h2>
+	<div id='grid5' jsid='grid5' data-dojo-type='gridx.Grid' data-dojo-props='
+		cacheClass: "gridx/core/model/cache/Sync",
+		store: store,
+		structure: layout,
+		selectRowTriggerOnCell: true,
+		modules: [
+			"gridx/modules/extendedSelect/Row",
+			"gridx/modules/IndirectSelect",
+			"gridx/modules/ToolBar",
+			"gridx/modules/ColumnResizer",
+			"gridx/modules/RowHeader",
+			"gridx/modules/Focus",
+			"gridx/modules/Sort"
+		]
+	'></div>
+</body>
+</html>

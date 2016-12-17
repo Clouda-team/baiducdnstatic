@@ -1,0 +1,256 @@
+//css3 utils
+.boxSizing(@style) {
+	-moz-box-sizing: @style; /* ff2 */
+	-ms-box-sizing: @style; /* ie8 */
+	-webkit-box-sizing: @style; /* safari3 */
+	-khtml-box-sizing: @style; /* konqueror */
+	box-sizing: @style; /* css3 rec */
+}
+.boxShadow(@h; @v; @blur; @color){
+	-moz-box-shadow: @h @v @blur @color;
+	-webkit-box-shadow: @h @v @blur @color;
+	box-shadow: @h @v @blur @color;
+}
+.verticalGradientBackground(@start-color; @end-color) {
+	background: @start-color; /* Old browsers */
+	background: -moz-linear-gradient(top, @start-color 0%, @end-color 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start-color), color-stop(100%,@end-color)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @start-color 0%, @end-color 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @start-color 0%, @end-color 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @start-color 0%, @end-color 100%); /* IE10+ */
+	background: linear-gradient(top, @start-color 0%, @end-color 100%); /* W3C */
+}
+.transition(@property; @duration) {
+	-webkit-transition-property: @property;
+	-moz-transition-property: @property;
+	-o-transition-property: @property;
+	transition-property: @property;
+
+	-webkit-transition-duration: @duration;
+	-moz-transition-duration: @duration;
+	-o-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+//gridx common
+@spriteIconMaxWidth: 20px;
+@spriteIconMaxHeight: 20px;
+.spriteBackground(@x; @y) {
+	background-image: url("images/sprite.png");
+	background-repeat: no-repeat;
+	background-position: @x @y;
+}
+.spriteIconSizeFree(@row; @column; @w; @h; @offsetX; @offsetY){
+	.spriteBackground(
+		(-@spriteIconMaxWidth * @column - (@spriteIconMaxWidth - @w) / 2 + @offsetX);
+		(-@spriteIconMaxHeight * @row - (@spriteIconMaxHeight - @h) / 2 + @offsetY)
+	);
+}
+.spriteIcon(@row; @column; @w; @h; @offsetX; @offsetY; @padding){
+	.spriteIconSizeFree(@row; @column; @w; @h; @offsetX; @offsetY);
+	height: @h - @padding * 2;
+	width: @w - @padding * 2;
+}
+.icon(@name; @w: 16px; @h: 16px; @offsetX: 0; @offsetY: 0; @padding: 0){
+	@n: `"img" + "@{name}"[0].toUpperCase() + "@{name}".substring(1)`;
+	@r: `@{n} + "-r"`;
+	@c: `@{n} + "-c"`;
+	.spriteIcon(@@r; @@c; @w; @h; @offsetX; @offsetY; @padding);
+}
+.iconNoSize(@name; @w: 16px; @h: 16px; @offsetX: 0; @offsetY: 0){
+	@n: `"img" + "@{name}"[0].toUpperCase() + "@{name}".substring(1)`;
+	@r: `@{n} + "-r"`;
+	@c: `@{n} + "-c"`;
+	.spriteIconSizeFree(@@r; @@c; @w; @h; @offsetX; @offsetY);
+}
+.loading(){
+	background-image: url('images/treeExpand_loading.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+//Image Icons
+@imgArrowUpSolidShadow-r: 0;
+@imgArrowUpSolidShadow-c: 0;
+
+@imgArrowDownSolidShadow-r: 0;
+@imgArrowDownSolidShadow-c: 1;
+
+@imgArrowDownHollowShadow-r: 0;
+@imgArrowDownHollowShadow-c: 2;
+
+@imgArrowUpHollowShadow-r: 0;
+@imgArrowUpHollowShadow-c: 3;
+
+@imgArrowUpHollowDownHollowShadow-r: 0;
+@imgArrowUpHollowDownHollowShadow-c: 4;
+
+@imgArrowUpSolidDownHollowShadow-r: 0;
+@imgArrowUpSolidDownHollowShadow-c: 5;
+
+@imgArrowUpHollowDownSolidShadow-r: 0;
+@imgArrowUpHollowDownSolidShadow-c: 6;
+
+//---------------------------------------------------------------------------
+@imgArrowUpSolidBlack-r: 1;
+@imgArrowUpSolidBlack-c: 0;
+
+@imgArrowDownSolidBlack-r: 1;
+@imgArrowDownSolidBlack-c: 1;
+
+@imgArrowDownHollowBlack-r: 1;
+@imgArrowDownHollowBlack-c: 2;
+
+@imgArrowUpHollowBlack-r: 1;
+@imgArrowUpHollowBlack-c: 3;
+
+@imgCrossBlack-r: 1;
+@imgCrossBlack-c: 4;
+
+//----------------------------------------------------------------------------
+
+@imgArrowLeftBlue-r: 2;
+@imgArrowLeftBlue-c: 0;
+
+@imgArrowRightBlue-r: 2;
+@imgArrowRightBlue-c: 1;
+
+@imgArrowLeftMostBlue-r: 2;
+@imgArrowLeftMostBlue-c: 2;
+
+@imgArrowRightMostBlue-r: 2;
+@imgArrowRightMostBlue-c: 3;
+
+@imgArrowUpBlue-r: 2;
+@imgArrowUpBlue-c: 4;
+
+@imgArrowLeftGrey-r: 3;
+@imgArrowLeftGrey-c: 0;
+
+@imgArrowRightGrey-r: 3;
+@imgArrowRightGrey-c: 1;
+
+@imgArrowLeftMostGrey-r: 3;
+@imgArrowLeftMostGrey-c: 2;
+
+@imgArrowRightMostGrey-r: 3;
+@imgArrowRightMostGrey-c: 3;
+
+@imgArrowUpGrey-r: 3;
+@imgArrowUpGrey-c: 4;
+
+//---------------------------------------------------------------------------
+
+@imgDndMove-r: 4;
+@imgDndMove-c: 9;
+
+@imgDndNoMove-r: 5;
+@imgDndNoMove-c: 9;
+
+@imgDndCopy-r: 4;
+@imgDndCopy-c: 8;
+
+@imgDndNoCopy-r: 5;
+@imgDndNoCopy-c: 8;
+
+@imgDndCellSingle-r: 4;
+@imgDndCellSingle-c: 5;
+
+@imgDndCellMultiple-r: 5;
+@imgDndCellMultiple-c: 5;
+
+@imgDndRowSingle-r: 4;
+@imgDndRowSingle-c: 6;
+
+@imgDndRowMultiple-r: 5;
+@imgDndRowMultiple-c: 6;
+
+@imgDndColumnSingle-r: 4;
+@imgDndColumnSingle-c: 7;
+
+@imgDndColumnMultiple-r: 5;
+@imgDndColumnMultiple-c: 7;
+
+//----------------------------------------------------------------------------------
+
+@imgDodExpandoClosed-r: 4;
+@imgDodExpandoClosed-c: 4;
+
+@imgDodExpandoOpen-r: 5;
+@imgDodExpandoOpen-c: 4;
+
+//----------------------------------------------------------------------------------
+
+@imgTreeExpandoClosed-r: 6;
+@imgTreeExpandoClosed-c: 0;
+
+@imgTreeExpandoClosedHover-r: 6;
+@imgTreeExpandoClosedHover-c: 1;
+
+@imgTreeExpandoOpen-r: 6;
+@imgTreeExpandoOpen-c: 2;
+
+@imgTreeExpandoOpenHover-r: 6;
+@imgTreeExpandoOpenHover-c: 3;
+
+//----------------------------------------------------------------------------------
+
+@imgCrossBorderedRed-r: 0;
+@imgCrossBorderedRed-c: 10;
+
+@imgCrossBorderedGrey-r: 1;
+@imgCrossBorderedGrey-c: 10;
+
+@imgPlusBorderedGreen-r: 0;
+@imgPlusBorderedGreen-c: 9;
+
+@imgPlusBorderedGrey-r: 1;
+@imgPlusBorderedGrey-c: 9;
+
+@imgFilterLTR-r: 2;
+@imgFilterLTR-c: 7;
+
+@imgFilterRTL-r: 3;
+@imgFilterRTL-c: 7;
+
+@imgCrossBlue-r: 6;
+@imgCrossBlue-c: 4;
+
+@imgCrossBlueHover-r: 6;
+@imgCrossBlueHover-c: 5;
+
+@imgCrossBlueActive-r: 6;
+@imgCrossBlueActive-c: 6;
+
+//----------------------------------------------------------------------------
+
+@imgTriangleCorner-r: 6;
+@imgTriangleCorner-c: 7;
+
+@imgCheckBoxPartial-r: 4;
+@imgCheckBoxPartial-c: 10;
+
+@imgCheckBoxPartialDisabled-r: 5;
+@imgCheckBoxPartialDisabled-c: 10;
+
+//----------------------------------------------------------------------------
+
+@imgArrowLeftDarkGrey-r: 1;
+@imgArrowLeftDarkGrey-c: 5;
+
+@imgArrowRightDarkGrey-r: 1;
+@imgArrowRightDarkGrey-c: 6;
+
+//----------------------------------------------------------------------------
+
+@imgArrowLeftHollowGrey-r: 6;
+@imgArrowLeftHollowGrey-c: 8;
+
+@imgArrowRightHollowGrey-r: 6;
+@imgArrowRightHollowGrey-c: 9;
+
+@imgCheckerGrey-r: 6;
+@imgCheckerGrey-c: 10;
+
+@imgCrossGrey-r: 0;
+@imgCrossGrey-c: 8;

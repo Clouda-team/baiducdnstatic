@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test Keyboard Mixin</title>
+		<link rel="stylesheet" href="../../../css/dgrid.css">
+	</head>
+	<body class="claro">
+		<h2>Keyboard/focus-enabled List and Grids</h2>
+		<div id="list"></div>
+		<div id="grid"></div>
+		<div id="rowGrid"></div>
+		<div id="list-ondemand"></div>
+		<div id="grid-ondemand"></div>
+		<div id="rowGrid-ondemand"></div>
+		<div id="grid-large-data-set"></div>
+		<script src="../../../../dojo/dojo.js"></script>
+		<script>
+			var grid, list, rowGrid, ready;
+			require([
+				'dgrid/OnDemandList',
+				'dgrid/List',
+				'dgrid/OnDemandGrid',
+				'dgrid/Grid',
+				'dgrid/Keyboard',
+				'dojo/_base/declare',
+				'dojo/on',
+				'dojo/query',
+				'dgrid/test/data/createSyncStore',
+				'dgrid/test/data/genericData',
+				'dgrid/test/data/testPerformanceStore'
+			], function(OnDemandList, List, OnDemandGrid, Grid, Keyboard, declare, on, query, createSyncStore,
+					genericData, largeDataSetStore){
+
+				var columns = {
+						col1: 'Column 1',
+						col2: 'Column 2',
+						col5: 'Column 5'
+					},
+					KeyboardGrid = declare([Grid, Keyboard]),
+					KeyboardList = declare([List, Keyboard]),
+					KeyboardOnDemandGrid = declare([OnDemandGrid, Keyboard]),
+					KeyboardOnDemandList = declare([OnDemandList, Keyboard]),
+					store = createSyncStore({ data: genericData });
+
+				function renderRow(item) {
+					var div = document.createElement('div');
+					div.appendChild(document.createTextNode(item.col5));
+					return div;
+				}
+
+				// Simple Grid, List, and cell navigation Grid
+				list = new KeyboardList({
+					renderRow: renderRow
+				}, 'list');
+				list.renderArray(genericData.items);
+				grid = new KeyboardGrid({
+					columns: columns
+				}, 'grid');
+				grid.renderArray(genericData.items);
+				rowGrid = new KeyboardGrid({
+					columns: columns,
+					cellNavigation: false
+				}, 'rowGrid');
+				rowGrid.renderArray(genericData.items);
+
+				// OnDemand Grid, List, and cell navigation Grid
+				onDemandList = new KeyboardOnDemandList({
+					collection: store,
+					renderRow: renderRow
+				}, 'list-ondemand');
+				onDemandGrid = new KeyboardOnDemandGrid({
+					collection: store,
+					columns: columns
+				}, 'grid-ondemand');
+				onDemandRowGrid = new KeyboardOnDemandGrid({
+					collection: store,
+					columns: columns,
+					cellNavigation: false
+				}, 'rowGrid-ondemand');
+				largeDataSetGrid = new KeyboardOnDemandGrid({
+					collection: largeDataSetStore,
+					columns: {
+						col1: { label: 'Column 0', field: 'id', width: '10%' },
+						col2: { label: 'Column 1', field: 'integer', width: '10%' },
+						col3: { label: 'Column 2', field: 'floatNum', width: '10%' },
+						col4: { label: 'Column 3', field: 'date', width: '10%' },
+						col5: { label: 'Column 4', field: 'date2', width: '10%' },
+						col6: { label: 'Column 5', field: 'text', width: '10%' },
+						col7: { label: 'Column 6', field: 'bool', width: '10%' },
+						col8: { label: 'Column 7', field: 'bool2', width: '10%' },
+						col9: { label: 'Column 8', field: 'price', width: '10%' },
+						col10: { label: 'Column 9', field: 'today', width: '10%' }
+					}
+				}, 'grid-large-data-set');
+				ready = true;
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+.claro {
+
+	/* Quick Filter */
+	.gridxQuickFilter {
+		padding: 2px;
+	}
+
+	.gridxQuickFilterButton,
+	.gridxQuickFilterComboButton {
+		margin: 0;
+
+		.dijitButtonNode {
+			border: none;
+			background: none;
+			box-shadow: none;
+			padding: 1px;
+
+			-moz-transition-duration: 0.3s, 0.35s;
+			-moz-transition-property: background-color;
+			border-radius: 4px;
+		}
+	}
+
+	.gridxQuickFilterComboButton {
+		.dijitButtonNode {
+			border-radius: 4px 0 0 4px;
+		}
+		.dijitArrowButton {
+			border-radius: 0 4px 4px 0;
+		}
+	}
+
+	.gridxQuickFilter {
+		.dijitComboButtonHover, .dijitButtonHover {
+			.dijitButtonNode {
+				background-color: #6bd6ff;
+				background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+				background-repeat: repeat-x;
+				padding: 0;
+				border: 1px solid #759DC0;
+			}
+		}
+
+		.dijitComboButtonActive, .dijitButtonActive {
+			.dijitButtonNode {
+				background-color: #7DBDFA;
+				background-image: -moz-linear-gradient(rgba(190, 190, 190, 0.98) 0px, rgba(255, 255, 255, 0.65) 3px, rgba(255, 255, 255, 0) 100%);
+				background-repeat: repeat-x;
+				padding: 0;
+				border: 1px solid #759DC0;
+			}
+		}
+	}
+}

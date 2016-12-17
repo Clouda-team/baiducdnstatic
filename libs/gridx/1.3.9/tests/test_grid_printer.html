@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Gridx Print</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+	<link rel='stylesheet' href="support/common.css" />
+	<style type="text/css">
+		.gridx {
+			width: 800px;
+			height: 500px;
+		}
+
+		.testDataWarningStatus,
+		.testDataCriticalStatus,
+		.testDataNormalStatus {
+			background-image: url("support/data/status.png");
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.testDataWarningStatus {
+			background-position: 0 -2px;
+		}
+
+		.testDataNormalStatus {
+			background-position: -18px -2px;
+		}
+
+		.testDataCriticalStatus {
+			background-position: -36px -2px;
+		}
+	</style>
+	<script type="text/javascript" src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+	<script type="text/javascript" src='support/common.js'></script>
+	<script type="text/javascript" src='test_grid_printer.js'></script>
+</head>
+<body class='claro'>
+	<h1 class='title' tabindex='0' onfocus='this.style.color="blue"' onblur='this.style.color=""'>
+		Gridx Print
+	</h1>
+	<table border='0' cellspacing='0' cellpadding='0'><tr>
+		<td class='pane'>
+			<div id='grid' jsid='grid' data-dojo-type='gridx.Grid' data-dojo-props='
+				cacheClass: "gridx/core/model/cache/Async",
+				store: store,
+				structure: layout,
+				autoWidth: true,
+				selectRowTriggerOnCell: true,
+				modules: modules
+			'></div>
+
+		</td>
+		<td id='ctrlPane' class='pane'></td>
+	</tr></table>
+</body>
+</html>

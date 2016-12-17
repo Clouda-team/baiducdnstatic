@@ -1,0 +1,52 @@
+@import "../../../dojo/resources/dojo.css";
+@import "../../../dijit/themes/claro/claro.css";
+@import "../../../dijit/themes/claro/document.css";
+/*@import "../../resources/_old/claro/Gridx.css";*/
+/*@import "../../resources/_old/claro/Gridx_rtl.css";*/
+@import "../../resources/claro/Gridx.css";
+
+body {
+	background:#fff url("../../../dijit/tests/images/testsBodyBg.gif") repeat-x top left;
+	padding:2em 2em 2em 2em;
+	margin: 5em;
+}
+
+h3 {
+	color: blue;
+	margin: 0;
+	padding: 0;
+}
+
+.title {
+	font-size: large;
+	font-weight: bolder;
+}
+
+#ctrlPane {
+	width: 200px;
+	height: 500px;
+	padding: 0 20px;
+	vertical-align: top;
+}
+
+#ctrlPane .dijitAccordionContainer {
+	width: 100%;
+	height: 100%;
+}
+
+.pane {
+	vertical-align: top;
+}
+
+#mainPane {
+	vertical-align: top;
+}
+
+.apiTester {
+}
+.apiTesterLog {
+	overflow: auto;
+	width: 300px;
+	height: 200px;
+	border: 1px solid blue;
+}
