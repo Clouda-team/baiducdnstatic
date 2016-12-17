@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test OnDemandGrids with promise-based stores</title>
+		<link rel="stylesheet" href="../../dojo/resources/dojo.css">
+		<link rel="stylesheet" href="../css/dgrid.css">
+		<link rel="stylesheet" href="../css/skins/claro.css">
+		<style>
+			.dgrid {
+				height: 20em;
+				margin: 1em;
+			}
+		</style>
+	</head>
+
+	<body class="claro">
+		<p>This test page tests stores that return promises from their query methods,
+			and old stores wrapped with adapters.</p>
+
+		<div>
+			<button onclick="filter(true)">Show only items named 'foo'</button>
+			<button onclick="filter(false)">Reset query</button>
+		</div>
+
+		<h2>Grid with a dstore/Memory store</h2>
+		<div id="grid1"></div>
+
+		<h2>Grid with a dojo/store</h2>
+		<div id="grid2"></div>
+
+		<h2>Grid with a dojo/data store</h2>
+		<div id="grid3"></div>
+
+		<h2>Grid with a dstore/RequestMemory store</h2>
+		<div id="grid4"></div>
+
+<script src="../../dojo/dojo.js" data-dojo-config="async: true"></script>
+
+<script>
+var filter;
+
+require([
+	'dojo/_base/declare',
+	'dojo/_base/lang',
+	'dojo/Deferred',
+	'dojo/data/ItemFileReadStore',
+	'dojo/store/DataStore',
+	'dojo/store/Memory',
+	'dojo/store/util/QueryResults',
+	'dgrid/OnDemandGrid',
+	'dgrid/test/data/createAsyncStore',
+	'dstore/RequestMemory',
+	'dstore/legacy/StoreAdapter',
+	'dstore/Trackable'
+], function (declare, lang, Deferred, ItemFileReadStore, DataStore, LegacyMemory, QueryResults, OnDemandGrid,
+	createAsyncStore, RequestMemory, StoreAdapter, Trackable) {
+
+	var dataStore;
+	var names = [ 'sasquatch', 'foo', 'bar', 'zaphod', 'beeblebrox' ];
+	var grids = [];
+	var stores = [];
+
+	function createItems () {
+		// generate data
+		var items = [];
+		var i;
+		for (i = 1; i <= 200; i++) {
+			items.push({
+				id: i,
+				name: names[i % 5]
+			});
+		}
+		return items;
+	}
+
+	filter = function (doFilter) {
+		for (var i = grids.length; i--;) {
+			grids[i].set('collection',
+				doFilter ? stores[i].filter({ name: 'foo' }) : stores[i]);
+		}
+	};
+
+	stores.push(createAsyncStore({ data: createItems() }));
+
+	// Create a grid with an async dstore store
+	grids.push(new OnDemandGrid({
+		columns: { id: 'id', name: 'name' },
+		collection: stores[0]
+	}, 'grid1'));
+
+	// Create a grid with an async dojo/store store
+	var LegacyAsyncMemory = declare(LegacyMemory, {
+		query: function (query, options) {
+			var results = this.inherited(arguments);
+			var def = new Deferred(function () {
+				clearTimeout(timer);
+			});
+			var timer = setTimeout(function () {
+				def.resolve(results);
+			}, 200);
+			var queryResults = new QueryResults(def.promise);
+			queryResults.total = this.data.length;
+			return queryResults;
+		}
+	});
+
+	// Create a dojo/store instance and use the dstore adapter
+	stores.push(new declare([ StoreAdapter, Trackable ])({
+		objectStore: new LegacyAsyncMemory({
+			data: createItems()
+		})
+	}));
+
+	grids.push(new OnDemandGrid({
+		columns: { id: 'id', name: 'name' },
+		collection: stores[1]
+	}, 'grid2'));
+
+	// Create a dojo/data store instance and use the dojo/store/DataStore and dstore adapters
+	stores.push(new StoreAdapter({
+		objectStore: new DataStore({
+			store: new ItemFileReadStore({
+				data: {
+					identifier: 'id',
+					items: createItems()
+				}
+			})
+		})
+	}));
+
+	grids.push(new OnDemandGrid({
+		columns: { id: 'id', name: 'name' },
+		collection: stores[2]
+	}, 'grid3'));
+	
+	// Create a dstore RequestMemory instance
+	stores.push(new RequestMemory({ target: 'data/requestData.json' }));
+	grids.push(new OnDemandGrid({
+		columns: { id: 'id', name: 'name' },
+		collection: stores[3]
+	}, 'grid4'));
+});
+</script>
+
+</body>
+</html>

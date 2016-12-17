@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Test Pagination Extension with i18n override</title>
+		<meta name="viewport" content="width=570">
+		<style>
+			@import "../../../dojo/resources/dojo.css";
+			@import "../../css/dgrid.css";
+			@import "../../css/skins/claro.css";
+			.heading {
+				font-weight: bold;
+				padding-bottom: 0.25em;
+			}
+			.dgrid {
+				width: 750px;
+				margin: 10px;
+			}
+		</style>
+		<script src="../../../dojo/dojo.js"
+			data-dojo-config="async: true"></script>
+		<script>
+			require(["dgrid/Grid", "dgrid/extensions/Pagination",
+					"dojo/i18n!dgrid/extensions/nls/pagination", "dgrid/Selection", "dgrid/Keyboard",
+					"dojo/_base/lang", "dojo/_base/declare", "dojo/dom-construct", "dojo/dom-form",
+					"dgrid/test/data/createAsyncStore", "dgrid/test/data/genericData", "dojo/domReady!"],
+				function(Grid, Pagination, i18nPagination, Selection, Keyboard,
+						lang, declare, domConstruct, domForm, createAsyncStore, genericData){
+
+					// Create a custom Pagination class with a distinct i18n bundle
+					// In this case, we're overriding just one value, so we're
+					// loading the original one to serve as a basis
+					var i18nCustomized = lang.mixin({}, i18nPagination, {
+						status: "Total: ${total} - Showing from ${start} to ${end}"
+					});
+					var MyPagination = declare(Pagination, {
+						i18nPagination: i18nCustomized
+					});
+
+					// Create our custom grid using MyPagination
+					var CustomGrid = declare([Grid, Keyboard, Selection, MyPagination]);
+
+					window.grid = new CustomGrid({
+						collection: createAsyncStore({ data: genericData }),
+						columns: {
+							col1: 'Column 1',
+							col2: {label: 'Column2', sortable: false},
+							col3: 'Column 3',
+							col4: 'Column 4',
+							col5: 'Column 5'
+						}
+					}, "grid");
+				});
+		</script>
+	</head>
+	<body class="claro">
+		<h2>A paginated grid with custom i18n</h2>
+		<p>Assuming success, the status in the lower left should read "Total: 100 - Showing from 1 to 10"</p>
+		<div id="grid"></div>
+	</body>
+</html>
