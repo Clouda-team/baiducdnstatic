@@ -1,0 +1,21 @@
+{
+  "name": "timer",
+  "filename": "timer.js",
+  "version": "1.0",
+  "description": "This file definits a JavaScript Timer...",
+  "homepage": "homepage/sitelink",
+  "keywords": ["timer.js", "timer", "Timer"],
+  "maintainers": [
+	{
+	  "name": "Nathanie",
+	  "web": "personal homepage",
+	  "mail": "iminif@qq.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/iMiNiF/timer.git"
+	}
+  ]
+}
