@@ -1,1 +1,21 @@
-
+{
+  "name": "skypecall",
+  "filename": "skypecall.js",
+  "version": "1.0",
+  "description": "skype网页版呼叫按扭",
+  "homepage": "项目主页/网站地址",
+  "keywords": ["skype按扭", "skype call", "skype button"],
+  "maintainers": [
+	{
+	  "name": "作者/ylic",
+	  "web": "作者/ylic",
+	  "mail": "作者/ylic@263.net"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "开源库地址"
+	}
+  ]
+}
