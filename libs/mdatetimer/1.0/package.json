@@ -1,0 +1,21 @@
+{
+  "name": "mdatetimer",
+  "filename": "zepto.mdatetimer.js",
+  "version": "1.0",
+  "description": "时间选择器",
+  "homepage": "",
+  "keywords": ["zepto", "time","mdatetimer"],
+  "maintainers": [
+	{
+	  "name": "",
+	  "web": "",
+	  "mail": ""
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/carrygor/zepto-mdatetimer"
+	}
+  ]
+}

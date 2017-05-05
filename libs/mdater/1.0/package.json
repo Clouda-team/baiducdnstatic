@@ -1,0 +1,21 @@
+{
+  "name": "mdater",
+  "filename": "zepto.mdater.js",
+  "version": "1.0",
+  "description": "时间选择器",
+  "homepage": "",
+  "keywords": ["zepto", "time","mdater"],
+  "maintainers": [
+	{
+	  "name": "",
+	  "web": "",
+	  "mail": ""
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/jqroom/mdater/blob/master/index.html"
+	}
+  ]
+}
