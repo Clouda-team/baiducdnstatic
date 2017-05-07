@@ -1,0 +1,17 @@
+{
+    "name": "webix",
+    "filename": "webix.js",
+    "description": "JavaScript UI Library for Speeding up Web Development",
+    "version": "4.3.0",
+    "repository": "https://github.com/webix-hub/tracker.git",
+    "homepage": "https://webix.com",
+    "keywords": [
+        "webix"
+    ],
+    "repositories": [
+        {
+          "type": "git",
+          "url": "https://github.com/webix-hub/tracker.git"
+        }
+    ]
+}
