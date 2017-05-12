@@ -1,0 +1,23 @@
+{
+  "name": "easyui.js",
+  "filename": "jquery.easyui.min.js",
+  "version": "1.4.4",
+  "description": "jQuery EasyUI.",
+  "homepage": "http://www.jeasyui.com/",
+  "keywords": [
+    "easyui"
+  ],
+  "maintainers": [
+    {
+      "name": "support",
+      "web": "http://www.jeasyui.com/",
+      "mail": "support@jeasyui.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/qiuqinghe/qqh/jquery.easyui.min.js"
+    }
+  ]
+}
