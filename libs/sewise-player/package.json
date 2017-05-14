@@ -1,0 +1,36 @@
+{
+    "name": "sewise-player",
+    "filename": "sewise.player.min.js",
+    "version": "2.5.2",
+    "description": "The HTML5 Video Player Framework",
+    "homepage": "http://player.sewise.com/",
+    "keywords": [
+    "html5",
+    "skins",
+    "video",
+    "player",
+    "web player",
+    "vod player",
+    "live player",
+    "html5 player",
+    "flash player",
+    "sewise player",
+    "html5 css skins",
+    "free html5 player",
+    "javascript player",
+    "stream media player",
+    "opensource html5 player"
+  ],
+   "maintainers": [
+       {
+           "name": "jackzhang1204",
+           "web": "https://github.com/jackzhang1204/sewise-player" 
+       }   
+	],
+   "repositories": [
+        {   
+            "type": "git",
+            "url": "https://github.com/jackzhang1204/sewise-player"
+        }
+   ]
+}
