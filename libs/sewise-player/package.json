@@ -30,7 +30,7 @@
    "repositories": [
         {   
             "type": "git",
-            "url": "https://github.com/jackzhang1204/sewise-player.git"
+            "url": "https://github.com/jackzhang1204/sewise-player"
         }
    ]
 }
