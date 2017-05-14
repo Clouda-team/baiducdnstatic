@@ -1,0 +1,37 @@
+{
+  "name": "sewise.player",
+  "filename": "主文件名，比如 abc.js",
+  "version": "2.5.2",
+  "description": "The HTML5 Video Player Framework",
+  "homepage": "http://player.sewise.com/",
+  "keywords": [
+    "html5",
+    "skins",
+    "video",
+    "player",
+    "web player",
+    "vod player",
+    "live player",
+    "html5 player",
+    "flash player",
+    "sewise player",
+    "html5 css skins",
+    "free html5 player",
+    "javascript player",
+    "stream media player",
+    "opensource html5 player"
+  ],
+  "maintainers": [
+	{
+	  "name": "Sewise, Inc.",
+	  "web": "http://player.sewise.com/",
+	  "mail": "jackzhang1204@gmail.com"
+	}
+  ],
+  
+  "author": "Sewise, Inc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackzhang1204/sewise-player"
+  },
+}
