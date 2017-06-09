@@ -1,0 +1,11 @@
+{
+    "name": "bootstrap-select",
+    "filename": "js/bootstrap-select",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "http://silviomoreto.github.io/bootstrap-select/",
+    "keywords": [
+		"css", 
+		"js"
+	]
+  }
