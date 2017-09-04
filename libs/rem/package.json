@@ -1,0 +1,17 @@
+{
+    "name": "rem.js",
+    "filename": "rem.js",
+    "version": "1.0.0",
+    "description": "移动端页面满屏自适应方案",
+    "homepage": "https://github.com/souying/layout-rem/",
+    "keywords": ["rem", "rem布局", "移动端布局", "移动端自适应", "自适应布局"],
+    "maintainers": [{
+        "name": "rem",
+        "web": "http://www.jiaoyiba.cc",
+        "mail": "100101065@qq.com"
+    }],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/souying/layout-rem"
+    }]
+}
