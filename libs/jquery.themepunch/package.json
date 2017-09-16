@@ -1,0 +1,22 @@
+ {
+    "name": "jquery.themepunch",
+    "filename": "revolution-slider-options.js",
+    "version": "1.0.0",
+    "description": "slide",
+    "homepage": "http://ricostacruz.com/jquery.transit/",
+    "keywords": ["slide"],
+    "maintainers": [
+  	{
+  	  "name": "Alex Dickson",
+  	  "web": "Rico Sta. Cruz",
+  	  "mail": "rico@ricostacruz.com"
+  	}
+    ],
+    "repositories": [
+  	{
+  	  "type": "git",
+  	  "url": "https://github.com/leanv9/jquery.themepunch"
+  	}
+    ]
+  }
+}
