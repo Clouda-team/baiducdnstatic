@@ -1,0 +1,24 @@
+{
+  "name": "scroxt.js",
+  "filename": "scroxt.min.js",
+  "version": "1.0.0",
+  "description": "scroxt.js用于快速生成滚动文本，性能优异。单行水平滚动，垂直滚动，视频弹幕",
+  "keywords": [
+    "barrage",
+    "horizontal",
+    "vertical",
+    "scroxt"
+  ],
+  "maintainers":[
+    {
+      "name": "陈建芳",
+      "mail": "1737752975@qq.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/chenjianfang/scroxt"
+    }
+  ]
+}
