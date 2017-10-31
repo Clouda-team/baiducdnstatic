@@ -1,0 +1,21 @@
+{
+    "name": "goldenlayout",
+    "filename": "goldenlayout.min.js",
+    "version": "1.5.9",
+    "description": "The ultimate Javascript layout manager",
+    "homepage": "http://golden-layout.com/",
+    "keywords": ["golden-layout", "javascript", "layout"],
+    "maintainers": [
+    {
+        "name": "deepstream.io",
+        "web": "http://deepstream.io/",
+        "mail": "info@deepstream.io"
+    }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/deepstreamIO/golden-layout"
+        }
+    ]
+}
