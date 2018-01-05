@@ -1,0 +1,20 @@
+{
+  "name": "amazeui",
+  "filename": "js/amazeui.min.js",
+  "version": "2.7.2",
+  "description": "Amaze UI is an open-sourced responsive front-end framework. ",
+  "homepage": "http://amazeui.org",
+  "keywords": ["html5", "responsive"],
+  "maintainers": [
+	{
+	  "name": "AllMobilize Inc. ",
+	  "mail": "uiadmin@yunshipei.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/amazeui/amazeui"
+	}
+  ]
+}
