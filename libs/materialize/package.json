@@ -1,0 +1,21 @@
+{
+  "name": "materialize",
+  "filename": "js/materialize.min.js",
+  "version": "0.100.2",
+  "description": "Materialize, A modern responsive front-end framework based on Material Design. ",
+  "homepage": "http://materializecss.com",
+  "keywords": ["material-design", "md", "responsive"],
+  "author": "Materialize",
+  "repository": {
+	  "type": "git",
+	  "url": "https://github.com/Dogfalo/materialize"
+  },
+  "bugs": {
+    "url": "https://github.com/Dogfalo/materialize/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/Dogfalo/materialize/blob/master/LICENSE"
+  }
+  ]
+}
