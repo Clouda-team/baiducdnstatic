@@ -1,0 +1,22 @@
+﻿{
+    "name": "jquery.easyui",
+    "filename": "jquery.easyui.min.js",
+    "version": "1.5.3",
+    "description": "jquery前端UI插件,第三方基于jQuery开发的，这个是免费版，还有商业版。用来做一般管理系统的UI还不错",
+    "homepage": "http://www.jeasyui.com/index.php",
+    "keywords": [
+       "jquery", "ui", "easyui"
+   ],
+   "maintainers": [
+       {
+           "name": "www.jeasyui.com",
+           "web": "http://www.jeasyui.com" 
+       }
+   ],
+   "repositories": [
+        {   
+            "type": "web",
+            "url": "http://www.jeasyui.com/download/downloads/jquery-easyui-1.5.3.zip"
+        }
+   ]
+}
