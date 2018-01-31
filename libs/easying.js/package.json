@@ -1,0 +1,21 @@
+{
+  "name": "easying.js",
+  "filename": "easying.js",
+  "version": "1.3",
+  "description": "jQuery Easing",
+  "homepage": "http://gsgd.co.uk/sandbox/jquery/easing/",
+  "keywords": ["jQuery", "Easing", "Easing"],
+  "maintainers": [
+	{
+	  "name": "Robert Penner/iijs",
+	  "web": "Robert Penner/www.otaku.中国",
+	  "mail": "Robert Penner/2223137007@qq.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/iijs/easying.js"
+	}
+  ]
+}
