@@ -1,74 +1,26 @@
 {
-	"name": "list-pull-loading",
-	"version": "1.0.1",
-	"description": "'list-pull-loading'是移动端上拉加载、下拉刷新的一个vue组件，使用了iscroll.js作为第三方插件。",
-	"main": "dist/list-pull-loading.js",
-	"unpkg": "dist/vue-lazyload.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/yujinjin/list-pull-loading.git"
-	},
-	"scripts": {
-		"demo": "webpack --config config/demo.config.js",
-		"compile":"set NODE_ENV=production&&webpack --config config/build.config.js"
-	},
-	"keywords": [
+  "name": "list-pull-loading",
+  "filename": "list-pull-loading.js",
+  "version": "1.0.1",
+  "description": "'list-pull-loading'是移动端上拉加载、下拉刷新的一个vue组件，使用了iscroll.js作为第三方插件。",
+  "homepage": "https://yujinjin.github.io/",
+  "keywords": [
 	    "vue",
 	    "iscroll",
 	    "list-pull-loading",
 	    "list-loading"
 	],
-	"author": "jinyu <yujinjin9@126.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/yujinjin/list-pull-loading/issues"
-	},
-	"dependencies": {
-		"vue": "^2.5.9",
-		"vuex": "^3.0.1",
-		"vue-router": "^3.0.1",
-		"iscroll": "^5.2"
-	},
-	"devDependencies": {
-		"vue-loader": "13.5.0",
-		"vue-template-compiler": "^2.5.9",
-		"autoprefixer": "^6.4.0",
-		"postcss-loader": "^2.0.8",
-	    "babel-plugin-syntax-jsx": "^6.18.0",
-		"babel-plugin-transform-vue-jsx": "^3.5.0",
-		"babel-helper-vue-jsx-merge-props": "^2.0.2",
-		"autoprefixer": "^7.2.1",
-		"babel-core": "^6.26.0",
-		"babel-eslint": "^8.0.3",
-		"babel-loader": "^7.1.2",
-		"babel-plugin-transform-runtime": "^6.23.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-stage-2": "^6.24.1",
-		"babel-register": "^6.26.0",
-		"babel-polyfill": "^6.26.0",
-		"cross-env": "^1.0.6",
-		"css-loader": "^0.28.7",
-		"less": "^2.7.1",
-		"less-loader": "^4.0.0",
-		"node-sass": "^4.7.2",
-    	"sass-loader": "^6.0.6",
-		"file-loader": "^1.1.5",
-		"html-loader": "^0.5.1",
-		"html-webpack-plugin": "^2.30.1",
-		"jshint": "^2.9.4",
-		"jshint-loader": "^0.8.4",
-		"style-loader": "^0.19.0",
-		"url-loader": "^0.6.2",
-		"opn": "^4.0.2",
-   		"extract-text-webpack-plugin": "^3.0.2",
-   		"webpack": "^3.9.1",
-		"webpack-dev-server": "^2.9.5",
-		"webpack-require-http": "^0.4.0",
-		"clean-webpack-plugin": "^0.1.18",
-		"friendly-errors-webpack-plugin": "^1.6.1"
-	},
-	"engines": {
-		"node": ">=5.0.0",
-		"npm": ">=3.3.6"
+  "maintainers": [
+	{
+	  "name": "jacyu",
+	  "web": "https://yujinjin.github.io/list-pull-loading/#/",
+	  "mail": "yujinjin9@126.com"
 	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/yujinjin/list-pull-loading.git"
+	}
+  ]
 }
