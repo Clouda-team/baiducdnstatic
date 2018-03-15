@@ -1,0 +1,26 @@
+{
+  "name": "list-pull-loading",
+  "filename": "list-pull-loading.js",
+  "version": "1.0.1",
+  "description": "'list-pull-loading'是移动端上拉加载、下拉刷新的一个vue组件，使用了iscroll.js作为第三方插件。",
+  "homepage": "https://yujinjin.github.io/",
+  "keywords": [
+	    "vue",
+	    "iscroll",
+	    "list-pull-loading",
+	    "list-loading"
+	],
+  "maintainers": [
+	{
+	  "name": "jacyu",
+	  "web": "https://yujinjin.github.io/list-pull-loading/#/",
+	  "mail": "yujinjin9@126.com"
+	}
+  ],
+  "repositories": [
+	{
+	  "type": "git",
+	  "url": "https://github.com/yujinjin/list-pull-loading.git"
+	}
+  ]
+}
