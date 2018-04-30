@@ -1,0 +1,21 @@
+{
+    "name": "mybatis3",
+    "description": "An open and free web integration framework for the financial services industry.",
+    "version": "1.0",
+    "keywords": [
+        "mybatis3Mapper"
+    ],
+    "filename": "mybatis-3-mapper.dtd",
+    "homepage": "http://www.mybatis3.org",
+    "author": "Bin.Nie",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/OpenMybatis3/Mybatis3.git"
+    },
+    "licenses": [
+        {
+            "type": "Apache-2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ]
+}
