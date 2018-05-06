@@ -1,0 +1,27 @@
+{
+  "name": "mathjax",
+  "filename": "MathJax.js",
+  "version": "2.7.3",
+  "description": "A JavaScript display engine for mathematics that works in all browsers. No more setup for readers. It just works.",
+  "homepage": "https://www.mathjax.org/",
+  "keywords": [
+    "mathjax",
+    "library",
+    "latex",
+    "math",
+    "formula"
+  ],
+  "maintainers": [
+    {
+      "name": "Davide Cervone",
+      "web": "https://github.com/dpvc",
+      "mail":"info@mathjax.org"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/mathjax/MathJax.git"
+    }
+  ]
+}
