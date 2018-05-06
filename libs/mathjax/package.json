@@ -2,19 +2,22 @@
   "name": "mathjax",
   "filename": "MathJax.js",
   "version": "2.7.3",
-  "description": "A JavaScript display engine for mathematics that works in all browsers. No more setup for readers. It just works.",
+  "description": "Beautiful math in all browsers. MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all browsers.",
   "homepage": "https://www.mathjax.org/",
   "keywords": [
-    "mathjax",
-    "library",
-    "latex",
     "math",
-    "formula"
+    "svg",
+    "mathml",
+    "tex",
+    "latex",
+    "asciimath",
+    "browser",
+    "browser-only"
   ],
   "maintainers": [
     {
-      "name": "Davide Cervone",
-      "web": "https://github.com/dpvc",
+      "name": "MathJax Consortium",
+      "web": "http://www.mathjax.org",
       "mail":"info@mathjax.org"
     }
   ],
