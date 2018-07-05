@@ -1,0 +1,22 @@
+{
+    "name": "spaceforce",
+    "filename": "spaceforce",
+    "version": "1.0.0",
+    "description": "spaceforce.js",
+    "homepage": "https://gitee.com/walnut_dev/front_static_resource",
+    "keywords": [
+      "dll",
+      "spaceforce"
+   ],
+   "maintainers": [
+       {
+           "name": "xuewy"
+       }
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url":  "https://gitee.com/walnut_dev/front_static_resource"
+       }
+   ]
+}
