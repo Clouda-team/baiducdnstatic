@@ -1,0 +1,20 @@
+  {
+    "name": “thrift”,
+    "filename": “thrift.js",
+    "version": "0.11.0",
+    "description": "Thrift JavaScript library version.",
+    "homepage": “thrift.apache.org”,
+    "keywords": [“thrift”],
+    "maintainers": [
+      {
+        "name": “Larry Su”,
+      }
+    ],
+    "repositories": [
+      {
+        "type": "git",
+        "url": "https://github.com/apache/thrift"
+      }
+    ]
+  }
+
